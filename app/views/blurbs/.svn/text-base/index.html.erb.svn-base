@@ -1,0 +1,22 @@
+<h1>Blurbs</h1>
+
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Body</th>
+  </tr>
+
+<% for blurb in @blurbs %>
+  <tr>
+    <td><%=h blurb.key %></td>
+    <td class="grey"><%=h blurb.body[0..80] if blurb.body %></td>
+    <td><%= link_to 'Show', blurb %></td>
+    <td><%= link_to 'Edit', edit_blurb_path(blurb) %></td>
+    <td><%= link_to 'Delete', blurb, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Blurb', new_blurb_path %> 

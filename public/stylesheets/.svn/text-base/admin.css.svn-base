@@ -1,0 +1,166 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, 
+small,  strong, sub, sup,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+ margin: 0; padding: 0; border: 0; outline: 0;
+ font-weight: inherit;
+ font-style: inherit;
+ font-size: 100%;
+ font-family: inherit;
+ vertical-align: baseline;
+}
+:focus {outline: 0;}
+ol, ul {list-style: none;}
+table {border-collapse: separate; border-spacing: 0;}
+caption, th, td { text-align: left; font-weight: normal;}
+.grey {color: #999;}
+
+a img {border: none;}
+body {
+ padding: 0; margin: 0;
+ font-family: "Lucida Grande";
+ font-size: 14px;
+}
+#sections {
+  font: 13px normal Arial, helvetica, san-serif;
+  margin: 0; padding: 0px;
+  list-style: none;
+}
+#sections li {
+  float: left;
+  margin: 0; padding: 7px 5px;
+}
+#sections li a {
+  text-decoration: none;
+}
+#sections li a:hover, #sections .on {
+  border-bottom: 3px solid #999;
+}
+#sections .pages {
+  background-color: #ccccc4;
+}
+#sections .first {
+  border-left: 1px solid #eee;
+  padding-left: 10px;
+}
+#header {
+  background: #E3E3E3;
+  padding: 30px;
+}
+#logo {
+  top: 20px;
+  left: 10px;
+}
+#logo a {
+  text-decoration:none;
+  font-size: 20px;
+  color: #069;
+  padding: 10px 10px;
+}
+#logo a:hover {
+  background-color: #eee;
+}
+#logo small a {font-size: 15px}
+
+
+#page {
+  width: 600px;
+  border: 2px solid #eee;
+  margin: 0 auto;
+}
+.page {
+  margin: 30px;
+}
+
+table th {
+  color: #999;
+  padding: 5px;
+}
+table td {
+  padding: 5px;
+}
+table td, table th {
+  border-bottom: 1px solid #eee;
+}
+table td a {
+  display: block;
+  border: 1px solid #ccc;
+  font-size: 10px;
+  padding: 3px;
+  color: #666;
+  background: #eee;
+  font-weight: bold;
+  text-decoration: none;
+}
+table td a:hover {
+  color: #333;
+  background: #ddd;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0 0 1em 0;
+  font-weight: normal;
+  color: #666;
+}
+p {margin: 0 0 1em 0;}
+b,strong {font-weight: bold;}
+i,em {font-style: italic;}
+
+.hint {
+  color: #999; font-size: 0.8em;
+  width: 300px;
+}
+form label {
+  font-size: 12px;
+  color: #333;
+}
+form fieldset {
+  margin: 0 0 1em 0;
+}
+form textarea {
+  width: 300px;
+  height: 100px;
+}
+.side_hint fieldset {
+  position: relative;
+}
+.side_hint .hint {
+  position: absolute;
+  right: 0; top: 1.6em;
+  width: 200px;
+  border: 1px solid #eee;
+  padding: 5px;
+}
+.side_hint fieldset:hover .hint {
+  background-color: #fffff0;
+  color: #666;
+}
+
+#paper {
+  margin-top: 64px;
+  width: 100%;
+  text-align: left;
+  background-color: #fff;
+}
+#paper_2 {
+  width: 500px;
+  margin: 0 auto;
+  padding: 10px 150px 10px 30px;
+  background-color: white;
+  font-family: arial, helvetica, sans-serif;
+  color: #222211;
+  font-size: 14px;
+  line-height: 1.3em;
+}
+
+#notice, #error {
+  border: 1px solid #dda;
+  background: #ffd;
+  padding: 12px;
+  margin: 0 0 18px 0;
+}

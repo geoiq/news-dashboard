@@ -1,0 +1,40 @@
+8
+
+dir
+3020
+svn+ssh://mc@babylon/mnt/data/svn/gardens/news/vendor/plugins/mocha/vendor/meta_project-0.4.15/lib/meta_project/release
+svn+ssh://mc@babylon/mnt/data/svn/gardens
+
+
+
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+
+svn:special svn:externals svn:needs-lock
+
+freshmeat.rb
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+ecc352cfcc3a2ddec9b5b8b618712c25
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+raa.rb
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+6d986948665beb417e2e55b59df22033
+2009-02-02T16:24:19.300657Z
+3020
+mc
+

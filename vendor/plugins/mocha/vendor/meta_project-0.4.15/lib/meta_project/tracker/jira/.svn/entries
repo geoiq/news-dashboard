@@ -1,0 +1,40 @@
+8
+
+dir
+3020
+svn+ssh://mc@babylon/mnt/data/svn/gardens/news/vendor/plugins/mocha/vendor/meta_project-0.4.15/lib/meta_project/tracker/jira
+svn+ssh://mc@babylon/mnt/data/svn/gardens
+
+
+
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+
+svn:special svn:externals svn:needs-lock
+
+jira_issues.rb
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+ffe6af53d0c248142853fce1b02c3ccb
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+jira_tracker.rb
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+c9586fc2260cf7a2b137df247403f0be
+2009-02-02T16:24:19.300657Z
+3020
+mc
+

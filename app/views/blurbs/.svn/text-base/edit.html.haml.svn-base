@@ -1,0 +1,23 @@
+%h1 Editing Blurb
+
+- form_for(@blurb) do |f|
+  = f.error_messages
+
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  %p
+    = f.label :body
+    %br
+    = f.text_area :body 
+  %p
+    = f.label :publish
+    %br
+    = f.datetime_select :publish_at
+  %p
+    = f.submit "Update"
+
+= link_to 'Show', @blurb 
+|
+= link_to 'Back', blurbs_path

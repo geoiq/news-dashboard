@@ -1,0 +1,76 @@
+8
+
+dir
+3020
+svn+ssh://mc@babylon/mnt/data/svn/gardens/news/vendor/plugins/mocha/vendor/meta_project-0.4.15/lib/meta_project/project/xforge
+svn+ssh://mc@babylon/mnt/data/svn/gardens
+
+
+
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+
+svn:special svn:externals svn:needs-lock
+
+source_forge.rb
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+e318e12bd80d61a1255392347d668fd3
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+ruby_forge.rb
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+559dab4f854d5008ad9542ae42f06095
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+session.rb
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+987febafedfb2e03f615b2ffabee6632
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+xforge_base.rb
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+d28b9149586c0900a1752f59f472246b
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+xfile.rb
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+b7ac37298a05bc2fe4007b68b3adcda0
+2009-02-02T16:24:19.300657Z
+3020
+mc
+

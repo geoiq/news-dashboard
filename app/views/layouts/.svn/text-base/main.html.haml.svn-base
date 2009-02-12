@@ -1,0 +1,67 @@
+!!!
+- #render :partial => '/layouts/application_behaviours'
+%html{:xmlns=>"http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{"http-equiv" => "Content-Type", "content" => "text/html; charset=utf-8"}/
+    %title
+      =@page_title + ' - ' if @page_title
+      =@product_name
+    = stylesheet_link_tag "main", :media => "all"
+    = stylesheet_link_tag "f1_outlet", :media => "all"
+    /[if lt IE 7.]
+      = #stylesheet_link_tag "application_ie6", :media => "all" 
+  
+    =javascript_include_tag 'prototype', 'effects', 'application', 'f1_maker_map', 'f1_outlet'
+    %script{:type=>"text/javascript"}
+      = "Maker.maker_host =  '#{PLATFORM_CONFIG["maker"]}'"
+      = "Maker.finder_host = '#{PLATFORM_CONFIG["finder"]}'"
+      = "Maker.core_host =   '#{PLATFORM_CONFIG["url"]}'"
+    = yield :header
+  %body
+    #header
+      .header
+        #logo
+          =link_to "Navigating Washington", '/'
+      %ul.nav
+        %li= "#{link_to "About", "/about"}&nbsp;&nbsp;|&nbsp;&nbsp;"
+        %li= "#{link_to "Feedback", "mailto:support@fortiusone.com"}&nbsp;&nbsp;|&nbsp;&nbsp;"
+        %li= "#{link_to "Share", "http://addthis.com/bookmark.php"}&nbsp;&nbsp;|&nbsp;&nbsp;"
+        - if logged_in?
+          %li= "#{link_to "Your Atlases", user_atlases_path(current_user)}"
+        - else
+          %li= "#{link_to "Login", login_path}"
+    #content
+      .content
+        #page{:class => "c_#{@controller.controller_name} a_#{@controller.action_name}"}
+          .page
+            - unless @supress_flash
+              - if flash[:error]
+                #error= flash[:error]
+              - if flash[:warning]
+                #warning= flash[:warning]
+              - if flash[:notice]
+                #notice= flash[:notice]
+            = yield
+        #side
+          .side
+            = yield :side
+
+    - unless @client_footer
+      #footer
+        .footer.fl_r
+          .l= "Website Design &copy; #{Time.now.year} FortiusOne"
+          .r
+            /[I'm still looking for something to put here]
+    = yield :end
+    
+    %script{:type => "text/javascript", :charset => "utf-8"}
+      //<![CDATA[
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      try {
+      var pageTracker = _gat._getTracker("UA-1836539-9");
+      pageTracker._trackPageview();
+      } catch(err) {}
+      //]]>

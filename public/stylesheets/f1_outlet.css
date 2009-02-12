@@ -1,0 +1,21 @@
+/* - Map List - */
+.map_list li a {
+  display: block;
+  margin: 5px 0;
+  padding: 3px 0 3px 50px;
+  background: url(/images/b.map.gif) left 20% no-repeat;
+  text-decoration: none;
+  color: black;
+}
+.map_list li a:hover {
+  background-color: #fcffcd;
+}
+
+/* - Pagination - */
+.page_control .off {
+  color: #999;
+}
+.page_control span {
+  cursor: pointer;
+  padding: 0 0.3em 0 0;
+}

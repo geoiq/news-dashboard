@@ -1,0 +1,7 @@
+.page_control .off {
+  color: #999;
+}
+.page_control span {
+  cursor: pointer;
+  padding: 0 0.3em 0 0;
+}

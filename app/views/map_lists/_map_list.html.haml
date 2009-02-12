@@ -1,0 +1,26 @@
+- content_tag_for :div, map_list do
+  %ul
+    %li
+      %strong User:
+      =h map_list.user_id
+    %li
+      %strong Atlas:
+      =h map_list.atlas_id
+    %li
+      %strong Title:
+      =h map_list.title
+    %li
+      %strong Description:
+      =h map_list.description
+    %li
+      %strong Maker tag:
+      =h map_list.maker_tag
+    %li
+      %strong Maker user:
+      =h map_list.maker_user
+    %li
+      %strong Sort order:
+      =h map_list.sort_order
+    = link_to 'Show', map_list
+    = link_to 'Edit', edit_map_list_path(map_list)
+    = link_to 'Destroy', map_list, :confirm => 'Are you sure?', :method => :delete

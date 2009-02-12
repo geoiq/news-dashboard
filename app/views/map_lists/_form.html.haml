@@ -1,0 +1,32 @@
+- form_for(map_list) do |f|
+  = f.error_messages
+  %p
+    = f.label :user_id
+    %br
+    = f.text_field :user_id
+  %p
+    = f.label :atlas_id
+    %br
+    = f.text_field :atlas_id
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  %p
+    = f.label :description
+    %br
+    = f.text_area :description
+  %p
+    = f.label :maker_tag
+    %br
+    = f.text_field :maker_tag
+  %p
+    = f.label :maker_user
+    %br
+    = f.text_field :maker_user
+  %p
+    = f.label :sort_order
+    %br
+    = f.text_area :sort_order
+  %p
+    = f.submit "Submit"

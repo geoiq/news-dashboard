@@ -1,0 +1,10 @@
+%h1 List of Atlases
+- if !@atlases.empty?
+  .atlases
+    = render :partial => "atlas", :collection => @atlases
+  = will_paginate(@atlases)
+- else
+  %p There are no atlases to show yet.
+= link_to 'New atlas', new_atlas_path
+- content_for :nav do
+  = link_to '+ New atlas', new_atlas_path

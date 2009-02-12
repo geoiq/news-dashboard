@@ -1,0 +1,9 @@
+K 10
+svn:ignore
+V 51
+development.log
+production.log
+server.log
+test.log
+
+END

@@ -1,0 +1,23 @@
+- content_tag_for :div, atlas do
+  %ul
+    %li
+      %strong Title:
+      =h atlas.title
+    %li
+      %strong Description:
+      =h atlas.description
+    %li
+      %strong Url:
+      =h atlas.url
+    %li
+      %strong Listed:
+      =h atlas.listed
+    %li
+      %strong Maker tag:
+      =h atlas.maker_tag
+    %li
+      %strong Maker user:
+      =h atlas.maker_user
+    = link_to 'Show', atlas
+    = link_to 'Edit', edit_atlas_path(atlas)
+    = link_to 'Destroy', atlas, :confirm => 'Are you sure?', :method => :delete

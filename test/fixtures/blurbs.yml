@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  key: string
+  title: string
+  body: text
+  publish_at: <%= Time.now %>
+
+two:
+  key: string
+  title: string
+  body: text
+  publish_at: <%= Time.now %>

@@ -1,0 +1,5 @@
+%h2== Editing: <span id="atlas_title">#{@atlas.title}</span>
+= render :partial => "form", :locals => {:atlas => @atlas}
+%ul
+  %li= link_to 'Show', @atlas
+  %li= link_to 'Back', atlases_path

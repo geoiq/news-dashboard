@@ -1,0 +1,15 @@
+.map_list.clear
+  .fl_r.f_f
+    %fieldset.l
+      = f.label "List maps tagged with:"
+      = f.text_field :maker_tag,  :index => index, :class => 'nice'
+    %fieldset.r
+      = f.label "Label this Map List:"
+      = f.text_field :title, :index => index, :class => 'nice'
+  %fieldset
+    = f.label "Only show maps from GeoCommons User: (optional)"
+    = f.text_field :maker_user, :index => index, :class => 'nice'
+
+  .actions
+    = link_to "Preview", "#"
+    = link_to "Organize", "#"

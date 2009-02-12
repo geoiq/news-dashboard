@@ -1,0 +1,4 @@
+%h1 Make a New Atlas
+= render :partial => "form", :locals => {:atlas => @atlas}
+%ul
+  %li= link_to 'Back', atlases_path

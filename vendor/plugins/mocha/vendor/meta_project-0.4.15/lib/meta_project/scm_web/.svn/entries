@@ -1,0 +1,40 @@
+8
+
+dir
+3020
+svn+ssh://mc@babylon/mnt/data/svn/gardens/news/vendor/plugins/mocha/vendor/meta_project-0.4.15/lib/meta_project/scm_web
+svn+ssh://mc@babylon/mnt/data/svn/gardens
+
+
+
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+
+svn:special svn:externals svn:needs-lock
+
+pathname.rb
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+e1c4179dc1fb7cdda8e4f738e131cd74
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+browser.rb
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+1752613785986794a2acc7fd2f1b7e87
+2009-02-02T16:24:19.300657Z
+3020
+mc
+

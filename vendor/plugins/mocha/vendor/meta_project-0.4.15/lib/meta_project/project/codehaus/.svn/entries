@@ -1,0 +1,28 @@
+8
+
+dir
+3020
+svn+ssh://mc@babylon/mnt/data/svn/gardens/news/vendor/plugins/mocha/vendor/meta_project-0.4.15/lib/meta_project/project/codehaus
+svn+ssh://mc@babylon/mnt/data/svn/gardens
+
+
+
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+
+svn:special svn:externals svn:needs-lock
+
+codehaus_project_svn.rb
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+d8a0896b658f223bb70467b40626636c
+2009-02-02T16:24:19.300657Z
+3020
+mc
+

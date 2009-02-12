@@ -1,0 +1,52 @@
+8
+
+dir
+2848
+svn+ssh://mc@babylon/mnt/data/svn/gardens/news/vendor/rails/activerecord/lib/active_record/locking
+svn+ssh://mc@babylon/mnt/data/svn/gardens
+
+
+
+2009-01-11T21:13:04.484870Z
+2657
+ajturner
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a95b0784-15e6-4a7b-bff4-9e50d6a318ad
+
+optimistic.rb
+file
+
+
+
+
+2009-01-26T16:36:51.000000Z
+2a87fa890cf79cbb5d69d3000e270e4f
+2009-01-11T21:13:04.484870Z
+2657
+ajturner
+
+pessimistic.rb
+file
+
+
+
+
+2009-01-26T16:36:51.000000Z
+6735f6abf6f1a9cf789385ccf930979f
+2009-01-11T21:13:04.484870Z
+2657
+ajturner
+

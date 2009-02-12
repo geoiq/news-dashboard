@@ -1,0 +1,43 @@
+8
+
+dir
+3020
+svn+ssh://mc@babylon/mnt/data/svn/gardens/news/vendor/plugins/haml-scaffold/samples
+svn+ssh://mc@babylon/mnt/data/svn/gardens
+
+
+
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+
+svn:special svn:externals svn:needs-lock
+
+posts_controller_test.rb
+file
+
+
+
+
+2009-01-29T17:05:14.000000Z
+9f43a86a63f24685389c5945fa0ff357
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+posts_controller.rb
+file
+
+
+
+
+2009-01-29T17:05:14.000000Z
+c0b97bff44da70af7685745e62f03926
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+views
+dir
+

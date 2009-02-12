@@ -1,0 +1,5 @@
+#paper
+  #paper_2
+    = RDiscount.new(@blurb.body).to_html if @blurb.body
+    = link_to 'edit', edit_blurb_path(@blurb) if logged_in?
+    

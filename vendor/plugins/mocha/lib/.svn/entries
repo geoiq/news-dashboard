@@ -1,0 +1,55 @@
+8
+
+dir
+3020
+svn+ssh://mc@babylon/mnt/data/svn/gardens/news/vendor/plugins/mocha/lib
+svn+ssh://mc@babylon/mnt/data/svn/gardens
+
+
+
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+
+svn:special svn:externals svn:needs-lock
+
+mocha_standalone.rb
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+b0e7cbc54a7c4515596a0029a50bb377
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+stubba.rb
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+c7f61cf5ac9326efd70bf75e50e8ef81
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+mocha
+dir
+
+mocha.rb
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+006d0f56253a789034ea17bdc9ac5331
+2009-02-02T16:24:19.300657Z
+3020
+mc
+

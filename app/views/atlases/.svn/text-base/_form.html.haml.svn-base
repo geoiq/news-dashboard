@@ -1,0 +1,48 @@
+- form_for(atlas) do |f|
+  = f.error_messages
+  
+  .side_hint
+    = f.hidden_field :user_id
+    %fieldset
+      = f.label :title
+      %br
+      = f.text_field :title
+ 
+    %fieldset
+      = f.label :description
+      %br
+      = f.text_area :description
+      .hint
+        %small Hint: Use short paragraphs. The first paragraph will be an introduction. It will include a "more &raquo;" link leading to the full description.
+ 
+    %fieldset
+      = f.label :url, "Link"
+      %br
+      news.geocommons.com/
+      = f.text_field :url, :style => "width: 100px"
+      .hint
+        %small Enter a short phrase with no spaces. Example: "first100days"
+ 
+    %fieldset
+      = f.check_box :listed
+      = f.label :listed, "List this atlas on the homepage?"
+ 
+    %fieldset
+      = f.label :maker_tag, "Show maps with this tag:"
+      %br
+      = f.text_field :maker_tag
+      .hint
+        %small Your Atlas will display all of the maps with this tag.
+ 
+    %fieldset
+      = f.label :maker_user, "Only show maps from this person:"
+      %br
+      = f.text_field :maker_user
+      .hint
+        %small Optional. Limit the tag search to a single Maker username.
+    
+ 
+  %fieldset
+    = f.submit "Make My Atlas"
+    .hint
+      %small Don't worry, you can change your atlas or start over anytime.

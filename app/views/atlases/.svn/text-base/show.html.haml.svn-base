@@ -1,0 +1,31 @@
+- content_tag_for :div, @atlas do
+
+  #maker_map{:style=>"height:600px"}
+    .loading
+      Loading...
+  - content_for :side do
+    #panel_welcome.panel
+      %label= link_to h(@atlas.title), "#", :class => "expand expand_welcome"
+      .short
+        = RDiscount.new(@atlas.description.split("\r\n\r\n").first).to_html
+        = link_to "more &raquo;", "#", :class => "expand expand_welcome"
+      .long{:style=>"display:none"}
+        = RDiscount.new(@atlas.description).to_html
+        = link_to "&laquo; less", "#", :class => "expand expand_explore"
+        
+    
+    #panel_explore.panel
+      %label= link_to "Explore", "#", :class => "expand expand_explore"
+      .short{:style=>"display:none"}
+
+      .long
+        .longb
+          #explore Loading...
+    
+      
+- content_for :end do
+  
+  %script{:type=>"text/javascript"}
+    == News.find_maps("#{@atlas.maker_tag}")
+    Accordion.initialize()
+

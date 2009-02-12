@@ -1,0 +1,52 @@
+8
+
+dir
+2848
+svn+ssh://mc@babylon/mnt/data/svn/gardens/news/vendor/rails/actionpack/test/fixtures/post_test/post
+svn+ssh://mc@babylon/mnt/data/svn/gardens
+
+
+
+2009-01-11T21:13:04.484870Z
+2657
+ajturner
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a95b0784-15e6-4a7b-bff4-9e50d6a318ad
+
+index.iphone.erb
+file
+
+
+
+
+2009-01-26T16:37:03.000000Z
+9d2a071f6bb095ecb35babcd8a84f4ae
+2009-01-11T21:13:04.484870Z
+2657
+ajturner
+
+index.html.erb
+file
+
+
+
+
+2009-01-26T16:37:03.000000Z
+60e2514e14358183d8280dc930d9a0c2
+2009-01-11T21:13:04.484870Z
+2657
+ajturner
+

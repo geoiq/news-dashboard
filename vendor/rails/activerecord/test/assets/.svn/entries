@@ -1,0 +1,53 @@
+8
+
+dir
+2848
+svn+ssh://mc@babylon/mnt/data/svn/gardens/news/vendor/rails/activerecord/test/assets
+svn+ssh://mc@babylon/mnt/data/svn/gardens
+
+
+
+2009-01-11T21:13:04.484870Z
+2657
+ajturner
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a95b0784-15e6-4a7b-bff4-9e50d6a318ad
+
+flowers.jpg
+file
+
+
+
+
+2009-01-26T16:36:42.000000Z
+b8b3d3817392fc0b699f9a3f303f522a
+2009-01-11T21:13:04.484870Z
+2657
+ajturner
+has-props
+
+example.log
+file
+
+
+
+
+2009-01-26T16:36:42.000000Z
+9e63e88de0b0d6c944ee7c6f3d9659d9
+2009-01-11T21:13:04.484870Z
+2657
+ajturner
+

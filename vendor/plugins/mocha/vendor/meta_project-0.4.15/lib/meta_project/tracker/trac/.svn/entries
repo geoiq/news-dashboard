@@ -1,0 +1,28 @@
+8
+
+dir
+3020
+svn+ssh://mc@babylon/mnt/data/svn/gardens/news/vendor/plugins/mocha/vendor/meta_project-0.4.15/lib/meta_project/tracker/trac
+svn+ssh://mc@babylon/mnt/data/svn/gardens
+
+
+
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+
+svn:special svn:externals svn:needs-lock
+
+trac_tracker.rb
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+e06b063c708a8a4cc581275e4aed0421
+2009-02-02T16:24:19.300657Z
+3020
+mc
+

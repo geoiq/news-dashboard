@@ -1,0 +1,8 @@
+%h2 Listing map_lists
+- if !@map_lists.empty?
+  .map_lists
+    = render :partial => "map_list", :collection => @map_lists
+  = will_paginate(@map_lists)
+- else
+  %p There are no map_lists to show yet.
+= link_to 'New map_list', new_map_list_path

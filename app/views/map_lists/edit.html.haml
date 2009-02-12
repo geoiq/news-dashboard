@@ -1,0 +1,5 @@
+%h2 Editing map_list
+= render :partial => "form", :locals => {:map_list => @map_list}
+%ul
+  %li= link_to 'Show', @map_list
+  %li= link_to 'Back', map_lists_path

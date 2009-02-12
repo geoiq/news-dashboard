@@ -1,0 +1,70 @@
+8
+
+dir
+3020
+svn+ssh://mc@babylon/mnt/data/svn/gardens/news/vendor/plugins/mocha/vendor/meta_project-0.4.15
+svn+ssh://mc@babylon/mnt/data/svn/gardens
+
+
+
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+
+svn:special svn:externals svn:needs-lock
+
+Rakefile
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+b77310ca25341ee658c98e1da231b2db
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+doc
+dir
+
+lib
+dir
+
+CHANGES
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+db13dd6ff0a5c9958773fd2ba5914095
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+MIT-LICENSE
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+0b35b0ee65626b9521cadb9eef3c7983
+2009-02-02T16:24:19.300657Z
+3020
+mc
+
+README
+file
+
+
+
+
+2009-01-29T20:05:24.000000Z
+f9f7647e9f6dd54414629ed06ab4c57c
+2009-02-02T16:24:19.300657Z
+3020
+mc
+

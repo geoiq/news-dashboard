@@ -1,0 +1,76 @@
+require 'test_helper'
+
+class AtlasesControllerTest < ActionController::TestCase
+
+  context "on GET to :show for first record" do
+      setup do
+        get :show, :id => atlases(:one).to_param
+      end
+
+      should_assign_to :user
+      should_respond_with :success
+      should_render_template :show
+      should_not_set_the_flash
+
+  end
+
+    def test_create
+       Atlas.any_instance.expects(:save).returns(true)
+       post :create, :atlas => { }
+       assert_response :redirect
+     end
+    
+     def test_create_with_failure
+       Atlas.any_instance.expects(:save).returns(false)
+       post :create, :atlas => { }
+       assert_template "new"
+     end
+    
+     def test_destroy
+       Atlas.any_instance.expects(:destroy).returns(true)
+       delete :destroy, :id => atlases(:one).to_param
+       assert_not_nil flash[:notice]    
+       assert_response :redirect
+     end
+    
+     def test_destroy_with_failure
+       Atlas.any_instance.expects(:destroy).returns(false)    
+       delete :destroy, :id => atlases(:one).to_param
+       assert_not_nil flash[:error]
+       assert_response :redirect
+     end
+    
+     def test_edit
+       get :edit, :id => atlases(:one).to_param
+       assert_response :success
+     end
+    
+     def test_index
+       get :index
+       assert_response :success
+       assert_not_nil assigns(:atlases)
+     end
+    
+     def test_new
+       get :new
+       assert_response :success
+     end
+    
+     def test_show
+       get :show, :id => atlases(:one).to_param
+       assert_response :success
+     end
+    
+     def test_update
+       Atlas.any_instance.expects(:save).returns(true)
+       put :update, :id => atlases(:one).to_param, :atlas => { }
+       assert_response :redirect
+     end
+    
+     def test_update_with_failure
+       Atlas.any_instance.expects(:save).returns(false)
+       put :update, :id => atlases(:one).to_param, :atlas => { }
+       assert_template "edit"
+     end
+
+end

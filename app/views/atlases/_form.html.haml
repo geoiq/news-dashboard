@@ -1,0 +1,49 @@
+- content_for :nav do
+  = link_to "&laquo Your Atlases", user_atlases_path(@atlas.user_id)
+
+- form_for(atlas) do |f|
+  = f.error_messages
+  
+  .side_hint.block_labels
+    = f.hidden_field :user_id
+    %fieldset
+      = f.label :title
+      - content_for :end_js do
+        $('atlas_title').focus()
+      = f.text_field :title, :class => 'keysync keysync_atlas_title'
+      - content_for :end_js do
+        KeySync.initialize()
+ 
+    %fieldset
+      = f.label :description
+      = f.text_area :description
+      .hint
+        %small Hint: Use short paragraphs. The first paragraph will be an introduction. It will include a "more &raquo;" link leading to the full description.
+ 
+    %fieldset
+      = f.label :url, "Link"
+      news.geocommons.com/
+      = f.text_field :url, :style => "width: 100px"
+      .hint
+        %small Enter a short phrase with no spaces. Example: "first100days"
+ 
+    %fieldset
+      = f.check_box :listed
+      = f.label :listed, "List this atlas on the homepage?", :class => 'inline'
+    %label.big
+      Lists of Maps
+    
+
+    - for @map_list in @atlas.map_lists do
+      - fields_for :map_list do |ff|
+        = render :partial => "atlases/map_list", :object => @map_list, :locals => {:f => ff, :index => @map_list.id}
+    - (1..how_many_new_map_list_fields?(@atlas)).each do |index|
+      - fields_for :new_map_lists do |ff|
+        = render :partial => "atlases/map_list", :locals => {:f => ff, :index => index}
+
+  %fieldset.clear
+    = f.submit @atlas.new_record? ? "Make My Atlas" : "Update This Atlas"
+    - if @atlas.new_record?
+      .hint
+        %small Don't worry, you can change your atlas or start over anytime.
+  
