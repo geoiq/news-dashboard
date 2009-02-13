@@ -1,5 +1,0 @@
-%h2 Editing atlas
-= render :partial => "form", :locals => {:atlas => @atlas}
-%ul
-  %li= link_to 'Show', @atlas
-  %li= link_to 'Back', atlases_path

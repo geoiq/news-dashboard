@@ -1,34 +1,0 @@
-8
-
-dir
-3020
-svn+ssh://mc@babylon/mnt/data/svn/gardens/news/vendor/plugins/mocha/vendor/meta_project-0.4.15/lib
-svn+ssh://mc@babylon/mnt/data/svn/gardens
-
-
-
-2009-02-02T16:24:19.300657Z
-3020
-mc
-
-
-svn:special svn:externals svn:needs-lock
-
-rake
-dir
-
-meta_project
-dir
-
-meta_project.rb
-file
-
-
-
-
-2009-01-29T20:05:24.000000Z
-949e9cefdb145a829eeb2cc51111f1af
-2009-02-02T16:24:19.300657Z
-3020
-mc
-

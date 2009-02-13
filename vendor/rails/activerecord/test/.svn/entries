@@ -1,73 +1,0 @@
-8
-
-dir
-2848
-svn+ssh://mc@babylon/mnt/data/svn/gardens/news/vendor/rails/activerecord/test
-svn+ssh://mc@babylon/mnt/data/svn/gardens
-
-
-
-2009-01-11T21:13:04.484870Z
-2657
-ajturner
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-a95b0784-15e6-4a7b-bff4-9e50d6a318ad
-
-schema
-dir
-
-assets
-dir
-
-connections
-dir
-
-models
-dir
-
-debug.log
-file
-
-
-
-
-2009-01-26T16:36:49.000000Z
-db732baca13098bf21022b5e6c1f792f
-2009-01-11T21:13:04.484870Z
-2657
-ajturner
-
-config.rb
-file
-
-
-
-
-2009-01-26T16:36:49.000000Z
-2cec417ec9966c979e5314731c20060f
-2009-01-11T21:13:04.484870Z
-2657
-ajturner
-
-fixtures
-dir
-
-migrations
-dir
-
-cases
-dir
-

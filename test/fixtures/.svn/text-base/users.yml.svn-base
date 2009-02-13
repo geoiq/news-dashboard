@@ -1,8 +1,0 @@
-sam_adams:
-  id: 1
-  login: sam_adams
-  email: aaron@email.com
-  crypted_password: "31b51e224fe8dfd0b51196488b39ddc6b245c1cf"
-  salt: "5a151d4e11651aed9c34cc7b706bf753144ca8a8"
-  created_at: <%= 5.days.ago.to_s :db %>
-  name: Samual Adams

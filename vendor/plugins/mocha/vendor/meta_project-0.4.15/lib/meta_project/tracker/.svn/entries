@@ -1,97 +1,0 @@
-8
-
-dir
-3020
-svn+ssh://mc@babylon/mnt/data/svn/gardens/news/vendor/plugins/mocha/vendor/meta_project-0.4.15/lib/meta_project/tracker
-svn+ssh://mc@babylon/mnt/data/svn/gardens
-
-
-
-2009-02-02T16:24:19.300657Z
-3020
-mc
-
-
-svn:special svn:externals svn:needs-lock
-
-jira
-dir
-
-jira.rb
-file
-
-
-
-
-2009-01-29T20:05:24.000000Z
-487072510a8d1e695df079376042cc75
-2009-02-02T16:24:19.300657Z
-3020
-mc
-
-trac
-dir
-
-issue.rb
-file
-
-
-
-
-2009-01-29T20:05:24.000000Z
-d6968ae1c6d2dc35b26a2cbf3a3cd26a
-2009-02-02T16:24:19.300657Z
-3020
-mc
-
-xforge
-dir
-
-trac.rb
-file
-
-
-
-
-2009-01-29T20:05:24.000000Z
-5c2954c2b2da522ca92716911cb41350
-2009-02-02T16:24:19.300657Z
-3020
-mc
-
-base.rb
-file
-
-
-
-
-2009-01-29T20:05:24.000000Z
-0efa3a425b41030014a6ad8a02f43b5c
-2009-02-02T16:24:19.300657Z
-3020
-mc
-
-xforge.rb
-file
-
-
-
-
-2009-01-29T20:05:24.000000Z
-60e76900f7b27eb94f1dc6cbdf62f297
-2009-02-02T16:24:19.300657Z
-3020
-mc
-
-digit_issues.rb
-file
-
-
-
-
-2009-01-29T20:05:24.000000Z
-d130063429af83f453140d0577b60a86
-2009-02-02T16:24:19.300657Z
-3020
-mc
-

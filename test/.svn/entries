@@ -1,52 +1,0 @@
-8
-
-dir
-2848
-svn+ssh://mc@babylon/mnt/data/svn/gardens/news/test
-svn+ssh://mc@babylon/mnt/data/svn/gardens
-
-
-
-2009-01-08T23:11:57.988603Z
-2640
-mc
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-a95b0784-15e6-4a7b-bff4-9e50d6a318ad
-
-unit
-dir
-
-test_helper.rb
-file
-3020
-
-
-
-2009-01-29T20:00:09.000000Z
-3aebbb1ec76cd8a6f0d15cdc30255883
-2009-02-02T16:24:19.300657Z
-3020
-mc
-
-functional
-dir
-
-integration
-dir
-
-fixtures
-dir
-

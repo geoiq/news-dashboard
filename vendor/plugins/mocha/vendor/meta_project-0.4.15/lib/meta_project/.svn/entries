@@ -1,109 +1,0 @@
-8
-
-dir
-3020
-svn+ssh://mc@babylon/mnt/data/svn/gardens/news/vendor/plugins/mocha/vendor/meta_project-0.4.15/lib/meta_project
-svn+ssh://mc@babylon/mnt/data/svn/gardens
-
-
-
-2009-02-02T16:24:19.300657Z
-3020
-mc
-
-
-svn:special svn:externals svn:needs-lock
-
-http
-dir
-
-patois
-dir
-
-scm_web
-dir
-
-release
-dir
-
-patois.rb
-file
-
-
-
-
-2009-01-29T20:05:24.000000Z
-fe39fd17e9d06155967c947e89a6b94e
-2009-02-02T16:24:19.300657Z
-3020
-mc
-
-scm_web.rb
-file
-
-
-
-
-2009-01-29T20:05:24.000000Z
-0986e4f001c0eba383258eb2f29e6a02
-2009-02-02T16:24:19.300657Z
-3020
-mc
-
-version_parser.rb
-file
-
-
-
-
-2009-01-29T20:05:24.000000Z
-fa970df9bcd8690ca13546c14a9a0c79
-2009-02-02T16:24:19.300657Z
-3020
-mc
-
-project
-dir
-
-core_ext
-dir
-
-project.rb
-file
-
-
-
-
-2009-01-29T20:05:24.000000Z
-4b96b3ca4a765cf99c55b77dfaad884e
-2009-02-02T16:24:19.300657Z
-3020
-mc
-
-tracker
-dir
-
-project_analyzer.rb
-file
-
-
-
-
-2009-01-29T20:05:24.000000Z
-3a161b0160d7b9d135ec041885620d8e
-2009-02-02T16:24:19.300657Z
-3020
-mc
-
-tracker.rb
-file
-
-
-
-
-2009-01-29T20:05:24.000000Z
-d550b7c980194cce9bb47baeee0cc123
-2009-02-02T16:24:19.300657Z
-3020
-mc
-
