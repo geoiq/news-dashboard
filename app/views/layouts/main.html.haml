@@ -18,18 +18,7 @@
       = "Maker.core_host =   '#{PLATFORM_CONFIG["url"]}'"
     = yield :header
   %body
-    #header
-      .header
-        #logo
-          =link_to "Navigating Washington", '/'
-      %ul.nav
-        %li= "#{link_to "About", "/about"}&nbsp;&nbsp;|&nbsp;&nbsp;"
-        %li= "#{link_to "Feedback", "mailto:support@fortiusone.com"}&nbsp;&nbsp;|&nbsp;&nbsp;"
-        %li= "#{link_to "Share", "http://addthis.com/bookmark.php"}&nbsp;&nbsp;|&nbsp;&nbsp;"
-        - if logged_in?
-          %li= "#{link_to "Your Atlases", user_atlases_path(current_user)}"
-        - else
-          %li= "#{link_to "Login", login_path}"
+    = render :partial => 'layouts/header'
     #content
       .content
         #page{:class => "c_#{@controller.controller_name} a_#{@controller.action_name}"}
@@ -49,23 +38,9 @@
           .side
             = yield :side
 
-    - unless @client_footer
-      #footer
-        .footer.fl_r
-          .l= "Website Design &copy; #{Time.now.year} FortiusOne"
-          .r
-            /[I'll put something here someday]
+    = render :partial => 'layouts/footer'
     = yield :end
     
     %script{:type => "text/javascript", :charset => "utf-8"}
       = yield :end_js
-      //<![CDATA[
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-      </script>
-      <script type="text/javascript">
-      try {
-      var pageTracker = _gat._getTracker("UA-1836539-9");
-      pageTracker._trackPageview();
-      } catch(err) {}
-      //]]>
+      = render :partial => 'layouts/google_analytics'

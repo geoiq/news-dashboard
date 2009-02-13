@@ -28513,3 +28513,1795 @@ Rendering atlases/index
 Rendered atlases/_atlas (0.00340)
 Rendered atlases/_atlas (0.00077)
 Completed in 0.03883 (25 reqs/sec) | Rendering: 0.00605 (15%) | DB: 0.00211 (5%) | 200 OK [http://localhost/users/1/atlases]
+
+
+Processing AtlasesController#show (for 127.0.0.1 at 2009-02-13 08:41:17) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZWEyNzcxNGIyODUzZjVhOTc0ZjYwYzZmZTA1MTg5
+NDY6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs
+YXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DHVzZXJfaWRpBg==--420fe65bac9b088ff9023fa6517bd692bee44a23
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"atlases"}
+  [4;36;1mAtlas Load (0.000517)[0m   [0;1mSELECT * FROM "atlases" WHERE ("atlases"."id" = 11) [0m
+Rendering template within layouts/main
+Rendering atlases/show
+  [4;35;1mMapList Load (0.000757)[0m   [0mSELECT * FROM "map_lists" WHERE ("map_lists".atlas_id = 11) [0m
+  [4;36;1mUser Load (0.000387)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.12697 (7 reqs/sec) | Rendering: 0.10877 (85%) | DB: 0.00166 (1%) | 200 OK [http://localhost/atlases/11]
+
+
+Processing AtlasesController#show (for 127.0.0.1 at 2009-02-13 08:42:27) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"atlases"}
+  [4;35;1mAtlas Load (0.000335)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."id" = 11) [0m
+Rendering template within layouts/main
+Rendering atlases/show
+  [4;36;1mMapList Load (0.000438)[0m   [0;1mSELECT * FROM "map_lists" WHERE ("map_lists".atlas_id = 11) [0m
+  [4;35;1mUser Load (0.000439)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.14706 (6 reqs/sec) | Rendering: 0.13566 (92%) | DB: 0.00121 (0%) | 200 OK [http://localhost/atlases/11]
+
+
+Processing AtlasesController#show (for 127.0.0.1 at 2009-02-13 08:42:47) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"atlases"}
+  [4;36;1mAtlas Load (0.000336)[0m   [0;1mSELECT * FROM "atlases" WHERE ("atlases"."id" = 11) [0m
+Rendering template within layouts/main
+Rendering atlases/show
+  [4;35;1mMapList Load (0.000490)[0m   [0mSELECT * FROM "map_lists" WHERE ("map_lists".atlas_id = 11) [0m
+  [4;36;1mUser Load (0.000428)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.03497 (28 reqs/sec) | Rendering: 0.02279 (65%) | DB: 0.00125 (3%) | 200 OK [http://localhost/atlases/11]
+
+
+Processing AtlasesController#show (for 127.0.0.1 at 2009-02-13 08:49:15) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"atlases"}
+  [4;35;1mAtlas Load (0.000365)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."id" = 11) [0m
+Rendering template within layouts/main
+Rendering atlases/show
+  [4;36;1mMapList Load (0.000781)[0m   [0;1mSELECT * FROM "map_lists" WHERE ("map_lists".atlas_id = 11) [0m
+  [4;35;1mUser Load (0.000476)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.04163 (24 reqs/sec) | Rendering: 0.02791 (67%) | DB: 0.00162 (3%) | 200 OK [http://localhost/atlases/11]
+
+
+Processing AtlasesController#show (for 127.0.0.1 at 2009-02-13 08:52:44) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"atlases"}
+  [4;36;1mAtlas Load (0.000315)[0m   [0;1mSELECT * FROM "atlases" WHERE ("atlases"."id" = 11) [0m
+Rendering template within layouts/main
+Rendering atlases/show
+  [4;35;1mMapList Load (0.000429)[0m   [0mSELECT * FROM "map_lists" WHERE ("map_lists".atlas_id = 11) [0m
+  [4;36;1mUser Load (0.000455)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.03387 (29 reqs/sec) | Rendering: 0.02328 (68%) | DB: 0.00120 (3%) | 200 OK [http://localhost/atlases/11]
+
+
+Processing AtlasesController#show (for 127.0.0.1 at 2009-02-13 08:54:08) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"atlases"}
+  [4;35;1mAtlas Load (0.000312)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."id" = 11) [0m
+Rendering template within layouts/main
+Rendering atlases/show
+  [4;36;1mMapList Load (0.000411)[0m   [0;1mSELECT * FROM "map_lists" WHERE ("map_lists".atlas_id = 11) [0m
+  [4;35;1mUser Load (0.000439)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.03410 (29 reqs/sec) | Rendering: 0.02363 (69%) | DB: 0.00116 (3%) | 200 OK [http://localhost/atlases/11]
+
+
+Processing AtlasesController#show (for 127.0.0.1 at 2009-02-13 08:55:48) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"atlases"}
+  [4;36;1mAtlas Load (0.000408)[0m   [0;1mSELECT * FROM "atlases" WHERE ("atlases"."id" = 11) [0m
+Rendering template within layouts/main
+Rendering atlases/show
+  [4;35;1mMapList Load (0.000431)[0m   [0mSELECT * FROM "map_lists" WHERE ("map_lists".atlas_id = 11) [0m
+  [4;36;1mUser Load (0.000385)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.03448 (28 reqs/sec) | Rendering: 0.02367 (68%) | DB: 0.00122 (3%) | 200 OK [http://localhost/atlases/11]
+
+
+Processing AtlasesController#show (for 127.0.0.1 at 2009-02-13 08:56:29) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"atlases"}
+  [4;35;1mAtlas Load (0.000325)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."id" = 11) [0m
+Rendering template within layouts/main
+Rendering atlases/show
+  [4;36;1mMapList Load (0.000435)[0m   [0;1mSELECT * FROM "map_lists" WHERE ("map_lists".atlas_id = 11) [0m
+  [4;35;1mUser Load (0.000404)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.04006 (24 reqs/sec) | Rendering: 0.02907 (72%) | DB: 0.00116 (2%) | 200 OK [http://localhost/atlases/11]
+
+
+Processing AtlasesController#show (for 127.0.0.1 at 2009-02-13 08:56:51) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"atlases"}
+  [4;36;1mAtlas Load (0.000333)[0m   [0;1mSELECT * FROM "atlases" WHERE ("atlases"."id" = 11) [0m
+Rendering template within layouts/main
+Rendering atlases/show
+  [4;35;1mMapList Load (0.000494)[0m   [0mSELECT * FROM "map_lists" WHERE ("map_lists".atlas_id = 11) [0m
+  [4;36;1mUser Load (0.000458)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.13024 (7 reqs/sec) | Rendering: 0.12059 (92%) | DB: 0.00128 (0%) | 200 OK [http://localhost/atlases/11]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 09:01:38) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mBlurb Load (0.000176)[0m   [0mSELECT * FROM "blurbs" WHERE ("blurbs"."key" = 'Welcome Intro') LIMIT 1[0m
+  [4;36;1mBlurb Load (0.000151)[0m   [0;1mSELECT * FROM "blurbs" WHERE ("blurbs"."key" = 'Welcome') LIMIT 1[0m
+  [4;35;1mBlurb Load (0.000352)[0m   [0mSELECT * FROM "blurbs" WHERE ("blurbs"."key" = 'Explore Intro') LIMIT 1[0m
+  [4;36;1mBlurb Load (0.000177)[0m   [0;1mSELECT * FROM "blurbs" WHERE ("blurbs"."key" = 'Explore') LIMIT 1[0m
+  [4;35;1mUser Load (0.000507)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.03725 (26 reqs/sec) | Rendering: 0.03358 (90%) | DB: 0.00136 (3%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 10:34:56) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;36;1mBlurb Load (0.000614)[0m   [0;1mSELECT * FROM "blurbs" WHERE ("blurbs"."key" = 'Welcome Intro') LIMIT 1[0m
+  [4;35;1mBlurb Load (0.000147)[0m   [0mSELECT * FROM "blurbs" WHERE ("blurbs"."key" = 'Welcome') LIMIT 1[0m
+  [4;36;1mBlurb Load (0.002039)[0m   [0;1mSELECT * FROM "blurbs" WHERE ("blurbs"."key" = 'Explore Intro') LIMIT 1[0m
+  [4;35;1mBlurb Load (0.000174)[0m   [0mSELECT * FROM "blurbs" WHERE ("blurbs"."key" = 'Explore') LIMIT 1[0m
+  [4;36;1mUser Load (0.000388)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.05039 (19 reqs/sec) | Rendering: 0.04474 (88%) | DB: 0.00336 (6%) | 200 OK [http://localhost/]
+
+
+Processing AtlasesController#index (for 127.0.0.1 at 2009-02-13 10:34:58) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"atlases", "user_id"=>"1"}
+  [4;35;1mUser Load (0.000384)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000360)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mAtlas Load (0.001074)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases".user_id = 1) ORDER BY created_at desc LIMIT 20 OFFSET 0[0m
+Rendering template within layouts/admin
+Rendering atlases/index
+Rendered atlases/_atlas (0.00618)
+Rendered atlases/_atlas (0.00122)
+Completed in 0.06299 (15 reqs/sec) | Rendering: 0.04249 (67%) | DB: 0.00182 (2%) | 200 OK [http://localhost/users/1/atlases]
+
+
+Processing AtlasesController#show (for 127.0.0.1 at 2009-02-13 10:35:02) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"atlases"}
+  [4;36;1mAtlas Load (0.000400)[0m   [0;1mSELECT * FROM "atlases" WHERE ("atlases"."id" = 10) [0m
+Rendering template within layouts/main
+Rendering atlases/show
+  [4;35;1mMapList Load (0.000706)[0m   [0mSELECT * FROM "map_lists" WHERE ("map_lists".atlas_id = 10) [0m
+  [4;36;1mUser Load (0.001029)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.04414 (22 reqs/sec) | Rendering: 0.03041 (68%) | DB: 0.00214 (4%) | 200 OK [http://localhost/atlases/10]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:10:58) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mUser Load (0.004839)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.10266 (9 reqs/sec) | Rendering: 0.09508 (92%) | DB: 0.00484 (4%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:13:27) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;36;1mUser Load (0.001146)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.02925 (34 reqs/sec) | Rendering: 0.02566 (87%) | DB: 0.00115 (3%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:13:47) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mUser Load (0.000526)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.02628 (38 reqs/sec) | Rendering: 0.02312 (87%) | DB: 0.00053 (2%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:28:23) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;36;1mAtlas Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: atlases.status: SELECT * FROM "atlases" WHERE (("atlases"."order" = 'created_at desc') AND ("atlases"."status" = 'published')) [0m
+
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: atlases.status: SELECT * FROM "atlases"     WHERE (("atlases"."order" = 'created_at desc') AND ("atlases"."status" = 'published')) ) on line #10 of main/index.html.haml:
+7:       %label.h3 About GeoCommons
+8:       %p GeoCommons delivers visual analytics through maps; enabling non-technical professionals to view multiple datasets, draw conclusions, make decisions and solve problems without traditional GIS overhead. Learn more about <a href="http://geocommons.com/">GeoCommons</a>
+9:     .r
+10:       - for atlas in Atlas.published.latest_first do
+11:         - content_tag_for :div, atlas do
+12:           %h2= atlas.title
+13:           %p= atlas.short_description
+
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract_adapter.rb:147:in `log'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:372:in `catch_schema_changes'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:275:in `select'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:80:in `cache_sql'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    vendor/rails/activerecord/lib/active_record/base.rb:586:in `find_by_sql'
+    vendor/rails/activerecord/lib/active_record/base.rb:1345:in `find_every'
+    vendor/rails/activerecord/lib/active_record/base.rb:540:in `find'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `send'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/base.rb:1857:in `with_scope'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:157:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `send'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/base.rb:1857:in `with_scope'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:157:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:164:in `load_found'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:149:in `proxy_found'
+    (__DELEGATION__):2:in `each'
+    app/views/main/index.html.haml:10:in `_run_plugin_47app47views47main47index46html46haml'
+    vendor/rails/actionpack/lib/action_view/base.rb:342:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:342:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:248:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1112:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:845:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1161:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1167:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:579:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `sass_old_process'
+    /opt/local/lib/ruby/gems/1.8/gems/haml-2.0.7/lib/sass/plugin/rails.rb:19:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Users/matt/Sites/fortiusone/news/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:30:29) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mAtlas Load (0.000000)[0m   [0mSQLite3::SQLException: no such column: atlases.status: SELECT * FROM "atlases" WHERE (("atlases"."order" = 'created_at desc') AND ("atlases"."status" = 'published')) [0m
+
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: atlases.status: SELECT * FROM "atlases"     WHERE (("atlases"."order" = 'created_at desc') AND ("atlases"."status" = 'published')) ) on line #10 of main/index.html.haml:
+7:       %label.h3 About GeoCommons
+8:       %p GeoCommons delivers visual analytics through maps; enabling non-technical professionals to view multiple datasets, draw conclusions, make decisions and solve problems without traditional GIS overhead. Learn more about <a href="http://geocommons.com/">GeoCommons</a>
+9:     .r
+10:       - for atlas in Atlas.published.latest_first do
+11:         - content_tag_for :div, atlas do
+12:           %h2= atlas.title
+13:           %p= atlas.short_description
+
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract_adapter.rb:147:in `log'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:372:in `catch_schema_changes'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:275:in `select'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:80:in `cache_sql'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    vendor/rails/activerecord/lib/active_record/base.rb:586:in `find_by_sql'
+    vendor/rails/activerecord/lib/active_record/base.rb:1345:in `find_every'
+    vendor/rails/activerecord/lib/active_record/base.rb:540:in `find'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `send'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/base.rb:1857:in `with_scope'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:157:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `send'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/base.rb:1857:in `with_scope'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:157:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:164:in `load_found'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:149:in `proxy_found'
+    (__DELEGATION__):2:in `each'
+    app/views/main/index.html.haml:10:in `_run_plugin_47app47views47main47index46html46haml'
+    vendor/rails/actionpack/lib/action_view/base.rb:342:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:342:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:248:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1112:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:845:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1161:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1167:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:579:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `sass_old_process'
+    /opt/local/lib/ruby/gems/1.8/gems/haml-2.0.7/lib/sass/plugin/rails.rb:19:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Users/matt/Sites/fortiusone/news/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:30:32) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;36;1mAtlas Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: atlases.status: SELECT * FROM "atlases" WHERE (("atlases"."order" = 'created_at desc') AND ("atlases"."status" = 'published')) [0m
+
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: atlases.status: SELECT * FROM "atlases"     WHERE (("atlases"."order" = 'created_at desc') AND ("atlases"."status" = 'published')) ) on line #10 of main/index.html.haml:
+7:       %label.h3 About GeoCommons
+8:       %p GeoCommons delivers visual analytics through maps; enabling non-technical professionals to view multiple datasets, draw conclusions, make decisions and solve problems without traditional GIS overhead. Learn more about <a href="http://geocommons.com/">GeoCommons</a>
+9:     .r
+10:       - for atlas in Atlas.published.latest_first do
+11:         - content_tag_for :div, atlas do
+12:           %h2= atlas.title
+13:           %p= atlas.short_description
+
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract_adapter.rb:147:in `log'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:372:in `catch_schema_changes'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:275:in `select'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:80:in `cache_sql'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    vendor/rails/activerecord/lib/active_record/base.rb:586:in `find_by_sql'
+    vendor/rails/activerecord/lib/active_record/base.rb:1345:in `find_every'
+    vendor/rails/activerecord/lib/active_record/base.rb:540:in `find'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `send'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/base.rb:1857:in `with_scope'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:157:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `send'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/base.rb:1857:in `with_scope'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:157:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:164:in `load_found'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:149:in `proxy_found'
+    (__DELEGATION__):2:in `each'
+    app/views/main/index.html.haml:10:in `_run_plugin_47app47views47main47index46html46haml'
+    vendor/rails/actionpack/lib/action_view/base.rb:342:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:342:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:248:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1112:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:845:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1161:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1167:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:579:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `sass_old_process'
+    /opt/local/lib/ruby/gems/1.8/gems/haml-2.0.7/lib/sass/plugin/rails.rb:19:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Users/matt/Sites/fortiusone/news/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:31:06) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mAtlas Load (0.000000)[0m   [0mSQLite3::SQLException: no such column: atlases.status: SELECT * FROM "atlases" WHERE ("atlases"."status" = 'published') ORDER BY created_at desc[0m
+
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: atlases.status: SELECT * FROM "atlases"     WHERE ("atlases"."status" = 'published')  ORDER BY created_at desc) on line #10 of main/index.html.haml:
+7:       %label.h3 About GeoCommons
+8:       %p GeoCommons delivers visual analytics through maps; enabling non-technical professionals to view multiple datasets, draw conclusions, make decisions and solve problems without traditional GIS overhead. Learn more about <a href="http://geocommons.com/">GeoCommons</a>
+9:     .r
+10:       - for atlas in Atlas.published.latest_first do
+11:         - content_tag_for :div, atlas do
+12:           %h2= atlas.title
+13:           %p= atlas.short_description
+
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract_adapter.rb:147:in `log'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:372:in `catch_schema_changes'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:275:in `select'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:80:in `cache_sql'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    vendor/rails/activerecord/lib/active_record/base.rb:586:in `find_by_sql'
+    vendor/rails/activerecord/lib/active_record/base.rb:1345:in `find_every'
+    vendor/rails/activerecord/lib/active_record/base.rb:540:in `find'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `send'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/base.rb:1857:in `with_scope'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:157:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `send'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/base.rb:1857:in `with_scope'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:157:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:164:in `load_found'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:149:in `proxy_found'
+    (__DELEGATION__):2:in `each'
+    app/views/main/index.html.haml:10:in `_run_plugin_47app47views47main47index46html46haml'
+    vendor/rails/actionpack/lib/action_view/base.rb:342:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:342:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:248:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1112:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:845:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1161:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1167:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:579:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `sass_old_process'
+    /opt/local/lib/ruby/gems/1.8/gems/haml-2.0.7/lib/sass/plugin/rails.rb:19:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Users/matt/Sites/fortiusone/news/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:31:35) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;36;1mAtlas Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: atlases.publish: SELECT * FROM "atlases" WHERE ("atlases"."publish" = 't') ORDER BY created_at desc[0m
+
+
+ActionView::TemplateError (SQLite3::SQLException: no such column: atlases.publish: SELECT * FROM "atlases"     WHERE ("atlases"."publish" = 't')  ORDER BY created_at desc) on line #10 of main/index.html.haml:
+7:       %label.h3 About GeoCommons
+8:       %p GeoCommons delivers visual analytics through maps; enabling non-technical professionals to view multiple datasets, draw conclusions, make decisions and solve problems without traditional GIS overhead. Learn more about <a href="http://geocommons.com/">GeoCommons</a>
+9:     .r
+10:       - for atlas in Atlas.published.latest_first do
+11:         - content_tag_for :div, atlas do
+12:           %h2= atlas.title
+13:           %p= atlas.short_description
+
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract_adapter.rb:147:in `log'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:372:in `catch_schema_changes'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/sqlite_adapter.rb:275:in `select'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:80:in `cache_sql'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    vendor/rails/activerecord/lib/active_record/base.rb:586:in `find_by_sql'
+    vendor/rails/activerecord/lib/active_record/base.rb:1345:in `find_every'
+    vendor/rails/activerecord/lib/active_record/base.rb:540:in `find'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `send'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/base.rb:1857:in `with_scope'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:157:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `send'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:158:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/base.rb:1857:in `with_scope'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    (__DELEGATION__):2:in `__send__'
+    (__DELEGATION__):2:in `with_scope'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:157:in `method_missing'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:164:in `load_found'
+    vendor/rails/activerecord/lib/active_record/named_scope.rb:149:in `proxy_found'
+    (__DELEGATION__):2:in `each'
+    app/views/main/index.html.haml:10:in `_run_plugin_47app47views47main47index46html46haml'
+    vendor/rails/actionpack/lib/action_view/base.rb:342:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:342:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:248:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1112:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:845:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1161:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1167:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:579:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `sass_old_process'
+    /opt/local/lib/ruby/gems/1.8/gems/haml-2.0.7/lib/sass/plugin/rails.rb:19:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Users/matt/Sites/fortiusone/news/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:34:25) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mAtlas Load (0.025477)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000435)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.06390 (15 reqs/sec) | Rendering: 0.03533 (55%) | DB: 0.02591 (40%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:34:42) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mAtlas Load (0.025435)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000428)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.06106 (16 reqs/sec) | Rendering: 0.03288 (53%) | DB: 0.02586 (42%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:35:18) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mAtlas Load (0.002351)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.003078)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.10752 (9 reqs/sec) | Rendering: 0.09889 (91%) | DB: 0.00543 (5%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:35:49) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mAtlas Load (0.001535)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000470)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.03817 (26 reqs/sec) | Rendering: 0.03371 (88%) | DB: 0.00200 (5%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:36:13) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mAtlas Load (0.001822)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000408)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.14084 (7 reqs/sec) | Rendering: 0.13619 (96%) | DB: 0.00223 (1%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:36:47) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mAtlas Load (0.001641)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000486)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.03951 (25 reqs/sec) | Rendering: 0.03492 (88%) | DB: 0.00213 (5%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:38:19) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mAtlas Load (0.001952)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000597)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.03999 (25 reqs/sec) | Rendering: 0.03471 (86%) | DB: 0.00255 (6%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:42:53) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mAtlas Load (0.001380)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000481)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.03056 (32 reqs/sec) | Rendering: 0.02620 (85%) | DB: 0.00186 (6%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:46:22) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mAtlas Load (0.026085)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000485)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.06115 (16 reqs/sec) | Rendering: 0.03058 (50%) | DB: 0.02657 (43%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:46:45) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mAtlas Load (0.001396)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000485)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 0.03276 (30 reqs/sec) | Rendering: 0.02824 (86%) | DB: 0.00188 (5%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:54:18) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mAtlas Load (0.021152)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000703)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+
+
+ActionView::TemplateError (Missing layout layouts/_google_analytics.html.erb in view path /Users/matt/Sites/fortiusone/news/app/views) on line #62 of layouts/main.html.haml:
+59:     
+60:     %script{:type => "text/javascript", :charset => "utf-8"}
+61:       = yield :end_js
+62:       = render :partial => 'layouts/google_analytics'
+
+    vendor/rails/actionpack/lib/action_view/template.rb:85:in `raise_missing_template_exception'
+    vendor/rails/actionpack/lib/action_view/template.rb:78:in `set_extension_and_file_name'
+    vendor/rails/actionpack/lib/action_view/template.rb:15:in `initialize'
+    vendor/rails/actionpack/lib/action_view/partial_template.rb:8:in `initialize'
+    vendor/rails/actionpack/lib/action_view/partials.rb:110:in `new'
+    vendor/rails/actionpack/lib/action_view/partials.rb:110:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:277:in `render_without_haml'
+    /opt/local/lib/ruby/gems/1.8/gems/haml-2.0.7/lib/haml/helpers/action_view_mods.rb:12:in `render'
+    /opt/local/lib/ruby/gems/1.8/gems/haml-2.0.7/lib/haml/helpers.rb:57:in `non_haml'
+    /opt/local/lib/ruby/gems/1.8/gems/haml-2.0.7/lib/haml/helpers/action_view_mods.rb:12:in `render'
+    app/views/layouts/main.html.haml:62:in `_run_plugin_47app47views47layouts47main46html46haml'
+    vendor/rails/actionpack/lib/action_view/base.rb:342:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:342:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:248:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:257:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1161:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1167:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:579:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `sass_old_process'
+    /opt/local/lib/ruby/gems/1.8/gems/haml-2.0.7/lib/sass/plugin/rails.rb:19:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Users/matt/Sites/fortiusone/news/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:54:30) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/main
+Rendering main/index
+  [4;35;1mAtlas Load (0.001356)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000589)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_google_analytics (0.00005)
+Completed in 0.03000 (33 reqs/sec) | Rendering: 0.02555 (85%) | DB: 0.00195 (6%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:55:23) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+
+
+NoMethodError (undefined method `home' for #<MainController:0x38377fc>):
+    /vendor/rails/actionpack/lib/action_controller/layout.rb:227:in `send!'
+    /vendor/rails/actionpack/lib/action_controller/layout.rb:227:in `active_layout'
+    /vendor/rails/actionpack/lib/action_controller/layout.rb:287:in `pick_layout'
+    /vendor/rails/actionpack/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1161:in `default_render'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1167:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:579:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `sass_old_process'
+    /opt/local/lib/ruby/gems/1.8/gems/haml-2.0.7/lib/sass/plugin/rails.rb:19:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Users/matt/Sites/fortiusone/news/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:55:31) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/home
+Rendering main/index
+  [4;35;1mAtlas Load (0.001856)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000532)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.03928 (25 reqs/sec) | Rendering: 0.03414 (86%) | DB: 0.00239 (6%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:55:57) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.003760)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000574)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_google_analytics (0.00004)
+Completed in 0.18245 (5 reqs/sec) | Rendering: 0.17463 (95%) | DB: 0.00433 (2%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 13:59:03) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.014466)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.026023)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.04813)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.09146 (10 reqs/sec) | Rendering: 0.04699 (51%) | DB: 0.04049 (44%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:01:13) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.002426)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000456)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.01348)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.03474 (28 reqs/sec) | Rendering: 0.02892 (83%) | DB: 0.00288 (8%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:01:30) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.001964)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000846)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.03430)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.07218 (13 reqs/sec) | Rendering: 0.06430 (89%) | DB: 0.00281 (3%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:03:19) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.002002)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000445)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.01627)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00001)
+Completed in 0.04688 (21 reqs/sec) | Rendering: 0.03375 (71%) | DB: 0.00245 (5%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:03:30) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.004081)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000421)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.07245)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.30739 (3 reqs/sec) | Rendering: 0.30007 (97%) | DB: 0.00450 (1%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:03:38) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.001380)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000565)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.01963)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00004)
+Completed in 0.04164 (24 reqs/sec) | Rendering: 0.03607 (86%) | DB: 0.00195 (4%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:03:39) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.001257)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000415)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.11800)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.13390 (7 reqs/sec) | Rendering: 0.12982 (96%) | DB: 0.00167 (1%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:03:57) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.001508)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.001781)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.01677)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.03339 (29 reqs/sec) | Rendering: 0.02782 (83%) | DB: 0.00329 (9%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:06:25) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.001714)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000523)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.02100)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.04459 (22 reqs/sec) | Rendering: 0.03976 (89%) | DB: 0.00224 (5%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:11:47) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.001400)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000557)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.01868)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.03963 (25 reqs/sec) | Rendering: 0.03529 (89%) | DB: 0.00196 (4%) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-13 14:23:55) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/i" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Users/matt/Sites/fortiusone/news/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-13 14:23:57) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/b." with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Users/matt/Sites/fortiusone/news/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-13 14:23:59) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/b.launch.gif" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Users/matt/Sites/fortiusone/news/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:25:18) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.004405)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000463)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.02018)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.05178 (19 reqs/sec) | Rendering: 0.04443 (85%) | DB: 0.00487 (9%) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-13 14:25:31) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/b.launch.gf" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Users/matt/Sites/fortiusone/news/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-13 14:25:35) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/b.launch.gif" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Users/matt/Sites/fortiusone/news/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-02-13 14:26:25) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/images/b.ladunch.gif" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:503:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:510:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Users/matt/Sites/fortiusone/news/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:27:35) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.021777)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000470)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.01678)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.05633 (17 reqs/sec) | Rendering: 0.03133 (55%) | DB: 0.02225 (39%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:29:08) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.001693)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000570)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.02703)
+Rendered layouts/_footer (0.00026)
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.21072 (4 reqs/sec) | Rendering: 0.20580 (97%) | DB: 0.00226 (1%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:32:20) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.001427)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000882)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.02155)
+Rendered layouts/_footer (0.00006)
+Rendered layouts/_google_analytics (0.00004)
+Completed in 0.04507 (22 reqs/sec) | Rendering: 0.03986 (88%) | DB: 0.00231 (5%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:33:18) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.014698)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000505)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.04327)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.37880 (2 reqs/sec) | Rendering: 0.36087 (95%) | DB: 0.01520 (4%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:34:15) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.002034)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.001270)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.01790)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.06503 (15 reqs/sec) | Rendering: 0.05806 (89%) | DB: 0.00330 (5%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:34:45) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.001378)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000439)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.11831)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.13750 (7 reqs/sec) | Rendering: 0.13329 (96%) | DB: 0.00182 (1%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:39:03) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.001794)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000442)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.02163)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.03939 (25 reqs/sec) | Rendering: 0.03475 (88%) | DB: 0.00224 (5%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:39:55) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.001405)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000483)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.14070)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00002)
+Completed in 0.16243 (6 reqs/sec) | Rendering: 0.15648 (96%) | DB: 0.00189 (1%) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2009-02-13 14:40:29) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Rendering template within layouts/centered_content
+Rendering main/index
+  [4;35;1mAtlas Load (0.001529)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."listed" = 't') ORDER BY created_at desc[0m
+  [4;36;1mUser Load (0.000424)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.01366)
+Rendered layouts/_footer (0.00005)
+Rendered layouts/_google_analytics (0.00001)
+Completed in 0.03265 (30 reqs/sec) | Rendering: 0.02819 (86%) | DB: 0.00195 (5%) | 200 OK [http://localhost/]
+
+
+Processing AtlasesController#show (for 127.0.0.1 at 2009-02-13 14:40:43) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMdXNlcl9pZGkGOgxjc3JmX2lkIiVlYTI3NzE0
+YjI4NTNmNWE5NzRmNjBjNmZlMDUxODk0NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7d9e92b2df354e3723062a32a43638c1c5ce6965
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"atlases"}
+  [4;35;1mAtlas Load (0.000583)[0m   [0mSELECT * FROM "atlases" WHERE ("atlases"."id" = 10) [0m
+Rendering template within layouts/main
+Rendering atlases/show
+  [4;36;1mMapList Load (0.000629)[0m   [0;1mSELECT * FROM "map_lists" WHERE ("map_lists".atlas_id = 10) [0m
+  [4;35;1mUser Load (0.016657)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.03094)
+Rendered layouts/_footer (0.00006)
+Rendered layouts/_google_analytics (0.00004)
+Completed in 0.19916 (5 reqs/sec) | Rendering: 0.17070 (85%) | DB: 0.01787 (8%) | 200 OK [http://localhost/atlases/10]

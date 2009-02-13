@@ -10,4 +10,12 @@ class Atlas < ActiveRecord::Base
   
   validates_format_of :url, :with => /^[\w\d]+$/, :on => :create, :message => "is invalid"
   
+  named_scope :listed    , :conditions => { :listed => true 	 } 
+  named_scope :unlisted  , :conditions => { :listed => false  }
+  named_scope :latest_first , :order =>  'created_at desc'
+  
+  def short_description
+    description.split("\r\n").first
+  end
+  
 end

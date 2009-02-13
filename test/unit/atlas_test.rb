@@ -35,10 +35,20 @@ class AtlasTest < ActiveSupport::TestCase
     
   end
 
+  context "An atlas" do
+    setup do
+      make_an_atlas
+    end
+    
+    should "have short description derrived from the full description" do
+      assert_equal("First paragraph", @atlas.short_description)
+    end
+  end
+
   def make_an_atlas
     @atlas = Atlas.create!( :user => @user, 
                                 :title => "Obama's First 100 Days", 
-                                :description => "Description",
+                                :description => "First paragraph\r\nSecond paragraph\r\nThird paragraph.",
                                 :url => "obama100" )
   end
   

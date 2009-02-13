@@ -1,0 +1,34 @@
+!!!
+- #render :partial => '/layouts/application_behaviours'
+%html{:xmlns=>"http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{"http-equiv" => "Content-Type", "content" => "text/html; charset=utf-8"}/
+    %title
+      =@page_title + ' - ' if @page_title
+      =@product_name
+    = stylesheet_link_tag "main", :media => "all"
+    = stylesheet_link_tag "f1_outlet", :media => "all"
+    /[if lt IE 7.]
+      = #stylesheet_link_tag "application_ie6", :media => "all" 
+  
+    =javascript_include_tag 'prototype', 'effects', 'application', 'f1_maker_map', 'f1_outlet'
+    %script{:type=>"text/javascript"}
+      = "Maker.maker_host =  '#{PLATFORM_CONFIG["maker"]}'"
+      = "Maker.finder_host = '#{PLATFORM_CONFIG["finder"]}'"
+      = "Maker.core_host =   '#{PLATFORM_CONFIG["url"]}'"
+    = yield :header
+  %body
+    = render :partial => 'layouts/header'
+    
+    #centered_content
+      .centered_content
+        #page{:class => "c_#{@controller.controller_name} a_#{@controller.action_name}"}
+          = yield
+        
+    = render :partial => 'layouts/footer'
+    
+    = yield :end
+    
+    %script{:type => "text/javascript", :charset => "utf-8"}
+      = yield :end_js
+      = render :partial => 'layouts/google_analytics'
