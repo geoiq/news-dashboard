@@ -5,10 +5,11 @@ ssh_options[:compression] = false
 
 set :application, "news"
 
-set :repository_root, "svn+ssh://babylon/mnt/data/svn/gardens/#{application}" 
+#set :repository_root, "svn+ssh://babylon/mnt/data/svn/gardens/#{application}" 
 # set(:tag) { Capistrano::CLI.ui.ask("\n>> Tag to deploy, e.g. 'releases/1.3' (or press <enter> for trunk): ") }
 # set(:repository) { (tag == "trunk" || tag.length == 0) ? "#{repository_root}/trunk" : "#{repository_root}/#{tag}" }
-set :repository, repository_root
+set :repository, "git@babylon:#{application}.git"
+set :scm, "git"
 set :runner, nil
 
 set :deploy_to, "/fortiusone/live/apps/#{application}"
