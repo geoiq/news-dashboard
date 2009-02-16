@@ -61,6 +61,12 @@ class AtlasesControllerTest < ActionController::TestCase
       
       should "have maplists with a different title" do
         assert_equal("UPDATED", @updated_atlas.map_lists[0]["title"])
+        assert_equal("UPDATED TOO", @updated_atlas.map_lists[1]["title"])
+      end
+      
+      should "have maplists with a different tags" do
+        assert_equal("UpdatedTag", @updated_atlas.map_lists[0]["maker_tag"])
+        assert_equal("UpdatedTag2", @updated_atlas.map_lists[1]["maker_tag"])
       end
     end
     
@@ -238,12 +244,12 @@ class AtlasesControllerTest < ActionController::TestCase
         :description => "Description",
         :url => "obama100",
         :user_id => 1 },
-      :map_lists => {
-        @saved_atlas.map_lists[0].id =>{"maker_tag"=>"obama100economy", 
+      :map_list => {
+        @saved_atlas.map_lists[0].id =>{"maker_tag"=>"UpdatedTag", 
               "maker_user"=>"xxx", 
               "title" => "UPDATED",
               "description" => "Description goes here"},
-        @saved_atlas.map_lists[1].id =>{"maker_tag"=>"obama100healthcare", 
+        @saved_atlas.map_lists[1].id =>{"maker_tag"=>"UpdatedTag2", 
               "maker_user"=>"xxx", 
               "title" => "UPDATED TOO",
               "description" => "Description goes here"}}}
@@ -257,7 +263,7 @@ class AtlasesControllerTest < ActionController::TestCase
         :description => "Description",
         :url => "obama100",
         :user_id => 1 },
-      :map_lists => {
+      :map_list => {
         @saved_atlas.map_lists[0].id =>{"maker_tag"=>"obama100economy", 
               "maker_user"=>"xxx", 
               "title" => "UPDATED",

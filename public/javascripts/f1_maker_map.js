@@ -6,7 +6,7 @@ var Maker = {
   
   find_maps: function(maker_tag, maker_user, callback) {
     Maker._check_hosts()
-    var q = "tag:" + maker_tag
+    var q = "tag:" + maker_tag.split(/[, ]+/).join(" and tag:") //comma delimited tag spliting
     if(maker_user != undefined && maker_user != "") {q +=  " and user:" + maker_user}
     Maker.search(q, callback)
   },

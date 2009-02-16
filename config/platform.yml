@@ -9,7 +9,7 @@ test:
     maker: http://localhost:4002
     scratch: file:/var/rails/core/trunk/tmp/scratch
 production:
-    url: http://malacca-core
-    finder: http://localhost:4001
-    maker: http://localhost:4002
+    url: http://geocommons.dynalias.com
+    finder: http://finder.geocommons.dynalias.com
+    maker: http://maker.geocommons.dynalias.com
     scratch: file:/var/rails/core/trunk/tmp/scratch

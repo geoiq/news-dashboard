@@ -75,8 +75,8 @@ class AtlasesController < ApplicationController
   def update
     Atlas.transaction do
       @atlas.update_attributes!(params[:atlas])
-      if params[:map_lists] 
-        @atlas.map_lists.update params[:map_lists].keys, params[:map_lists].values
+      if params[:map_list] 
+        @atlas.map_lists.update params[:map_list].keys, params[:map_list].values
       end
       if params[:new_map_lists]
         @map_lists = @atlas.map_lists.create params[:new_map_lists].values if params[:new_map_lists]
