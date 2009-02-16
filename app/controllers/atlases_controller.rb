@@ -5,7 +5,7 @@ class AtlasesController < ApplicationController
   layout 'admin', :except => [:show]
   before_filter :login_required, :except => [:show]
 
-  before_filter :find_atlas
+  before_filter :find_atlas, :only => [:show, :edit, :destroy]
   before_filter :ignore_empty_maplists
   
   rescue_from ActiveRecord::RecordInvalid, :with => :show_errors
@@ -98,7 +98,12 @@ class AtlasesController < ApplicationController
   end
 
   def find_atlas
-    @atlas = Atlas.find(params[:id]) if params[:id]
+    if params[:id]
+      @atlas = Atlas.find(params[:id]) if params[:id]
+    else params[:url]
+      @atlas = Atlas.find_by_url(params[:url])
+    end
+    raise ActiveRecord::RecordNotFound, "Atlas not found for params #{params.inspect}" if @atlas.nil?
   end
 
 end

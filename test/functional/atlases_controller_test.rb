@@ -23,6 +23,18 @@ class AtlasesControllerTest < ActionController::TestCase
       should_not_set_the_flash
   end
   
+  context "on GET using an atlas top-level URL" do
+    setup do
+      login_as(:sam_adams)
+      post_a_valid_atlas
+      @saved_atlas = assigns(:atlas)
+      get :show, :url => @saved_atlas.url
+    end
+    should_assign_to :atlas
+    should_respond_with :success
+    
+  end
+  
   context "on CREATE of a valid record" do
     setup do
       login_as(:sam_adams)

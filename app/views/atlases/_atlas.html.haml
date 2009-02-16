@@ -6,6 +6,6 @@
     %li.details
       ="url: <strong>#{h atlas.url}</strong>" 
     .actions
-      = link_to 'Show', atlas
+      = link_to 'Show', top_atlas_path(:url => atlas.url)
       = link_to 'Edit', edit_atlas_path(atlas)
       = link_to 'Delete', atlas, :confirm => 'Are you sure?', :method => :delete

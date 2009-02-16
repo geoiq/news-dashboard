@@ -8,8 +8,8 @@
   .r
     - for atlas in Atlas.listed.latest_first do
       - content_tag_for :div, atlas do
-        %h2= link_to atlas.title, atlas_path(atlas)
+        %h2= link_to atlas.title, top_atlas_path(:url => atlas.url)
         %p= atlas.short_description
-        = link_to "Launch &raquo;", atlas_path(atlas), :class => "b_launch"
+        = link_to "Launch &raquo;", top_atlas_path(:url => atlas.url), :class => "b_launch"
       
     
