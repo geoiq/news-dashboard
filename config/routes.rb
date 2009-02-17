@@ -17,6 +17,8 @@ ActionController::Routing::Routes.draw do |map|
   map.admin '/admin', :controller => 'blurbs', :action => "index"
   map.about '/about', :controller => 'main', :action => "about"
   
+  map.mine '/mine', :controller => 'atlases', :action => 'mine'
+  
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

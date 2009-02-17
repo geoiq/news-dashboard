@@ -130,6 +130,13 @@ class AtlasesControllerTest < ActionController::TestCase
     should_assign_to :atlas
   end
 
+  context "on get of /mine" do
+    setup do
+      login_as(:sam_adams)
+      get :mine
+    end
+    should_redirect_to "user_atlases_url(1)" 
+  end
   
   # Built in scaffold tests:
   def test_destroy

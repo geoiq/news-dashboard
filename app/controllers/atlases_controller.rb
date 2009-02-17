@@ -53,6 +53,10 @@ class AtlasesController < ApplicationController
     end
   end
 
+  def mine
+    redirect_to user_atlases_url(current_user.id)
+  end
+
   def edit
   end
 
