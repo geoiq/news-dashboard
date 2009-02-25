@@ -131,19 +131,28 @@ var MapList = Class.create({
     }
     
     var list =  new Template('<ul>#{items}</ul>')
-    var item =  new Template('<li id="#{pk}"><a href="javascript:void(0)" class="load_map load_map_#{pk}">#{title}</a></li>');
+    // fixme: move the details links out of this and into place specific for the dashboard app.
+    var item =  new Template('<li id="maplist_item_#{pk}">\
+                                <a href="javascript:void(0)" class="load_map load_map_#{pk}">#{title}</a>\
+                                <div class="details" style="display:none"> \
+                                  View in \
+                                  <a href="#{maker_url}/maps/#{pk}" target="_maker">Maker<i>!</i></a> | \
+                                  <a href="#{maker_url}/maps/#{pk}.kml" target="_maker">Google Earth (KML)</a> \
+                                </div>\
+                              </li>');
     var items = ""
     jsonData.each(function(e){ 
           items += item.evaluate({  title: title.evaluate({title:e.title, description:e.description}), 
                                     description: e.description, 
-                                    pk: e.pk})  
+                                    pk: e.pk,
+                                    maker_url: Maker.maker_host})  
         })
     this.element.update( list.evaluate({items:items}) )
     this.observe_list()
   },
   
   observe_list: function() {
-    $$('.load_map').invoke('observe','click', this.on_item_click )
+    $$('.load_map').invoke('observe','click', this.on_item_click.bind(this) )
   },
   
   on_item_click: function(ev) {
@@ -154,7 +163,14 @@ var MapList = Class.create({
     if (el.tagName != 'A') {el = el.parentNode} //better than recursive code
     $$('.load_map.on').invoke('toggleClassName','on')
     el.toggleClassName('on')
-    FlashMap.load_map('maker_map', id_from_class_pair(el, "load_map"))
+    var id = id_from_class_pair(el, "load_map")
+    this.reveal_details(id)
+    FlashMap.load_map('maker_map', id)
+  },
+  
+  reveal_details: function(id) {
+    $$('.map_list .details').invoke('hide')
+    $$('#maplist_item_' + id + ' .details').invoke('show')
   }
 })
 
@@ -189,7 +205,7 @@ var Accordion = {
     to.style.visibility = 'hidden'  //visibility hack required in order to get an accurate height calculation on a 'display:none' object.
     to.show()
     var heightStart = from.getHeight()
-    var heightEnd = to.getHeight()
+    var heightEnd = to.getHeight() + 15 //hack: extra space to account for the hidden 'details' elements that are later visible
     to.style.height = heightStart + 'px'
     to.style.visibility = 'visible'
     from.hide() 
