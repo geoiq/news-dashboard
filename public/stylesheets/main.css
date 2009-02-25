@@ -215,13 +215,13 @@ border-top: 2px solid #e1e1e1;
 /* __________________________( home ) ___ */
 #home_headline {margin: 0 0 20px 0;}
 
-label.h2 {
+h2 {
   display: block;
   font-size: 18px; font-weight: bold;
   letter-spacing: -0.6px;
   margin: 0 0 0.5em 0;
 }
-label.h3 {
+h3 {
   display: block;
   font-size: 14px;
   font-weight: bold;

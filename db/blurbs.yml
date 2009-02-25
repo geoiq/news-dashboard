@@ -1,0 +1,50 @@
+--- 
+- !ruby/object:Blurb 
+  attributes: 
+    updated_at: 2009-02-25 18:12:30
+    title: ""
+    body: <img src="/images/g.headline.png" id="home_headline"/>
+    id: "1"
+    publish_at: 2009-02-25 18:10:00
+    key: feature graphic
+    created_at: 2009-02-25 18:12:30
+  attributes_cache: {}
+
+- !ruby/object:Blurb 
+  attributes: 
+    updated_at: 2009-02-25 18:14:09
+    title: ""
+    body: "<h2>Don\xE2\x80\x99t just read the news, understand the data behind the news.</h2>"
+    id: "2"
+    publish_at: 2009-02-25 18:13:00
+    key: headline
+    created_at: 2009-02-25 18:13:23
+  attributes_cache: {}
+
+- !ruby/object:Blurb 
+  attributes: 
+    updated_at: 2009-02-25 18:41:02
+    title: ""
+    body: |-
+      Drawing from our extensive database of publicly sourced data the GeoCommons Data Team brings you the latest datasets behind current events presented as fully interactive <a href="http://maker.geocommons.com/">Maker<i>!</i></a> maps.
+      
+      Our maps of breaking news events highlight the soon to be released GeoCommons API which enables you to implement a GeoCommons dashboard within your organization. For more information on the GeoCommons Dashboard visit FortiusOne or email <a src="mailto:sales@fortiusone.com">sales@fortiusone.com</a>.
+    id: "3"
+    publish_at: 2009-02-25 18:14:00
+    key: intro
+    created_at: 2009-02-25 18:15:15
+  attributes_cache: {}
+
+- !ruby/object:Blurb 
+  attributes: 
+    updated_at: 2009-02-25 18:16:11
+    title: ""
+    body: |-
+      <h3>About GeoCommons</h3>
+      <p>GeoCommons delivers visual analytics through maps; enabling non-technical professionals to view multiple datasets, draw conclusions, make decisions and solve problems without traditional GIS overhead.  <a href="http://geocommons.com/">Learn more about GeoCommons</a></p>
+    id: "4"
+    publish_at: 2009-02-25 18:15:00
+    key: About GeoCommons
+    created_at: 2009-02-25 18:16:11
+  attributes_cache: {}
+

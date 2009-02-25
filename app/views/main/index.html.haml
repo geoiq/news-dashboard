@@ -1,10 +1,9 @@
-= image_tag "g.headline.png", :id => "home_headline"
+= Blurb.display('feature graphic')
 .home.fl_r.f_f
   .l.paragraphs
-    %label.h2 Don’t just read the news, understand the data behind the news.
-    %p Drawing from our extensive database of publicly sourced data the GeoCommons Data Team brings you the latest datasets behind current events presented as fully interactive <a href="http://maker.geocommons.com/">Maker<i>!</i></a> maps. 
-    %label.h3 About GeoCommons
-    %p GeoCommons delivers visual analytics through maps; enabling non-technical professionals to view multiple datasets, draw conclusions, make decisions and solve problems without traditional GIS overhead.  <a href="http://geocommons.com/">Learn more about GeoCommons</a>
+    %label.h2= Blurb.display('headline')
+    = Blurb.display('intro')
+    = Blurb.display('About GeoCommons')
   .r
     - for atlas in Atlas.listed.latest_first do
       - content_tag_for :div, atlas do
