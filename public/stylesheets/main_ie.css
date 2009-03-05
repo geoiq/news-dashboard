@@ -1,3 +1,4 @@
 /* hack for list spacing bug: http://tinyurl.com/ts8ye */
 .map_list li a {display:inline-block;}
 .map_list li a {display:block;}
+.map_list .details a {display: inline;}
