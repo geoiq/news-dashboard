@@ -18,7 +18,8 @@
 
 /* - Pagination - */
 .page_control .off {
-  color: #999;
+  color: #ccc;
+  cursor: default !important;
 }
 .page_control span {
   cursor: pointer;

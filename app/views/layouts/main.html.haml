@@ -8,8 +8,8 @@
       =@product_name
     = stylesheet_link_tag "main", :media => "all"
     = stylesheet_link_tag "f1_outlet", :media => "all"
-    /[if lt IE 7.]
-      = #stylesheet_link_tag "application_ie6", :media => "all" 
+    /[if lt IE 8]
+      = stylesheet_link_tag "main_ie", :media => "all" 
   
     =javascript_include_tag 'prototype', 'effects', 'application', 'f1_maker_map', 'f1_outlet'
     %script{:type=>"text/javascript"}

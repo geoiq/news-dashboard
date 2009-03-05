@@ -15,10 +15,10 @@ var Paginate = Class.create({
       start_page: 1,
       page_list: new Template('<ul>#{html}</ul><div id="page_control_#{id}" class="page_control"></div>'),
       page:      new Template('<li id="#{id}_page_#{number}" class="#{id}_page"#{hide}>#{html}</li>'),
-      prev_off:  new Template('<span class="prev off">&#9668;</span>'),
-      prev_on:   new Template('<span class="prev #{page_show_classes}">&#9668;</span>'),
-      next_off:  new Template('<span class="next off">&#9658;</span>'),
-      next_on:   new Template('<span class="next #{page_show_classes}">&#9658;</span>'),
+      prev_off:  new Template('<span class="prev off">&laquo; Previous</span>'),
+      prev_on:   new Template('<span class="prev #{page_show_classes}">&laquo; Previous</span>'),
+      next_off:  new Template('<span class="next off">More &raquo;</span>'),
+      next_on:   new Template('<span class="next #{page_show_classes}">More &raquo;</span>'),
       page_off:  new Template('<span class="page_dot off">&bull;</span>'),
       page_on:   new Template('<span class="page_dot #{page_show_classes}">&bull;</span>')
     }, arguments[1] || { });
@@ -34,7 +34,7 @@ var Paginate = Class.create({
                        html: p })
       i++
     }.bind(this))
-    this.total = i
+    this.total = i-1
     this.element.update( this.options.page_list.evaluate({
         id: this.element.id,
         html:page_html }))
@@ -55,14 +55,14 @@ var Paginate = Class.create({
     } else {
       html += this.options.prev_on.evaluate({page_show_classes: this.class_pair(current-1)}) 
     }
-    for(var i=1; i < this.total; i++) {
+    for(var i=1; i <= this.total; i++) {
       if(current==i) { 
         html += this.options.page_off.evaluate({}) 
       } else {
         html += this.options.page_on.evaluate({page_show_classes: this.class_pair(i)})
       }
     }
-    if(current == this.total-1) { 
+    if(current == this.total) { 
       html += this.options.next_off.evaluate({}) 
     } else {
       html += this.options.next_on.evaluate({page_show_classes:this.class_pair(current+1)}) 
