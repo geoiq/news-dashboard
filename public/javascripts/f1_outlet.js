@@ -193,10 +193,12 @@ var Accordion = {
     var lng  = $$('#'+panel.id +' .long' ).first()    
     var shrt = $$('#'+panel.id +' .short').first()
     if (action=='maximize' && !lng.visible()) {
-      Accordion.tween_swap(shrt, lng)
+      shrt.hide(); lng.show();
+      // Accordion.tween_swap(shrt, lng) // disabled for now because of numerous display issues related to the changing height of panel contents
     } 
     if (action=='minimize' && lng.visible()) {
-      Accordion.tween_swap(lng, shrt)
+      lng.hide(); shrt.show();
+      // Accordion.tween_swap(lng, shrt)
     }
   },
   
