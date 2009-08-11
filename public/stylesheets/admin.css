@@ -243,3 +243,22 @@ form textarea {
 .map_list input.nice {
   width: 200px;
 }
+
+/*___________________ Sortable */
+.sortable {
+  width: 300px;
+  padding: 0 0 20px 0;
+}
+.sortable li {
+  cursor: pointer;
+  display: block;
+  background: #b8ddff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  padding: 4px 10px;
+  margin:  0 0 4px 0;
+}
+
+

@@ -5,7 +5,7 @@ class AtlasesController < ApplicationController
   layout 'admin', :except => [:show]
   before_filter :login_required, :except => [:show]
 
-  before_filter :find_atlas, :only => [:show, :edit, :destroy, :update]
+  before_filter :find_atlas, :only => [:show, :edit, :destroy, :update, :organize]
   before_filter :ignore_empty_maplists
   
   rescue_from ActiveRecord::RecordInvalid, :with => :show_errors
@@ -88,9 +88,13 @@ class AtlasesController < ApplicationController
     end
     respond_to do |format|
       flash[:notice] = 'Atlas was successfully updated.'
-      format.html { redirect_to @atlas }
+      format.html { redirect_to edit_atlas_path(@atlas) }
       format.xml  { head :ok }
     end
+  end
+  
+  def organize
+    
   end
 
   private

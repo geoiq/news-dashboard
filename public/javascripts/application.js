@@ -58,6 +58,19 @@ var KeySync = {
   }
 }
 
+var SortableMapList = {
+  initialize: function() {
+    Sortable.create('sortable_map_list', {
+      onUpdate: SortableMapList.update
+    })
+  },
+  update: function(list) {
+    Sortable.sequence(list).each(function(v,i){
+      $("map_list_"+v+"_sort_order").value = i
+    })
+  }
+}
+
 
 function id_from_class_pair(el, action) {
   var r = new RegExp(".*"+action+"_([^ ]+).*")

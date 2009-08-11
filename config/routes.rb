@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :map_lists
 
-  map.resources :atlases
+  map.resources :atlases, :member => { :organize => :get }
 
   map.resources :blurbs
 

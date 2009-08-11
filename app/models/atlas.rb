@@ -1,7 +1,7 @@
 class Atlas < ActiveRecord::Base
 
   belongs_to :user
-  has_many :map_lists
+  has_many :map_lists, :order => :sort_order
   validates_associated :map_lists
   
   validates_uniqueness_of :url
