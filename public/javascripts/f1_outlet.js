@@ -111,11 +111,20 @@ var PaginatedMapList = Class.create({
 //    title_format: [template string] allows you to specify your own title template.
 //                  ex: MapList.on_list_maps(jsonData, {title_format: "<h1>#{title}</h1>" })
 var MapList = Class.create({
-  initialize: function(element) {
+  initialize: function(element, jsonData) {
     this.element = $(element);
     this.options = Object.extend({
-      title_format: 'short'
-    }, arguments[1] || { });
+      title_format: 'short',
+      list_format: '<ul>#{items}</ul>',
+      item_format: '<li id="maplist_item_#{pk}">\
+                                  <a href="javascript:void(0)" class="load_map load_map_#{pk}">#{title}</a>\
+                                  <div class="details" style="display:none"> \
+                                    View in \
+                                    <a href="#{maker_url}/maps/#{pk}" target="_maker">Maker<i>!</i></a> | \
+                                    <a href="#{maker_url}/maps/#{pk}.kml" target="_maker">Google Earth (KML)</a> \
+                                  </div>\
+                                </li>'
+    }, arguments[2] || { });
   },
   populate: function(jsonData) {
     var title
@@ -129,17 +138,8 @@ var MapList = Class.create({
     else if ( /\#\{title\}/.test(this.options.title_format) ) {
       title = new Template(this.options.title_format)
     }
-    
-    var list =  new Template('<ul>#{items}</ul>')
     // fixme: move the details links out of this and into place specific for the dashboard app.
-    var item =  new Template('<li id="maplist_item_#{pk}">\
-                                <a href="javascript:void(0)" class="load_map load_map_#{pk}">#{title}</a>\
-                                <div class="details" style="display:none"> \
-                                  View in \
-                                  <a href="#{maker_url}/maps/#{pk}" target="_maker">Maker<i>!</i></a> | \
-                                  <a href="#{maker_url}/maps/#{pk}.kml" target="_maker">Google Earth (KML)</a> \
-                                </div>\
-                              </li>');
+    var item =  new Template(this.options.item_format);
     var items = ""
     jsonData.each(function(e){ 
           items += item.evaluate({  title: title.evaluate({title:e.title, description:e.description}), 
@@ -147,7 +147,7 @@ var MapList = Class.create({
                                     pk: e.pk,
                                     maker_url: Maker.maker_host})  
         })
-    this.element.update( list.evaluate({items:items}) )
+    this.element.update( new Template(this.options.list_format).evaluate({items:items}) )
     this.observe_list()
   },
   

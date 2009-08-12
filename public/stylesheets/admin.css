@@ -260,5 +260,11 @@ form textarea {
   padding: 4px 10px;
   margin:  0 0 4px 0;
 }
+.sortable_items li {
+  cursor: pointer;
+  background: white;
+  margin: 5px 0;
+  padding: 5px;
+}
 
 
