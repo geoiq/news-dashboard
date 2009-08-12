@@ -1,5 +1,5 @@
 set :stages, %w(development staging appliance production ec2) 
-set :default_stage, 'production' 
+set :default_stage, 'staging' 
 require 'capistrano/ext/multistage' 
 ssh_options[:compression] = false
 
