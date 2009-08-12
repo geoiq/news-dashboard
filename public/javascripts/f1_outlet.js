@@ -113,17 +113,18 @@ var PaginatedMapList = Class.create({
 var MapList = Class.create({
   initialize: function(element, jsonData) {
     this.element = $(element);
+    this.map_list_id = this.element.id.replace(/map_list_([^_]+?)_.*/,'$1')
     this.options = Object.extend({
       title_format: 'short',
       list_format: '<ul>#{items}</ul>',
       item_format: '<li id="maplist_item_#{pk}">\
-                                  <a href="javascript:void(0)" class="load_map load_map_#{pk}">#{title}</a>\
-                                  <div class="details" style="display:none"> \
-                                    View in \
-                                    <a href="#{maker_url}/maps/#{pk}" target="_maker">Maker<i>!</i></a> | \
-                                    <a href="#{maker_url}/maps/#{pk}.kml" target="_maker">Google Earth (KML)</a> \
-                                  </div>\
-                                </li>'
+                      <a href="javascript:void(0)" class="load_map load_map_#{pk}">#{title}</a>\
+                      <div class="details" style="display:none"> \
+                        View in \
+                        <a href="#{maker_url}/maps/#{pk}" target="_maker">Maker<i>!</i></a> | \
+                        <a href="#{maker_url}/maps/#{pk}.kml" target="_maker">Google Earth (KML)</a> \
+                      </div>\
+                    </li>'
     }, arguments[2] || { });
   },
   populate: function(jsonData) {
@@ -152,19 +153,18 @@ var MapList = Class.create({
   },
   
   observe_list: function() {
-    $$('.load_map').invoke('observe','click', this.on_item_click.bind(this) )
+    $$('#' +this.element.id+ ' .load_map').invoke('observe','click', this.on_item_click.bind(this) )
   },
   
   on_item_click: function(ev) {
     ev.stop();
     var el = ev.element()
-    if (el.tagName != 'A') {el = el.parentNode}
-    if (el.tagName != 'A') {el = el.parentNode} 
-    if (el.tagName != 'A') {el = el.parentNode} //better than recursive code
+    while (el.tagName != 'A') {el = $(el.parentNode)}
     $$('.load_map.on').invoke('toggleClassName','on')
     el.toggleClassName('on')
     var id = id_from_class_pair(el, "load_map")
     this.reveal_details(id)
+    UrlHash.set('/'+this.map_list_id+'/'+id)
     FlashMap.load_map('maker_map', id)
   },
   
@@ -173,6 +173,15 @@ var MapList = Class.create({
     $$('#maplist_item_' + id + ' .details').invoke('show')
   }
 })
+
+var UrlHash = {
+  set: function(new_location) {
+    window.location = "#" + new_location;
+  },
+  get: function() {
+    return window.location.hash.split('#')[1]
+  }
+}
 
 
 var Accordion = {

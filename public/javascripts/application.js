@@ -127,16 +127,7 @@ var SortableMapList = {
   }
 }
 
-
 function id_from_class_pair(el, action) {
   var r = new RegExp(".*"+action+"_([^ ]+).*")
   return el.className.replace(r,'$1')
 }
-
-// #panel_explore.panel
-//   %label= link_to "Explore", "#", :class => "expand expand_explore"
-//   .short{:style=>"display:none"}
-// 
-//   .long
-//     .longb
-//       #explore Loading...
