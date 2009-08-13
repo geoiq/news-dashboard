@@ -3,6 +3,19 @@
   #maker_map{:style=>"height:600px"}
     .loading
       Loading...
+  #caption
+    .caption
+      .description
+        %h2#map_title
+        %span#short_description
+        = link_to "more", '#', :id => 'more_caption', :class => 'toggle_caption'
+        #long_description{:style=>'display:none'}
+          #long_description_l
+          #long_description_r
+          = link_to "less", '#', :id => 'less_caption', :class => 'toggle_caption'
+      
+      = link_to "share", '#', :id => 'reveal_share'
+    = link_to "hide", '#', :id => 'dismiss_caption'
   - content_for :side do
     #panel_welcome.panel
       %label= link_to h(@atlas.title), "#", :class => "expand expand_welcome"

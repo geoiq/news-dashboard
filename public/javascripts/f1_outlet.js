@@ -103,7 +103,8 @@ var PaginatedMapList = Class.create({
     this.element = $(element);
     PaginatedMapLists.register(this)
     this.options = Object.extend({
-      per_page: 5
+      per_page: 5,
+      map_list_options: {}
     }, arguments[2] || { });
     this.populate(jsonData)
   },
@@ -113,7 +114,7 @@ var PaginatedMapList = Class.create({
     var p           = new Paginate(this.element)
     p.populate(slices.map(function(){return "Loading..."}))
     for(i=0;i<total_pages;i++) {
-      var list = new MapList(this.element.id + "_page_" + (i+1))
+      var list = new MapList(this.element.id + "_page_" + (i+1), this.options.map_list_options)
       list.populate(slices[i])
     }
   }
@@ -133,7 +134,7 @@ var MapLists = {
   }
 }
 var MapList = Class.create({
-  initialize: function(element, jsonData) {
+  initialize: function(element) {
     this.element = $(element);
     MapLists.register(this)
     this.map_list_id = this.element.id.replace(/map_list_([^_]+?)_.*/,'$1')
@@ -147,8 +148,9 @@ var MapList = Class.create({
                         <a href="#{maker_url}/maps/#{pk}" target="_maker">Maker<i>!</i></a> | \
                         <a href="#{maker_url}/maps/#{pk}.kml" target="_maker">Google Earth (KML)</a> \
                       </div>\
-                    </li>'
-    }, arguments[2] || { });
+                    </li>',
+      after_item_click: function(el,id) {}
+    }, arguments[1] || { });
   },
   populate: function(jsonData) {
     var title
@@ -187,6 +189,7 @@ var MapList = Class.create({
     var id = id_from_class_pair(el, "load_map")
     this.set_url_hash(id)
     FlashMap.load_map('maker_map', id)
+    this.options.after_item_click(el,id)
   },
   
   set_url_hash: function(id){

@@ -3,11 +3,13 @@ var News = {
   default_map_list: "",
   default_map_list_page: "",
   default_map: "",
+  maps: {},
   
   create_panels: function(element, jsonData) {
     jsonData.each(function(data) {
       News.create_panel(element,data);
     })
+    News.init_caption_observers()
   },
   
   create_panel: function(element, jsonData) {
@@ -54,11 +56,35 @@ var News = {
     if(results.length == 0) {element.innerHTML = "No maps found for this topic."; return}
     var explore_list = new PaginatedMapList(element, results, {
                             title_format: "cool: #{title}",
-                            per_page: 8 })
+                            per_page: 8,
+                            map_list_options: {
+                              after_item_click: News.after_item_click
+                            }})
     if (News.default_map == "") {News.default_map = results[0].pk}
     if (News.default_map_list_page == "") {News.default_map_list_page = 1}
+    News.index_maps(results)
     News.load_default_map(element)
   },
+  
+  after_item_click: function(el,id){
+    var l,r,c,sen
+    sen = News.maps[id].description.split('. ')
+    $('short_description').update( sen.slice(0).join('.'))
+    sen.length == 1 ? $('more_caption').hide() : $('more_caption').show()
+    var words = News.maps[id].description.split(' ')
+    if(words.length > 50) {
+      c = Math.floor(words.length/2)
+      l = words.slice(0,c).join(' ')
+      r = words.slice(c).join(' ')
+    } else {
+      l = words.join(' ')
+      r = ''
+    }
+    $('long_description_l').update(l)
+    $('long_description_r').update(r)
+    $('map_title').update(News.maps[id].title)
+  },
+  
   load_default_map: function(element){
     if( "map_list_" + News.default_map_list == element.id) {
       Accordion.expand('panel_' + News.default_map_list)
@@ -80,6 +106,12 @@ var News = {
     }
   },
   
+  index_maps: function(results) {
+    results.each(function(map) {
+      News.maps[map.pk] = map
+    })
+  },
+  
   custom_sort: function(jsonMapData, maps_sort_order){
     var sorted = []
     maps_sort_order = maps_sort_order.split(',')
@@ -93,6 +125,16 @@ var News = {
     return sorted
   },
   
+  init_caption_observers: function() {
+    $$('.toggle_caption').invoke('observe','click', function(ev){
+      ev.stop(); var el = ev.element();
+      $('short_description').toggle()
+      $('more_caption').toggle()
+      $('long_description').toggle()
+    })
+  },
+  
+  // ----- begin Admin Organize screen lists TODO: put this in a separate js file -----------
   // for the sortable list of maps in admin. Puts the sort order into a hidden field
   // to submit with the rest of the form.
   load_sortable_map_list: function(maplist) {
@@ -100,10 +142,8 @@ var News = {
     eval("News[callback] = function(jsonData){News.on_sortable_search_results(jsonData,'map_list_"+maplist.id+"',maplist)}")
     Maker.find_maps(maplist.maker_tag, maplist.maker_user, "News." + callback)
   },
-  
   on_sortable_search_results: function(jsonData, element, map_list) {
     element = $(element)
-    console.log(['map_list', map_list.default, map_list.default_map_id])
     results = News.prepare_data(jsonData, map_list.maps_sort_order)
     var id = id_from_class_pair(element, 'map_list')
     if(results.length == 0) {element.innerHTML = "No maps found for this topic."; return}
@@ -132,7 +172,6 @@ var News = {
     }
     News.observe_default_buttons(element)
   },
-  
   observe_default_buttons: function(map_list){
     $$('#' +map_list.id+ ' .default_map').invoke('observe','click', function(ev) {
       ev.stop(); var el = ev.element();
@@ -143,6 +182,8 @@ var News = {
       el.toggleClassName('on')
     })
   }
+  // end Admin Organize screen lists -----------
+  
 }
 
 var KeySync = {

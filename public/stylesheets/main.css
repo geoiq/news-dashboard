@@ -127,6 +127,68 @@ h1 small {
   margin: 0 auto;
 }
 
+/* __________________________( Caption ) ___ */
+#caption {
+  position: absolute;
+  bottom: 40px;
+  opacity: 0.85;
+  margin-right: 330px;
+}
+.caption {
+  background-color: white;
+  margin: 0 0px 0 20px;
+  padding: 10px 10px;
+  position: relative;
+}
+#caption:hover {opacity: 1;}
+.caption #title {
+  font-weight: bold;
+  font-size: 14px;
+}
+.caption .description {
+  margin-right: 100px;
+}
+.caption #reveal_share {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: #CBE3A2;
+  padding: 12px 18px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid #9DAF7D
+}
+.caption #reveal_share:hover {
+  background-color: #B3C78E;
+}
+#long_description_l {
+  width: 45%;
+  float: left;
+}
+#long_description_r {
+  width: 45%;
+  float: left;
+  padding-left: 12px;
+}
+#less_caption {
+  display: block;
+  clear: both;
+}
+#dismiss_caption {
+  position: absolute;
+  top:0; left: 0;
+  background: #BEDCFD;
+  border-right: 1px solid #A0BAD5; 
+  display: block;
+  width: 20px;
+  height: 100%;
+  text-indent: -500em;
+}
+#dismiss_caption:hover {
+  background-color: #A0BAD5;
+}
 
 /* __________________________( Header ) ___ */
 #header {
