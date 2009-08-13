@@ -16,7 +16,8 @@
     #atlas_panels
       
 - content_for :end_js do
-  - for map_list in @atlas.map_lists
-    == News.create_panel('atlas_panels', #{map_list.to_json})
+  == News.create_panels('atlas_panels', #{@atlas.map_lists.to_json})
+  == News.default_map_list = "#{@atlas.default_map_list_id}"
+  == News.default_map = "#{@atlas.default_map_id}"
   Accordion.initialize()
 

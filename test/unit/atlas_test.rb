@@ -1,4 +1,4 @@
-require 'test_helper'
+require File.dirname(__FILE__) + '/../test_helper'
 
 class AtlasTest < ActiveSupport::TestCase
 
@@ -34,7 +34,7 @@ class AtlasTest < ActiveSupport::TestCase
     end
     
   end
-
+  
   context "An atlas" do
     setup do
       make_an_atlas
@@ -43,6 +43,12 @@ class AtlasTest < ActiveSupport::TestCase
     should "have short description derrived from the full description" do
       assert_equal("First paragraph", @atlas.short_description)
     end
+    
+    should "have a default map list" do
+      make_some_map_lists
+      assert_equal(3, @atlas.default_map_list_id)
+    end
+    
   end
 
   def make_an_atlas
@@ -50,6 +56,21 @@ class AtlasTest < ActiveSupport::TestCase
                                 :title => "Obama's First 100 Days", 
                                 :description => "First paragraph\r\nSecond paragraph\r\nThird paragraph.",
                                 :url => "obama100" )
+  end
+  
+  def make_some_map_lists
+    1.upto(3) {
+    @atlas.map_lists.create!( :user => @user,
+                               :title => 'MyString',            
+                               :description  => 'MyText',        
+                               :maker_tag =>  'MyString',        
+                               :maker_user  =>  'MyString',       
+                               :sort_order => 1,           
+                               :maps_sort_order => "1,2",     
+                               :default =>  false,
+                               :default_map_id =>  1 )
+    }
+    @atlas.map_lists[2].default = true
   end
   
   def make_another_atlas

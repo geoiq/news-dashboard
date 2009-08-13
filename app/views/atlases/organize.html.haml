@@ -8,6 +8,8 @@
         = fields_for :map_list do |ff|
           = ff.hidden_field :sort_order, :index => @map_list.id
           = ff.hidden_field :maps_sort_order, :index => @map_list.id
+          = ff.hidden_field :default_map_id, :index => @map_list.id
+          = ff.hidden_field :default, :index => @map_list.id, :class => 'default_toggle'
 
   - for @map_list in @atlas.map_lists
     %label= @map_list.title
