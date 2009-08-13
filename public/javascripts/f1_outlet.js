@@ -8,9 +8,16 @@
 // Fully customizable javascript pagination system. Initialize it with the id of a placeholder
 // element to replace. Populate it with an array of html strings. Override the generated xhtml
 // by passing in new templates.
+var Paginations = {
+  lookup: {},
+  register: function(item) {
+    Paginations.lookup[item.element.id] = item
+  }
+}
 var Paginate = Class.create({
   initialize: function(element) {
     this.element = $(element)
+    Paginations.register(this)
     this.options = Object.extend({
       start_page: 1,
       page_list: new Template('<ul>#{html}</ul><div id="page_control_#{id}" class="page_control"></div>'),
@@ -75,6 +82,9 @@ var Paginate = Class.create({
     ev.stop();
     var el = ev.element()
     var number = parseInt(id_from_class_pair(el, this.show_class))
+    this.show(number)
+  },
+  show: function(number) {
     var page = $(this.element.id + "_page_" + number)
     this.pages.without(page).invoke('hide')
     page.show()
@@ -82,10 +92,16 @@ var Paginate = Class.create({
   }
 })
 
-
+var PaginatedMapLists = {
+  lookup: {},
+  register: function(item) {
+    PaginatedMapLists.lookup[item.element.id] = item
+  }
+}
 var PaginatedMapList = Class.create({
   initialize: function(element, jsonData) {
     this.element = $(element);
+    PaginatedMapLists.register(this)
     this.options = Object.extend({
       per_page: 5
     }, arguments[2] || { });
@@ -110,9 +126,16 @@ var PaginatedMapList = Class.create({
 //    title_format: 'short' will display a list only with titles
 //    title_format: [template string] allows you to specify your own title template.
 //                  ex: MapList.on_list_maps(jsonData, {title_format: "<h1>#{title}</h1>" })
+var MapLists = {
+  lookup: {},
+  register: function(item) {
+    MapLists.lookup[item.element.id] = item
+  }
+}
 var MapList = Class.create({
   initialize: function(element, jsonData) {
     this.element = $(element);
+    MapLists.register(this)
     this.map_list_id = this.element.id.replace(/map_list_([^_]+?)_.*/,'$1')
     this.options = Object.extend({
       title_format: 'short',
@@ -160,15 +183,22 @@ var MapList = Class.create({
     ev.stop();
     var el = ev.element()
     while (el.tagName != 'A') {el = $(el.parentNode)}
-    $$('.load_map.on').invoke('toggleClassName','on')
-    el.toggleClassName('on')
+    this.select_item(el)
     var id = id_from_class_pair(el, "load_map")
-    this.reveal_details(id)
-    UrlHash.set('/'+this.map_list_id+'/'+id)
+    this.set_url_hash(id)
     FlashMap.load_map('maker_map', id)
   },
   
-  reveal_details: function(id) {
+  set_url_hash: function(id){
+    var match = this.element.id.match(/map_list_([0-9]+)_page_([0-9]+)/)
+    UrlHash.set('/'+match[1]+'/' +match[2]+ '/'+id)  // == /list_id/page_id/map_id
+  },
+  
+  select_item: function(el) {
+    el = $(el)
+    var id = id_from_class_pair(el, "load_map")
+    $$('.load_map.on').invoke('toggleClassName','on')
+    el.toggleClassName('on')
     $$('.map_list .details').invoke('hide')
     $$('#maplist_item_' + id + ' .details').invoke('show')
   }
@@ -191,8 +221,12 @@ var Accordion = {
   },
   pick: function(ev) {
     ev.stop();
-    el = ev.element()
-    panel = $("panel_" + id_from_class_pair(el, "expand"))
+    var el = ev.element()
+    var panel = $("panel_" + id_from_class_pair(el, "expand"))
+    Accordion.expand(panel)
+  },
+  expand: function(panel) {
+    panel = $(panel)
     Accordion.panels.without(panel).each(function(panel){
       Accordion.transition(panel, 'minimize')
     })

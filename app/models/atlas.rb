@@ -10,7 +10,7 @@ class Atlas < ActiveRecord::Base
   
   validates_format_of :url, :with => /^[\w\d]+$/, :on => :create, :message => "is invalid"
   
-  named_scope :listed    , :conditions => { :listed => true 	 } 
+  named_scope :listed    , :conditions => { :listed => true 	} 
   named_scope :unlisted  , :conditions => { :listed => false  }
   named_scope :latest_first , :order =>  'created_at desc'
   
@@ -18,4 +18,22 @@ class Atlas < ActiveRecord::Base
     description.split("\r\n").first
   end
   
+  def default_map_list
+    @default_map_list ||= (
+      self.map_lists.detect{|m| m.default? }
+    )
+  end
+  
+  def default_map_list_id
+    ml = default_map_list
+    return ml.id if ml
+    return nil
+  end
+  
+  def default_map_id
+    ml = default_map_list
+    return nil unless ml
+    return ml.default_map_id
+  end
+    
 end
