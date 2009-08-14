@@ -163,6 +163,9 @@ h1 small {
 .caption #reveal_share:hover {
   background-color: #B3C78E;
 }
+.caption .view_in {
+  margin-top: 1em;
+}
 #long_description_l {
   width: 45%;
   float: left;
@@ -176,19 +179,53 @@ h1 small {
   display: block;
   clear: both;
 }
-#dismiss_caption {
+#hide_caption, #show_caption {
   position: absolute;
   top:0; left: 0;
-  background: #BEDCFD;
   border-right: 1px solid #A0BAD5; 
   display: block;
   width: 20px;
   height: 100%;
   text-indent: -500em;
+  background: #BEDCFD url(/images/g.arrows.png) 8px center no-repeat;
+}
+#show_caption {
+  background: #BEDCFD url(/images/g.arrows.png) -12px center no-repeat;
 }
 #dismiss_caption:hover {
   background-color: #A0BAD5;
 }
+
+/* __________________________( Embed ) ___ */
+#embed {
+  background: white;
+  height: 155px;
+  position: absolute;
+  top: 120px;
+  left: 80px;
+  padding: 10px;
+  border: 1px solid gray;
+}
+#embed p {
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+#embed #dismiss_share {
+  position: absolute;
+  right: 10px;
+  display: block;
+  width: 40px;
+  text-align: center;
+  background: #CBE3A2;
+  padding: 4px 18px;
+  margin: 4px 0 0 0;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid #9DAF7D
+}
+
 
 /* __________________________( Header ) ___ */
 #header {

@@ -67,6 +67,12 @@ var News = {
   },
   
   after_item_click: function(el,id){
+    News.current_map = id
+    News.show_caption_for_map(id)
+    $('embed').hide()
+  },
+  
+  show_caption_for_map: function(id){
     var l,r,c,sen
     sen = News.maps[id].description.split('. ')
     $('short_description').update( sen.slice(0).join('.'))
@@ -83,6 +89,49 @@ var News = {
     $('long_description_l').update(l)
     $('long_description_r').update(r)
     $('map_title').update(News.maps[id].title)
+    $('view_in_maker').href = Maker.maker_host + '/maps/' + id
+    $('view_in_kml').href = Maker.maker_host + '/maps/' + id + '.kml'
+  },
+  
+  init_caption_observers: function() {
+    $$('.toggle_caption').invoke('observe','click', function(ev){
+      ev.stop()
+      $('short_description').toggle()
+      $('more_caption').toggle()
+      $('long_description').toggle()
+    })
+    $('hide_caption').observe('click', function(ev){
+      ev.stop()
+      $('show_caption').clonePosition('hide_caption')
+      var cap = $$('#caption .caption')[0]
+      cap.morph('left: -' +cap.getDimensions().width+ 'px', {duration: 0.5})
+      $('show_caption').show()
+    })
+    $('show_caption').observe('click',function(ev) {
+      ev.stop()
+      $$('#caption .caption')[0].morph('left:1px', {duration: 0.5})
+      $('show_caption').hide()
+    })
+    $('reveal_share').observe('click', function(ev) {
+      ev.stop()
+      News.update_embed()
+      $('embed').show()
+      var d = $('embed').getDimensions()
+      $('embed').clonePosition('reveal_share',{
+        setWidth:false, setHeight:false, offsetTop:-parseInt(d.height)-30, offsetLeft:-parseInt(d.width)+89
+      })
+    })
+    $('dismiss_share').observe('click', function(ev) {
+      ev.stop()
+      $('embed').hide()
+    })
+  },
+  
+  update_embed: function() {
+    var v = $('embed_code').value
+    if (v.match('%mapid%')) {News.embed_template = v} 
+    console.log(News.embed_template)
+    $('embed_code').value = News.embed_template.replace(/%mapid%/g,News.current_map)
   },
   
   load_default_map: function(element){
@@ -94,6 +143,8 @@ var News = {
         afterFinish : function(){
                             Maker.resize_when_ready()
                             Event.observe(window, 'resize', Maker.resize_map_to_fit) }  })
+      News.show_caption_for_map(News.default_map)
+      News.current_map = News.default_map
     }
   },
   
@@ -123,15 +174,6 @@ var News = {
       })
     })
     return sorted
-  },
-  
-  init_caption_observers: function() {
-    $$('.toggle_caption').invoke('observe','click', function(ev){
-      ev.stop(); var el = ev.element();
-      $('short_description').toggle()
-      $('more_caption').toggle()
-      $('long_description').toggle()
-    })
   },
   
   // ----- begin Admin Organize screen lists TODO: put this in a separate js file -----------

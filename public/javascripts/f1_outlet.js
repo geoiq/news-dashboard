@@ -143,11 +143,6 @@ var MapList = Class.create({
       list_format: '<ul>#{items}</ul>',
       item_format: '<li id="maplist_item_#{pk}">\
                       <a href="javascript:void(0)" class="load_map load_map_#{pk}">#{title}</a>\
-                      <div class="details" style="display:none"> \
-                        View in \
-                        <a href="#{maker_url}/maps/#{pk}" target="_maker">Maker<i>!</i></a> | \
-                        <a href="#{maker_url}/maps/#{pk}.kml" target="_maker">Google Earth (KML)</a> \
-                      </div>\
                     </li>',
       after_item_click: function(el,id) {}
     }, arguments[1] || { });
@@ -164,7 +159,6 @@ var MapList = Class.create({
     else if ( /\#\{title\}/.test(this.options.title_format) ) {
       title = new Template(this.options.title_format)
     }
-    // fixme: move the details links out of this and into place specific for the dashboard app.
     var item =  new Template(this.options.item_format);
     var items = ""
     jsonData.each(function(e){ 
@@ -202,8 +196,6 @@ var MapList = Class.create({
     var id = id_from_class_pair(el, "load_map")
     $$('.load_map.on').invoke('toggleClassName','on')
     el.toggleClassName('on')
-    $$('.map_list .details').invoke('hide')
-    $$('#maplist_item_' + id + ' .details').invoke('show')
   }
 })
 
@@ -253,7 +245,7 @@ var Accordion = {
     to.style.visibility = 'hidden'  //visibility hack required in order to get an accurate height calculation on a 'display:none' object.
     to.show()
     var heightStart = from.getHeight()
-    var heightEnd = to.getHeight() + 15 //hack: extra space to account for the hidden 'details' elements that are later visible
+    var heightEnd = to.getHeight()
     to.style.height = heightStart + 'px'
     to.style.visibility = 'visible'
     from.hide() 
