@@ -208,7 +208,7 @@ var News = {
     var explore_list = new MapList(element, results, {
       list_format: "<ul id='sortable_list_"+ id +"' class='sortable_items'>#{items}</ul>",
       item_format: "<li id='sortable_item_#{pk}'>\
-                      #{title}\
+                      <p>#{title}</p>\
                       <span><a href='#' class='default_map' pk='#{pk}'>Default Map?</a></span>\
                     </li>"
     })

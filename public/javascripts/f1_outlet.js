@@ -114,7 +114,7 @@ var PaginatedMapList = Class.create({
     var p           = new Paginate(this.element)
     p.populate(slices.map(function(){return "Loading..."}))
     for(i=0;i<total_pages;i++) {
-      var list = new MapList(this.element.id + "_page_" + (i+1), this.options.map_list_options)
+      var list = new MapList(this.element.id + "_page_" + (i+1), [], this.options.map_list_options)
       list.populate(slices[i])
     }
   }
@@ -145,7 +145,7 @@ var MapList = Class.create({
                       <a href="javascript:void(0)" class="load_map load_map_#{pk}">#{title}</a>\
                     </li>',
       after_item_click: function(el,id) {}
-    }, arguments[1] || { });
+    }, arguments[2] || { });
   },
   populate: function(jsonData) {
     var title

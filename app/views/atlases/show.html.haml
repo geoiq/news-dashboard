@@ -27,13 +27,17 @@
   - content_for :side do
     #panel_welcome.panel
       %label= link_to h(@atlas.title), "#", :class => "expand expand_welcome"
-      .short
-        = RDiscount.new(@atlas.description.split("\r\n\r\n").first).to_html
-        = link_to "more &raquo;", "#", :class => "expand expand_welcome"
-      .long{:style=>"display:none"}
-        = RDiscount.new(@atlas.description).to_html
-        = link_to "&laquo; less", "#", :class => "expand expand_explore"
-    
+      - paragraphs = @atlas.description.split("\r\n\r\n")
+      - if paragraphs.length > 1
+        .short
+          = RDiscount.new(paragraphs.first).to_html
+          = link_to "more &raquo;", "#", :class => "expand expand_welcome"
+        .long{:style=>"display:none"}
+          = RDiscount.new(@atlas.description).to_html
+          = link_to "&laquo; less", "#", :class => "expand expand_explore"
+      - else
+        .short
+          = RDiscount.new(paragraphs.first).to_html
     #atlas_panels
       
 - content_for :end_js do

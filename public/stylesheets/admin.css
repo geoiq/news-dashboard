@@ -271,6 +271,9 @@ form textarea {
   position: absolute;
   right: 10px; bottom: 5px;
 }
+.sortable_items p {
+  margin: 0 100px 0 0;
+}
 .sortable_items li span a {
   color: #ccc;
   font-size: 10px;
