@@ -70,6 +70,7 @@ class AtlasesController < ApplicationController
   end
 
   def show
+    @page_title = @atlas.title
     respond_to do |format|
       format.html { render :layout => 'main'}
       format.xml  { render :xml => @atlas }

@@ -3,7 +3,7 @@
   #maker_map{:style=>"height:600px"}
     .loading
       Loading...
-  #caption
+  #caption{:style=>'display:none'}
     .caption
       .description
         %h2#map_title
@@ -13,9 +13,17 @@
           #long_description_l
           #long_description_r
           = link_to "less", '#', :id => 'less_caption', :class => 'toggle_caption'
-      
       = link_to "share", '#', :id => 'reveal_share'
-    = link_to "hide", '#', :id => 'dismiss_caption'
+      .view_in
+        %label View In
+        = link_to "Maker<i>!</i>", "#",      :id => 'view_in_maker', :target => '_maker'
+        &nbsp;|&nbsp;
+        = link_to "Google Earth (KML)", "#", :id => 'view_in_kml',   :target => '_maker'
+    = link_to "hide", '#', :id => 'hide_caption'
+  = link_to "show", '#', :id => 'show_caption', :style => 'display:none'
+  
+  = render :partial => 'embed'
+
   - content_for :side do
     #panel_welcome.panel
       %label= link_to h(@atlas.title), "#", :class => "expand expand_welcome"
@@ -29,8 +37,8 @@
     #atlas_panels
       
 - content_for :end_js do
-  == News.create_panels('atlas_panels', #{@atlas.map_lists.to_json})
   == News.default_map_list = "#{@atlas.default_map_list_id}"
   == News.default_map = "#{@atlas.default_map_id}"
+  == News.create_panels('atlas_panels', #{@atlas.map_lists.to_json})
   Accordion.initialize()
 
