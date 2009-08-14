@@ -3,7 +3,7 @@
   #maker_map{:style=>"height:600px"}
     .loading
       Loading...
-  #caption
+  #caption{:style=>'display:none'}
     .caption
       .description
         %h2#map_title
@@ -37,8 +37,8 @@
     #atlas_panels
       
 - content_for :end_js do
-  == News.create_panels('atlas_panels', #{@atlas.map_lists.to_json})
   == News.default_map_list = "#{@atlas.default_map_list_id}"
   == News.default_map = "#{@atlas.default_map_id}"
+  == News.create_panels('atlas_panels', #{@atlas.map_lists.to_json})
   Accordion.initialize()
 

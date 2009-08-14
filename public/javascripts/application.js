@@ -76,6 +76,7 @@ var News = {
   
   show_caption_for_map: function(id){
     News.update_caption(id)
+    $('caption').show()
     $('caption').setStyle({width: (document.viewport.getWidth() - 400) + 'px'})
     $('map_title').update(News.maps[id].title)
     $('view_in_maker').href = Maker.maker_host + '/maps/' + id
@@ -83,11 +84,12 @@ var News = {
   },
   
   update_caption: function(id){
-    var l,r,c,sen
-    sen = News.maps[id].description.split('. ')
+    var l,r,c,desc,sen
+    desc = News.maps[id].description ? News.maps[id].description : ""
+    sen = desc.split('. ')
     $('short_description').update( sen.slice(0).join('.'))
     sen.length == 1 ? $('more_caption').hide() : $('more_caption').show()
-    var words = News.maps[id].description.split(' ')
+    var words = desc.split(' ')
     if(words.length > 50) {
       c = Math.floor(words.length/2)
       l = words.slice(0,c).join(' ')
