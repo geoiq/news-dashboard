@@ -22,7 +22,7 @@
  
     %fieldset
       = f.label :url, "Link"
-      news.geocommons.com/
+      = URI.parse(PLATFORM_CONFIG["url"]).host + "/"
       = f.text_field :url, :style => "width: 100px"
       .hint
         %small Enter a short phrase with no spaces. Example: "first100days"

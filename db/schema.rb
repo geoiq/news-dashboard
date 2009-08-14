@@ -36,9 +36,9 @@ ActiveRecord::Schema.define(:version => 20090811195804) do
     t.text     "description"
     t.string   "maker_tag"
     t.string   "maker_user"
-    t.integer  "sort_order",      :default => 999
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sort_order",      :default => 999
     t.string   "maps_sort_order"
     t.boolean  "default",         :default => false
     t.integer  "default_map_id"
