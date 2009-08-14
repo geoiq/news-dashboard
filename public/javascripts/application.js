@@ -120,11 +120,12 @@ var News = {
       ev.stop()
       $('show_caption').clonePosition('hide_caption')
       var cap = $$('#caption .caption')[0]
-      cap.morph('left: -' +cap.getDimensions().width+ 'px', {duration: 0.5})
+      cap.morph('left: -' +cap.getDimensions().width+ 'px', {duration: 0.5, afterFinish:function(){cap.hide()}})
       $('show_caption').show()
     })
     $('show_caption').observe('click',function(ev) {
       ev.stop()
+      $$('#caption .caption')[0].show()
       $$('#caption .caption')[0].morph('left:1px', {duration: 0.5})
       $('show_caption').hide()
     })
