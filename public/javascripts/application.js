@@ -55,10 +55,11 @@ var News = {
     element = $(element)
     var results = News.prepare_data(jsonData, maps_sort_order)
     if(results.length == 0) {element.innerHTML = "No maps found for this topic."; return}
+    var per_page = News.smart_per_page(results)
     var explore_list = new PaginatedMapList(element, results, {
-                            title_format: "cool: #{title}",
-                            per_page: 8,
+                            per_page: per_page,
                             map_list_options: {
+                              title_format: "#{title}",
                               after_item_click: News.after_item_click
                             }})
     if (News.default_map == "") {News.default_map = results[0].pk}
@@ -66,7 +67,13 @@ var News = {
     News.index_maps(results)
     News.load_default_map(element)
   },
-  
+  smart_per_page: function(results){
+    var avg = results.inject(0, function(acc, i) { return acc + i.title.length; }) / results.length
+    if(avg < 20) {return 8}
+    if(avg < 40) {return 6}
+    if(avg < 60) {return 4}
+    return 4
+  },
   after_item_click: function(el,id){
     $('embed').hide()
     News.current_map = id
@@ -87,7 +94,7 @@ var News = {
     var l,r,c,desc,sen
     desc = News.maps[id].description ? News.maps[id].description : ""
     sen = desc.split('. ')
-    $('short_description').update( sen.slice(0).join('.'))
+    $('short_description').update( sen.slice(0,1).join('. '))
     sen.length == 1 ? $('more_caption').hide() : $('more_caption').show()
     var words = desc.split(' ')
     if(words.length > 50) {
