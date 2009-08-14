@@ -231,12 +231,18 @@ var Accordion = {
     var lng  = $$('#'+panel.id +' .long' ).first()    
     var shrt = $$('#'+panel.id +' .short').first()
     if (action=='maximize' && !lng.visible()) {
-      shrt.hide(); lng.show();
-      // Accordion.tween_swap(shrt, lng) // disabled for now because of numerous display issues related to the changing height of panel contents
+      if(Prototype.Browser.IE) { 
+        shrt.hide(); lng.show();
+      } else {
+        Accordion.tween_swap(shrt, lng)
+      }
     } 
     if (action=='minimize' && lng.visible()) {
-      lng.hide(); shrt.show();
-      // Accordion.tween_swap(lng, shrt)
+      if(Prototype.Browser.IE) {
+        lng.hide(); shrt.show();
+      } else {
+        Accordion.tween_swap(lng, shrt)
+      }
     }
   },
   

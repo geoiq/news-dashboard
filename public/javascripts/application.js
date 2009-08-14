@@ -10,6 +10,7 @@ var News = {
       News.create_panel(element,data);
     })
     News.init_caption_observers()
+    News.init_embed_template()
   },
   
   create_panel: function(element, jsonData) {
@@ -67,12 +68,21 @@ var News = {
   },
   
   after_item_click: function(el,id){
+    $('embed').hide()
     News.current_map = id
     News.show_caption_for_map(id)
-    $('embed').hide()
+    Maker.resize_when_ready() // FIXME: this doesn't seem to fire for heavier maps
   },
   
   show_caption_for_map: function(id){
+    News.update_caption(id)
+    $('caption').setStyle({width: (document.viewport.getWidth() - 400) + 'px'})
+    $('map_title').update(News.maps[id].title)
+    $('view_in_maker').href = Maker.maker_host + '/maps/' + id
+    $('view_in_kml').href = Maker.maker_host + '/maps/' + id + '.kml'
+  },
+  
+  update_caption: function(id){
     var l,r,c,sen
     sen = News.maps[id].description.split('. ')
     $('short_description').update( sen.slice(0).join('.'))
@@ -88,9 +98,6 @@ var News = {
     }
     $('long_description_l').update(l)
     $('long_description_r').update(r)
-    $('map_title').update(News.maps[id].title)
-    $('view_in_maker').href = Maker.maker_host + '/maps/' + id
-    $('view_in_kml').href = Maker.maker_host + '/maps/' + id + '.kml'
   },
   
   init_caption_observers: function() {
@@ -118,7 +125,7 @@ var News = {
       $('embed').show()
       var d = $('embed').getDimensions()
       $('embed').clonePosition('reveal_share',{
-        setWidth:false, setHeight:false, offsetTop:-parseInt(d.height)-30, offsetLeft:-parseInt(d.width)+89
+        setWidth:false, setHeight:false, offsetTop:-(parseInt(d.height)+30), offsetLeft:-(parseInt(d.width)-89)
       })
     })
     $('dismiss_share').observe('click', function(ev) {
@@ -127,10 +134,10 @@ var News = {
     })
   },
   
+  init_embed_template: function() {
+    News.embed_template = $('embed_code').value //keep a copy of the original embed template
+  },
   update_embed: function() {
-    var v = $('embed_code').value
-    if (v.match('%mapid%')) {News.embed_template = v} 
-    console.log(News.embed_template)
     $('embed_code').value = News.embed_template.replace(/%mapid%/g,News.current_map)
   },
   
@@ -209,7 +216,7 @@ var News = {
         } 
       })
     })
-    if(map_list.default) {
+    if(map_list['default']) {
       $$('#sortable_item_' +map_list.default_map_id+ ' a').invoke('addClassName','on')
     }
     News.observe_default_buttons(element)

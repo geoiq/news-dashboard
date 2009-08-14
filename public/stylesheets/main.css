@@ -130,6 +130,8 @@ h1 small {
 /* __________________________( Caption ) ___ */
 #caption {
   position: absolute;
+  left: 0;
+  z-index: 1000;
   bottom: 40px;
   opacity: 0.85;
   margin-right: 330px;
@@ -190,6 +192,7 @@ h1 small {
   background: #BEDCFD url(/images/g.arrows.png) 8px center no-repeat;
 }
 #show_caption {
+  z-index: 2000;
   background: #BEDCFD url(/images/g.arrows.png) -12px center no-repeat;
 }
 #dismiss_caption:hover {
@@ -200,11 +203,16 @@ h1 small {
 #embed {
   background: white;
   height: 155px;
+  z-index: 1001;
   position: absolute;
   top: 120px;
   left: 80px;
+  width: 455px;
   padding: 10px;
   border: 1px solid gray;
+}
+#embed_code {
+  width: 100%;
 }
 #embed p {
   font-weight: bold;
