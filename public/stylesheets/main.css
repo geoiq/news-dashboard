@@ -285,10 +285,16 @@ border-top: 2px solid #e1e1e1;
 .panel {
   margin: 0 0 10px 0;
 }
+.atlas_title {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
 .panel label a {
   display: block;
   background: #b8ddff;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   text-decoration: none;
   color: black;
@@ -302,6 +308,19 @@ border-top: 2px solid #e1e1e1;
   margin: 0 0 0.5em 0;
 }
 
+#continue_button, #loading_maps {
+  display: block;
+  width: 101px;
+  height: 31px;
+  background: url(/images/b.continue.png) no-repeat; 
+  text-indent: -500em;
+}
+#loading_maps {
+  background-position: 0 -62px;
+}
+#continue_button:hover {
+  background-position: 0 -31px;
+}
 
 /* __________________________( side ) ___ */
 #panel_explore label a {background: #dfffb8}

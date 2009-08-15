@@ -25,23 +25,16 @@
   = render :partial => 'embed'
 
   - content_for :side do
+    %label.atlas_title= h(@atlas.title)
     #panel_welcome.panel
-      %label= link_to h(@atlas.title), "#", :class => "expand expand_welcome"
-      - paragraphs = @atlas.description.split("\r\n\r\n")
-      - if paragraphs.length > 1
-        .short
-          = RDiscount.new(paragraphs.first).to_html
-          = link_to "more &raquo;", "#", :class => "expand expand_welcome"
-        .long{:style=>"display:none"}
-          = RDiscount.new(@atlas.description).to_html
-          = link_to "&laquo; less", "#", :class => "expand expand_explore"
-      - else
-        .short
-          = RDiscount.new(paragraphs.first).to_html
-    #atlas_panels
+      .short
+        = RDiscount.new(@atlas.description).to_html
+      %a#loading_maps{:href=>'#'} Loading...
+      %a#continue_button{:href=>'#', :style=>'display:none'} Continue
+    #atlas_panels{:style=>'display:none'}
       
 - content_for :end_js do
-  == News.default_map_list = "#{@atlas.default_map_list_id}"
+  == News.default_map_list = "map_list_#{@atlas.default_map_list_id}"
   == News.default_map = "#{@atlas.default_map_id}"
   == News.create_panels('atlas_panels', #{@atlas.map_lists.to_json})
   Accordion.initialize()

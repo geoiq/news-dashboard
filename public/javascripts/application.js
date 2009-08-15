@@ -4,13 +4,17 @@ var News = {
   default_map_list_page: "",
   default_map: "",
   maps: {},
+  panel_count: 0,
+  panels_loaded: 0,
   
   create_panels: function(element, jsonData) {
+    News.panel_count = jsonData.length
     jsonData.each(function(data) {
       News.create_panel(element,data);
     })
     News.init_caption_observers()
     News.init_embed_template()
+    News.init_intro_observers()
   },
   
   create_panel: function(element, jsonData) {
@@ -52,9 +56,11 @@ var News = {
     }
   },
   on_search_results: function(jsonData, element, maps_sort_order) {
+    News.panels_loaded++
     element = $(element)
     var results = News.prepare_data(jsonData, maps_sort_order)
     if(results.length == 0) {element.innerHTML = "No maps found for this topic."; return}
+    News.index_maps(results)
     var per_page = News.smart_per_page(results)
     var explore_list = new PaginatedMapList(element, results, {
                             per_page: per_page,
@@ -64,8 +70,12 @@ var News = {
                             }})
     if (News.default_map == "") {News.default_map = results[0].pk}
     if (News.default_map_list_page == "") {News.default_map_list_page = 1}
-    News.index_maps(results)
-    News.load_default_map(element)
+    if ("map_list_" + News.default_map_list == element.id) {News.default_map_list = element.id}
+    if (News.panels_loaded == News.panel_count) {
+      $('loading_maps').hide()
+      $('continue_button').show()  // Display the 'continue' link 
+      News.load_default_map()
+    }
   },
   smart_per_page: function(results){
     var avg = results.inject(0, function(acc, i) { return acc + i.title.length; }) / results.length
@@ -151,18 +161,29 @@ var News = {
     $('embed_code').value = News.embed_template.replace(/%mapid%/g,News.current_map)
   },
   
+  init_intro_observers: function(){
+    $('continue_button').observe('click', function(){
+      $('atlas_panels').show()
+      News.update_panels()
+      $('panel_welcome').hide()
+      $('continue_button').hide()
+    })
+  },
+  
+  // Makes the panels display the map_list, page and map stored in the defaults. Needs refactoring.
+  update_panels: function() {
+    Accordion.expand('panel_' + News.default_map_list.replace('map_list_',''))
+    Paginations.lookup[News.default_map_list].show(News.default_map_list_page);
+    MapLists.lookup[News.default_map_list + '_page_' + News.default_map_list_page].select_item($$('.load_map_' + News.default_map)[0]);
+  },
+  
   load_default_map: function(element){
-    if( "map_list_" + News.default_map_list == element.id) {
-      Accordion.expand('panel_' + News.default_map_list)
-      Paginations.lookup[element.id].show(News.default_map_list_page);
-      MapLists.lookup[element.id + '_page_' + News.default_map_list_page].select_item($$('.load_map_' + News.default_map)[0]);
-      Maker.load_map('maker_map', News.default_map, {
-        afterFinish : function(){
-                            Maker.resize_when_ready()
-                            Event.observe(window, 'resize', Maker.resize_map_to_fit) }  })
-      News.show_caption_for_map(News.default_map)
-      News.current_map = News.default_map
-    }
+    Maker.load_map('maker_map', News.default_map, {
+      afterFinish : function(){
+                          Maker.resize_when_ready()
+                          Event.observe(window, 'resize', Maker.resize_map_to_fit) }  })
+    News.show_caption_for_map(News.default_map)
+    News.current_map = News.default_map
   },
   
   prepare_data: function(jsonData, maps_sort_order){

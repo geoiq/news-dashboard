@@ -228,7 +228,7 @@ var Accordion = {
     Accordion.transition(panel, 'maximize')
   },
   transition: function(panel,action) {
-    var lng  = $$('#'+panel.id +' .long' ).first()    
+    var lng  = $$('#'+panel.id +' .long' ).first()
     var shrt = $$('#'+panel.id +' .short').first()
     if (action=='maximize' && !lng.visible()) {
       if(Prototype.Browser.IE) { 
@@ -237,11 +237,15 @@ var Accordion = {
         Accordion.tween_swap(shrt, lng)
       }
     } 
-    if (action=='minimize' && lng.visible()) {
-      if(Prototype.Browser.IE) {
-        lng.hide(); shrt.show();
+    if (action=='minimize') {
+      if (lng) {
+        if(Prototype.Browser.IE || 1==1) {
+          lng.hide(); shrt.show();
+        } else {
+          Accordion.tween_swap(lng, shrt)
+        }
       } else {
-        Accordion.tween_swap(lng, shrt)
+        shrt.show()
       }
     }
   },
