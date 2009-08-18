@@ -15,7 +15,7 @@ test:
 
 production:
   adapter: postgresql
-  database: news
-  username: news
-  password: news
+  database: inaug09 
+  username: inaug09
+  password: inaug09
   port: 5432
