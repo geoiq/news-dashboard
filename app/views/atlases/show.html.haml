@@ -22,7 +22,7 @@
     = link_to "hide", '#', :id => 'hide_caption'
   = link_to "show", '#', :id => 'show_caption', :style => 'display:none'
   
-  = render :partial => 'embed'
+  = find_and_preserve( render :partial => 'embed' )
 
   - content_for :side do
     %label.atlas_title= h(@atlas.title)
