@@ -1,7 +1,7 @@
 development:
-    url: http://core.news.geocommons.com
-    finder: http://finder.news.geocommons.com
-    maker: http://maker.news.geocommons.com
+    url: http://localhost:4000
+    finder: http://localhost:4001
+    maker: http://localhost:4002
     scratch: file:/var/rails/core/trunk/tmp/scratch
 test:
     url: http://localhost:4000
