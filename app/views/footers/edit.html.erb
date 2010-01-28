@@ -1,0 +1,24 @@
+<h1>Editing footer</h1>
+
+<% form_for(@footer) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :link %><br />
+    <%= f.text_field :link %>
+  </p>
+  <p>
+    <%= f.label :linktext %><br />
+    <%= f.text_field :linktext %>
+  </p>
+  <p>
+    <%= f.label :text %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @footer %> |
+<%= link_to 'Back', footers_path %>

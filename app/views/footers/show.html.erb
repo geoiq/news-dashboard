@@ -1,0 +1,18 @@
+<p>
+  <b>Link:</b>
+  <%=h @footer.link %>
+</p>
+
+<p>
+  <b>Linktext:</b>
+  <%=h @footer.linktext %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%=h @footer.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_footer_path(@footer) %> |
+<%= link_to 'Back', footers_path %>
