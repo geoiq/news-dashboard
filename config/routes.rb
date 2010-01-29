@@ -19,7 +19,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :session
   
   map.admin '/admin', :controller => 'blurbs', :action => "index"
-  map.about '/about', :controller => 'inaug08', :action => "about"
+  map.about '/about', :controller => 'main', :action => "about"
   
   map.mine '/mine', :controller => 'atlases', :action => 'mine'
   
