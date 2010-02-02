@@ -24,6 +24,7 @@ Rails::Initializer.run do |config|
   # They can then be installed with "rake gems:install" on new installations.
   config.gem "rdiscount"
   config.gem "haml"
+  config.gem "sanitize"
   config.gem 'mislav-will_paginate',    :version => '>= 2.2.6', :lib => 'will_paginate',  :source => 'http://gems.github.com'
   config.gem "thoughtbot-shoulda",      :version => '>= 2.0.6', :lib => "shoulda",        :source => "http://gems.github.com"
   
