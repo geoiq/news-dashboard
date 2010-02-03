@@ -1,2 +1,7 @@
+config/database.yml
+config/platform.yml
+
 log/*.log
 db/*.sqlite3
+
+._*

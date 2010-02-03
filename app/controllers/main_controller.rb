@@ -5,10 +5,10 @@ class MainController < ApplicationController
   layout 'centered_content'
   
   def index
-    @footer = Footer.first
+    @footer = Footer.first || Footer.new(:description => "Default")
   end
   
   def about
-    @footer = Footer.first
+    @footer = Footer.first || Footer.new(:description => "Default")
   end
 end
