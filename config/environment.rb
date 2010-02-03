@@ -25,7 +25,8 @@ Rails::Initializer.run do |config|
   config.gem "rdiscount"
   config.gem "haml"
   config.gem "sanitize"
-  config.gem 'mislav-will_paginate',    :version => '>= 2.2.6', :lib => 'will_paginate',  :source => 'http://gems.github.com'
+  config.gem "will_paginate"
+  #config.gem 'mislav-will_paginate',    :version => '>= 2.2.6', :lib => 'will_paginate',  :source => 'http://gems.github.com'
   config.gem "thoughtbot-shoulda",      :version => '>= 2.0.6', :lib => "shoulda",        :source => "http://gems.github.com"
   
 
