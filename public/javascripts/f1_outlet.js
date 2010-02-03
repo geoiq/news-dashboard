@@ -222,10 +222,12 @@ var Accordion = {
   },
   expand: function(panel) {
     panel = $(panel)
-    Accordion.panels.without(panel).each(function(panel){
-      Accordion.transition(panel, 'minimize')
-    })
-    Accordion.transition(panel, 'maximize')
+    if (panel) {
+      Accordion.panels.without(panel).each(function(panel){
+        Accordion.transition(panel, 'minimize')
+      })
+      Accordion.transition(panel, 'maximize')
+    }
   },
   transition: function(panel,action) {
     var lng  = $$('#'+panel.id +' .long' ).first()

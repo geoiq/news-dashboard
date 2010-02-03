@@ -78,7 +78,9 @@ var News = {
     }
   },
   smart_per_page: function(results){
-    var avg = results.inject(0, function(acc, i) { return acc + i.title.length; }) / results.length
+    // This is broken - i.title does not exist; maybe mean "name"?
+    //var avg = results.inject(0, function(acc, i) { return acc + i.name.length; }) / results.length
+    avg = 100
     if(avg < 20) {return 8}
     if(avg < 40) {return 6}
     if(avg < 60) {return 4}
