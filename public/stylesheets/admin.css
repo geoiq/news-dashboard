@@ -70,10 +70,11 @@ body {
 #page {
   width: 600px;
   border: 2px solid #eee;
+  border-top: 0;x;
   margin: 0 auto;
 }
 .page {
-  margin: 30px;
+  padding: 30px;
 }
 
 table th {
@@ -117,6 +118,9 @@ h2 {
 p {margin: 0 0 1em 0;}
 b,strong {font-weight: bold;}
 i,em {font-style: italic;}
+
+a {color: #006699}
+a:hover {color: #0088bb}
 
 /* __________________________( Patterns )_ */
 .fl_r {overflow: auto; height: 1%;}  /* float left/right */
@@ -196,6 +200,38 @@ form textarea {
   padding: 12px;
   margin: 0 0 18px 0;
 }
+
+/*___________________ Admin Nav */
+.admin_nav {
+  background: #eee;
+  margin: 0 0 20px 0;
+}
+.admin_nav li {
+  position: relative;
+}
+.admin_nav a {
+  display: inline-block;
+  padding: 10px 15px 10px 15px;
+}
+.admin_nav a:hover {
+  background: #f9f9f9;
+}
+
+
+/*___________________ Forms */
+
+form label {
+  display: block; 
+  margin-bottom: 0.1em;
+}
+
+form .preview img {
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 5px;
+  display: inline-block;
+}
+
 
 
 /*___________________ Atlas List */

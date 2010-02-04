@@ -23,6 +23,8 @@
           =link_to "Map of the News | Administration", '/admin'
           %small
             =link_to "&laquo;&nbsp;Site Home", '/'
+            = link_to "&laquo;&nbsp;Admin", admin_url
+            = link_to "&laquo Your Atlases", user_atlases_path(current_user.id)
             = yield :nav
     #content
       .content

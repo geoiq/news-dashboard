@@ -240,15 +240,11 @@ h1 small {
   background: #1a365f url(/images/bg.header.gif) repeat-x;
   height: 49px;
 }
-#header #logo {
-  text-indent: -500em;
-}
 
 #header #logo a {
-  background: url(/images/logo.png) no-repeat left;
-    display: block;
-    height: 49px;
-    width: 600px;
+  display: block;
+  height: 49px;
+  width: 600px;
 }
 
 #header .nav {
