@@ -10,6 +10,12 @@
     %label Header Color
     = f.text_field :header_color
     
+    %ul.color_pick
+      - for color in %w{#336699 #3b3084 #672e6b #7c2c2a #675724 #2a501d #3e8130}
+        %li
+          %a{:rel => color, :style => "background:#{color}", :href => '#'}
+            &nbsp;
+    
   %fieldset
     %label Logo Image
     = f.file_field :logo_image
@@ -18,16 +24,18 @@
   - if @configuration.logo_image_file_name
     %fieldset
       %label Preview
-      .preview= image_tag @configuration.logo_image.url
+      .preview= image_tag @configuration.logo_image.url(:exact)
     
   %fieldset
     %label Home Page Intro Graphic
     = f.file_field :intro_image
+    .hint For the best results upload an image with 828 pixels wide. Otherwise the image will be automatically resized and image quality will degrade.
+    
     
   - if @configuration.intro_image_file_name
     %fieldset
       %label Preview
-      .preview= image_tag @configuration.intro_image.url
+      .preview= image_tag @configuration.intro_image.url(:medium)
   
   
   = f.submit

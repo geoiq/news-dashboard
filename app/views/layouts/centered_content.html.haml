@@ -17,6 +17,10 @@
       = "Maker.finder_host = '#{PLATFORM_CONFIG["finder"]}'"
       = "Maker.core_host =   '#{PLATFORM_CONFIG["url"]}'"
     = yield :header
+    
+    %style{:media => "all"}
+      = configuration_styles
+    
   %body
     = render :partial => 'layouts/header'
     

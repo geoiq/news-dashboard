@@ -21,7 +21,8 @@ class ApplicationController < ActionController::Base
   def load_config
     @configuration = Configuration.find :first
     if @configuration.nil?
-      @configuration = Configuration.new.save
+      @configuration = Configuration.new
+      @configuration.save
     end
   end
   

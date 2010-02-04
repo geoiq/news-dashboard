@@ -232,6 +232,19 @@ form .preview img {
   display: inline-block;
 }
 
+/*___________________ Color Pick */
+.color_pick li {
+  border: 1px solid #ccc;
+  margin: 4px;
+  float: left;
+}
+.color_pick li a {
+  width: 15px;
+  height: 15px;
+  font-size: 1%;
+  float: left;
+  margin: 2px;
+}
 
 
 /*___________________ Atlas List */
