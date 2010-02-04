@@ -162,7 +162,7 @@ var MapList = Class.create({
     var item =  new Template(this.options.item_format);
     var items = ""
     jsonData.each(function(e){ 
-          items += item.evaluate({  title: title.evaluate({title:e.title, description:e.description}), 
+          items += item.evaluate({  title: title.evaluate({title:e.name, description:e.description}), 
                                     description: e.description, 
                                     pk: e.pk,
                                     maker_url: Maker.maker_host})  
