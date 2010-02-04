@@ -20,6 +20,9 @@ class ApplicationController < ActionController::Base
   
   def load_config
     @configuration = Configuration.find :first
+    if @configuration.nil?
+      @configuration = Configuration.new.save
+    end
   end
   
   def show_errors(exception)
