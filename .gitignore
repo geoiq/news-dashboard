@@ -3,5 +3,5 @@ config/platform.yml
 
 log/*.log
 db/*.sqlite3
-
 ._*
+*.DS_Store

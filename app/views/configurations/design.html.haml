@@ -1,0 +1,33 @@
+= render :partial => '/layouts/admin_nav'
+
+%h1 Design
+  
+%h2 Header logo
+
+- form_for @configuration, :html => { :multipart => true } do |f|
+
+  %fieldset
+    %label Header Color
+    = f.text_field :header_color
+    
+  %fieldset
+    %label Logo Image
+    = f.file_field :logo_image
+    .hint For the best results upload an image with 310x49 pixels. Otherwise the image will be automatically resized and image quality will degrade.
+    
+  - if @configuration.logo_image_file_name
+    %fieldset
+      %label Preview
+      .preview= image_tag @configuration.logo_image.url
+    
+  %fieldset
+    %label Home Page Intro Graphic
+    = f.file_field :intro_image
+    
+  - if @configuration.intro_image_file_name
+    %fieldset
+      %label Preview
+      .preview= image_tag @configuration.intro_image.url
+  
+  
+  = f.submit

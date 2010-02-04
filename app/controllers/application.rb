@@ -3,6 +3,8 @@
 
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
+  
+  before_filter :load_config
 
   include AuthenticatedSystem
   require 'rdiscount'
@@ -15,6 +17,10 @@ class ApplicationController < ActionController::Base
   # Uncomment this to filter the contents of submitted sensitive data parameters
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
+  
+  def load_config
+    @configuration = Configuration.find :first
+  end
   
   def show_errors(exception)
     respond_to do |format|

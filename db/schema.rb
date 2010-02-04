@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100127231947) do
+ActiveRecord::Schema.define(:version => 20100203190717) do
 
   create_table "atlases", :force => true do |t|
     t.integer  "user_id"
@@ -30,6 +30,12 @@ ActiveRecord::Schema.define(:version => 20100127231947) do
     t.datetime "updated_at"
   end
 
+  create_table "configurations", :force => true do |t|
+    t.string "header_color"
+    t.string "logo_image_file_name"
+    t.string "intro_image_file_name"
+  end
+
   create_table "footers", :force => true do |t|
     t.text     "link"
     t.text     "linktext"
@@ -44,9 +50,9 @@ ActiveRecord::Schema.define(:version => 20100127231947) do
     t.text     "description"
     t.string   "maker_tag"
     t.string   "maker_user"
+    t.integer  "sort_order",      :default => 999
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "sort_order",      :default => 999
     t.string   "maps_sort_order"
     t.boolean  "default",         :default => false
     t.integer  "default_map_id"
