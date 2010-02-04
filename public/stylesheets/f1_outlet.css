@@ -6,6 +6,7 @@
   background: url(/images/b.map.gif) left 20% no-repeat;
   text-decoration: none;
   color: black;
+  position: relative;
 }
 .map_list li a:hover, .map_list li a.on {
   background-color: #fcffcd;
@@ -14,6 +15,36 @@
 .map_list .details {
   font-size: 9px;
   padding: 0 0 0 50px;
+}
+
+/* Overlays */
+.map_list .overlay {
+}
+.map_list .show_overlays {
+  font-size: 9px;
+}
+.map_list .overlays_panel {
+   position: absolute;
+   margin: 0 0 0 20px;
+   width: 230px;
+   z-index: 10;
+}
+.map_list .overlays_panel_button {
+  margin: 0 0 0 50px;
+}
+.map_list .overlays_panel_button a {
+  text-decoration:none;
+}
+.map_list .overlays {
+  background-color:#fcffed;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #777;
+  border-bottom: 1px solid #777;
+  padding: 2px 5px;
+}
+.map_list .overlays a {
+  text-decoration:none;
 }
 
 /* - Pagination - */
