@@ -12,7 +12,7 @@ var Maker = {
   },
   
   search: function(q,callback) {
-    FlashMap.jsonp(Maker.maker_host + "/search.json", callback, "query="+encodeURIComponent(q))
+    FlashMap.jsonp(Maker.maker_host + "/search.json", callback, "query="+encodeURIComponent(q) + "&include_overlays=Y")
   },
   
   load_map: function(dom_id, map_id, options) {  

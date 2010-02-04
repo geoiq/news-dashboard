@@ -143,6 +143,17 @@ var MapList = Class.create({
       list_format: '<ul>#{items}</ul>',
       item_format: '<li id="maplist_item_#{pk}">\
                       <a href="javascript:void(0)" class="load_map load_map_#{pk}">#{title}</a>\
+                      <div class="overlays_panel_button">\
+                      <a href="javascript:void(0)" class="show_overlays show_overlays_#{pk}">\
+                        <span id="show_overlays_#{pk}">show overlays</span>\
+                        <span id="hide_overlays_#{pk}" style="display:none;">hide overlays</span>\
+                      </a>\
+                      </div>\
+                      <div class="overlays_panel" id="overlays_panel_#{pk}">\
+                        <div id="overlays_#{pk}" class="overlays" style="display:none">\
+                          <ul>#{overlays}</ul>\
+                        </div>\
+                      </div>\
                     </li>',
       after_item_click: function(el,id) {}
     }, arguments[2] || { });
@@ -150,31 +161,37 @@ var MapList = Class.create({
   populate: function(jsonData) {
     var title
     if (this.options.title_format == 'full') {
-      title = new Template('<strong>#{title}</strong><br/>#{description}') }
-    else if (this.options.title_format == 'short') {
-      title = new Template('#{title}') }
-    else if (this.options.title_format == 'reveal') {
+      title = new Template('<strong>#{title}</strong><br/>#{description}') 
+    } else if (this.options.title_format == 'short') {
+      title = new Template('#{title}') 
+    } else if (this.options.title_format == 'reveal') {
       title = new Template('<strong>#{title}</strong><br/><span class="desc">#{description}</span>')
-    }
-    else if ( /\#\{title\}/.test(this.options.title_format) ) {
+    } else if ( /\#\{title\}/.test(this.options.title_format) ) {
       title = new Template(this.options.title_format)
     }
     var item =  new Template(this.options.item_format);
     var items = ""
-    jsonData.each(function(e){ 
+    var overlay_template = new Template("<li><div class='overlay'><a href='#{url}'>#{name}</a></li>")
+    var thisMapList = this
+    jsonData.each(function(e){
           items += item.evaluate({  title: title.evaluate({title:e.name, description:e.description}), 
                                     description: e.description, 
                                     pk: e.pk,
+                                    overlays: thisMapList.populate_map_overlays(e, e.overlays, overlay_template),
                                     maker_url: Maker.maker_host})  
         })
     this.element.update( new Template(this.options.list_format).evaluate({items:items}) )
     this.observe_list()
   },
-  
+  populate_map_overlays: function(map, overlays, template) {
+    var result = ""
+    overlays.each(function(o) { result += template.evaluate(o) })
+    return result
+  },
   observe_list: function() {
     $$('#' +this.element.id+ ' .load_map').invoke('observe','click', this.on_item_click.bind(this) )
+    $$('#' +this.element.id+ ' .show_overlays').invoke('observe','click', this.on_toggle_overlays.bind(this) )
   },
-  
   on_item_click: function(ev) {
     ev.stop();
     var el = ev.element()
@@ -185,7 +202,16 @@ var MapList = Class.create({
     FlashMap.load_map('maker_map', id)
     this.options.after_item_click(el,id)
   },
-  
+  on_toggle_overlays: function(ev) {
+    ev.stop();
+    var el = ev.element()
+    while (el.tagName != 'A') {el = $(el.parentNode)}
+    // get parent a
+    var id = id_from_class_pair(el, "show_overlays")
+    $('overlays_' + id).toggle()
+    $('show_overlays_' + id).toggle()
+    $('hide_overlays_' + id).toggle()
+  },
   set_url_hash: function(id){
     var match = this.element.id.match(/map_list_([0-9]+)_page_([0-9]+)/)
     UrlHash.set('/'+match[1]+'/' +match[2]+ '/'+id)  // == /list_id/page_id/map_id
