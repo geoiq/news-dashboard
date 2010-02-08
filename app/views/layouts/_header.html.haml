@@ -7,7 +7,7 @@
     %li= "#{link_to "Feedback", "mailto:support@fortiusone.com"}&nbsp;&nbsp;|&nbsp;&nbsp;"
     %li= "#{link_to "Share", "http://addthis.com/bookmark.php"}&nbsp;&nbsp;"
     - if logged_in?
-      %li= "|&nbsp;&nbsp;#{link_to "Your Atlases", user_atlases_path(current_user)}"
+      %li= "|&nbsp;&nbsp;#{link_to "Your Atlases", user_atlases_path(current_user.login)}"
       - if @atlas
         %li= "&nbsp;&nbsp;|&nbsp;&nbsp;#{link_to "Edit", edit_atlas_path(@atlas.id)}"
     - else
