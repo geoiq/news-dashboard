@@ -74,6 +74,7 @@ class AtlasesController < ApplicationController
     respond_to do |format|
       format.html { render :layout => 'main'}
       format.xml  { render :xml => @atlas }
+      format.kml
     end
   end
 
