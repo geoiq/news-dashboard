@@ -5,6 +5,7 @@
 # ENV['RAILS_ENV'] ||= 'production'
 
 require 'uri'
+require 'digest/md5'
 
 # Specifies gem version of Rails to use when vendor/rails is not present
 RAILS_GEM_VERSION = '2.1.1' unless defined? RAILS_GEM_VERSION
@@ -17,6 +18,8 @@ INSTANCE_ID = FileTest.exists?("IDENTITY") ? (`cat IDENTITY`).strip : ''
 # Note: we end up reading platform config twice - since we need to know the cookie deomain before it would
 # have been read in the initializer 
 PLATFORM_CONFIG = YAML.load_file("#{RAILS_ROOT}/config/platform.yml")[RAILS_ENV]
+
+SESSION_KEY_ID = '_f1gc_session_'+Digest::MD5.hexdigest("follow#{INSTANCE_ID}clue")
 
 def self.determine_cookie_domain
   domain = URI.parse(PLATFORM_CONFIG["finder"]).host
@@ -81,7 +84,7 @@ Rails::Initializer.run do |config|
   # no regular words or you'll be exposed to dictionary attacks.
   config.action_controller.session = {
     :domain => COOKIE_DOMAIN,
-    :key => "_f1gc_session",
+    :key => SESSION_KEY_ID,
     :secret => "#{INSTANCE_ID}whymustyoutrytod3cod3s3cr3tsthatar3notmEanttob!decoded" }
 
   # Use the database for sessions instead of the cookie-based default,
