@@ -33,7 +33,6 @@
             =link_to "&laquo;&nbsp;Site Home", '/'
             = link_to "&laquo;&nbsp;Admin", admin_url
             = link_to "&laquo Your Atlases", user_atlases_path(current_user.login)
-            = yield :nav
     #content
       .content
         #page{:class => "c_#{@controller.controller_name} a_#{@controller.action_name}"}
