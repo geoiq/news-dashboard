@@ -1,0 +1,309 @@
+var GEOCOMMONS = {
+};
+
+function contains(a, obj) {
+    var i = a.length;
+    while (i--) {
+        if (a[i] === obj) {
+            return true;
+        }
+    }
+    return false;
+};
+
+Ext.onReady(function() {
+    var enable_gmaps = false;
+    <% if params[:offline] -%>
+    Ext.BLANK_IMAGE_URL = 'images/s.gif';
+    <% end -%>
+    
+    Ext.DomHelper.append(document.body,
+                         {tag: 'div',id: 'address2'});
+    Ext.get('address_div').show();
+
+    var map_options = { 
+        'units' : "m",
+        'maxResolution' : 156543.0339,
+        'numZoomLevels' : 22,
+        'projection' : new OpenLayers.Projection("EPSG:900913"),
+        'displayProjection' : new OpenLayers.Projection("EPSG:4326"),
+        'maxExtent' : new OpenLayers.Bounds(-20037508.34,-20037508.34,
+                                            20037508.34,20037508.34),
+        'controls': [new OpenLayers.Control.Navigation(), new OpenLayers.Control.PanZoomBar(),
+                     new OpenLayers.Control.Attribution()],
+        'theme': 'css/style.css'             };
+    
+    OpenLayers.IMAGE_RELOAD_ATTEMPTS = 2;
+
+    OpenLayers.ProxyHost = "/proxy.php?url=";
+
+    var map = new OpenLayers.Map('mappanel', map_options);
+    GEOCOMMONS.map = map;
+    var layerRoot = new Ext.tree.TreeNode({
+        text: "All Layers",
+        expanded: true
+    });
+    var layer_groups = [];
+    var sfc_overlays = []; 
+
+    <% if params[:offline] %>
+    var OSM_local = new OpenLayers.Layer.XYZ(
+        "OpenStreetMap (Haiti) local",
+        "tiles/osm/${z}/${x}/${y}.png",
+        {
+            buffer:0,
+            visibility: false, linkId:'basephoto',
+            numZoomLevels: 19
+        }
+    );    
+    map.addLayers([OSM_local]);
+
+    var haiti_best = new OpenLayers.Layer.XYZ("Satellite/Aerial Imagery",
+        "tiles/haiti-best-900913/${z}/${x}/${y}.jpeg",
+        {
+            buffer:0,
+            visibility: false, linkId:'basephoto',
+            numZoomLevels: 19
+        }
+    );
+    map.addLayer(haiti_best);
+    <% else -%>
+        var OSM_mapnik = new OpenLayers.Layer.TMS(
+            "OpenStreetMap",
+            "http://a.tile.openstreetmap.org/",
+            {
+                type: 'png', getURL: osm_getTileURL,
+                displayOutsideMaxExtent: true,
+                attribution: '<a href="http://www.openstreetmap.org/">' +
+                'OpenStreetMap</a>',
+                buffer: 0, linkId: 'osm'
+            }
+        );
+        map.addLayers([OSM_mapnik]);
+
+    <% end -%>
+
+    layerRoot.appendChild(new GeoExt.tree.BaseLayerContainer({
+        text: "Base Layers",
+        map: map,
+        draggable:false,
+        expanded: true
+    }));
+
+    <% layer_lists = [] -%>
+    <% @atlas.map_lists.each_with_index do |map_list, layer_index| -%>
+        var layers_<%= layer_index %> = [];
+        
+    <% map_list.maps_sort_order.split(",").each_with_index do |map, map_index| -%>
+
+        <% if params[:offline] -%>
+        var map_<%= layer_index %>_<%= map_index %> = new OpenLayers.Layer.GML(
+          "<%= 'name' %>", 
+          "/data/<%= map %>.kml?link_format=kml",
+          {
+            projection: map.displayProjection,
+            format: OpenLayers.Format.KML, 
+            formatOptions: {
+              maxDepth: 3,
+              extractStyles: true, 
+              extractAttributes: true
+            },
+            linkId: 'map_<%= layer_index %>_<%= map_index %>',
+            visibility: false
+          }
+        );
+        <% else -%>
+        var map_<%= layer_index %>_<%= map_index %> = new OpenLayers.Layer.Vector(
+            "name", {
+            projection: map.displayProjection,
+            strategies: [new OpenLayers.Strategy.Fixed()],
+            visibility: false,
+            format: OpenLayers.Format.KML,
+            protocol: new OpenLayers.Protocol.HTTP({
+                url: "<%= MAKER_API_URL %>/maps/<%= map %>.kml?link_format=kml",
+                format: new OpenLayers.Format.KML({
+                    maxDepth: 3,
+                    extractStyles: true,
+                    extractAttributes: true
+                })
+            }),
+            linkId: 'map_<%= layer_index %>_<%= map_index %>',
+            visibility: false
+        });        
+        <% end -%>
+        map_<%= layer_index %>_<%= map_index %>.events.on({
+            "featureselected": onFeatureSelect,
+            "featureunselected": onFeatureUnselect
+        });
+        layers_<%= layer_index %>.push(map_<%= layer_index %>_<%= map_index %>);      
+    <% end -%>
+
+    layer_groups.push({name:'<%= map_list.title %>', layers:layers_<%= layer_index %>,
+                       expanded:true});
+
+    <% end -%>
+    /////////////////////////////////////
+    // Layer Stores
+    /////////////////////////////////////
+
+    
+
+    for (var p=0; p<layer_groups.length; p+=1){
+        var my_layers = layer_groups[p]["layers"];
+        var my_store = new GeoExt.data.LayerStore({
+            map: map,
+            initDir: GeoExt.data.LayerStore.MAP_TO_STORE|GeoExt.data.LayerStore.STORE_TO_MAP,
+            layers: layer_groups[p]["layers"]
+        });
+        // Actually add to the tree...
+        layerRoot.appendChild(new GeoExt.tree.LayerContainer({
+            text: layer_groups[p]["name"],
+            layerStore: my_store,
+            expanded: layer_groups[p]["expanded"],
+            draggable:false,
+            loader: new GeoExt.tree.LayerLoader({
+                layers: layer_groups[p]["layers"],
+                filter: function(record) {
+                    var layer = record.get("layer");
+                    var layers = this.layers;
+                    return contains(layers, layer);
+                }
+            })
+        }));
+    }
+
+    GEOCOMMONS.stores = [];
+    GEOCOMMONS.store_lyrs = [];
+    GEOCOMMONS.lyrs = []
+
+    ////// Add Control for PDF Selection ///////
+    ////// Sourced From Controls.js
+    var showLoc = new ShowLoc(); 
+    var streetQuery = new StreetQuery();
+    GEOCOMMONS.streetQuery = streetQuery;
+    var selectPdfControl = new SelectPdfControl();
+
+    map.addControl(new OpenLayers.Control.MGRSMousePosition());
+    map.addControl(new OpenLayers.Control.Scale());
+
+    map.events.register('changebaselayer', map, function(e) {
+        if (e.layer.mapObject) {
+            e.layer.mapObject.checkResize();
+            e.layer.moveTo(e.layer.map.getCenter(), e.layer.map.getZoom());
+        }
+    });
+
+    var show_loc = new GeoExt.Action({
+        text: "Click to Show Location",
+        control: showLoc,
+        map: map,
+        toggleGroup: "draw",
+        allowDepress: false,
+        tooltip: "Click map to show location in Decimal degrees + DDMMSS",
+        group: "draw"
+    });
+
+    toolbarItems = [show_loc];
+    var mapPanel = new GeoExt.MapPanel({
+        renderTo: 'mappanel',
+        map: map,
+        title: 'Map',
+        extent: map.getExtent(),
+        tbar:toolbarItems
+    });
+    map.addControl(new H.ArgParser());
+    GEOCOMMONS.link = new H.Permalink();
+    map.addControl(GEOCOMMONS.link);
+
+    var layerTree = new Ext.tree.TreePanel({
+        title: 'Map Layers',
+        id: 'map_lt',
+        enableDD: true,
+        root: layerRoot,
+        rootVisible: false,
+        border: false,
+        autoScroll:true,
+        region:'center'
+    });
+
+    var contrib_window = new Ext.Window({
+        applyTo:'contrib-div',
+        layout:'fit',
+        width:500,
+        height:400,
+        closeAction:'hide',
+        plain: true,
+        items: new Ext.TabPanel({
+            activeTab:0,
+            deferredRender:false,
+            border:false
+            //,items: [new Ext.Panel({
+            //    title: 'Personal',
+            //    autoLoad: 'contrib/personal_contrib.html'
+            //}),new Ext.Panel({
+            //    title: 'Corporate',
+            //    autoLoad: 'contrib/corp_contrib.html'
+            //}),new Ext.Panel({
+            //    title: 'Infrastructure',
+            //    autoLoad: 'contrib/infra_contrib.html'
+            //})]
+        }),
+
+        buttons: [{
+            text: 'Close',
+            handler: function(){
+                contrib_window.hide();
+            }
+        }]
+    });
+    ltPanel = new Ext.Panel({
+        region: "center",
+        title: "",
+        layout: 'accordion',
+        items: [layerTree]
+    });
+
+    var west = new Ext.Panel({
+        region: 'west',
+        id: 'west-panel',
+        title:'&nbsp',
+        width: 300,
+        minSize: 175,
+        maxSize: 400,
+        collapsible: true,
+        margins: '0 0 0 5',
+        layout: 'border',
+        layoutConfig:{
+            animate: true
+        },
+
+        items: [
+            ltPanel,
+            {
+                contentEl: 'address_div',
+                title: "About this Atlas",
+                region: "south",
+                border:false
+            }
+        ]
+
+    });
+
+    new Ext.Viewport({
+        layout: "border",
+        items: [{
+            region: "north",
+            contentEl: "title",
+            height:55
+        }, {
+            region: "center",
+            title: "",
+            layout: 'fit',
+            items: [mapPanel]
+        },
+	west]
+    });
+
+    setMapCenter();
+
+});    

@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :map_lists
 
-  map.resources :atlases, :member => { :organize => :get }
+  map.resources :atlases, :member => { :organize => :get, :browser => :get }
 
   map.resources :blurbs
   

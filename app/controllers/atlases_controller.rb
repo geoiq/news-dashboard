@@ -2,14 +2,15 @@ class AtlasesController < ApplicationController
 
   ATLASES_PER_PAGE = 20
 
-  layout 'admin', :except => [:show]
-  before_filter :admin_required, :except => [:show]
+  layout 'admin', :except => [:show, :browser]
+  before_filter :admin_required, :except => [:show, :browser]
 
-  before_filter :find_atlas, :only => [:show, :edit, :destroy, :update, :organize]
+  before_filter :find_atlas, :only => [:browser, :show, :edit, :destroy, :update, :organize]
   before_filter :ignore_empty_maplists
   
   rescue_from ActiveRecord::RecordInvalid, :with => :show_errors
 
+  
   def create
     @atlas = Atlas.new(params[:atlas])
     Atlas.transaction do
@@ -69,6 +70,14 @@ class AtlasesController < ApplicationController
     end
   end
 
+  def browser
+    @page_title = @atlas.title
+    respond_to do |format|
+      format.html { render :layout => false}
+      format.js
+      # TODO: format.zip
+    end
+  end
   def show
     @page_title = @atlas.title
     respond_to do |format|
