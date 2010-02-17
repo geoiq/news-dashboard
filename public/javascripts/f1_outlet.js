@@ -182,12 +182,15 @@ var MapList = Class.create({
   on_item_click: function(ev) {
     ev.stop();
     var el = ev.element()
-    while (el.tagName != 'A') {el = $(el.parentNode)}
-    this.select_item(el)
     var id = id_from_class_pair(el, "load_map")
-    this.set_url_hash(id)
-    FlashMap.load_map('maker_map', id)
-    this.options.after_item_click(el,id)
+    //Ugly...hacky...i don't care..it works
+    if(el.className != "load_map load_map_" + id + " on"){
+      while (el.tagName != 'A') {el = $(el.parentNode)}   
+      this.select_item(el)
+      this.set_url_hash(id)
+      FlashMap.load_map('maker_map', id)
+      this.options.after_item_click(el,id)
+    }
   },
   set_url_hash: function(id){
     var match = this.element.id.match(/map_list_([0-9]+)_page_([0-9]+)/)
