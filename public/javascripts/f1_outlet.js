@@ -161,13 +161,11 @@ var MapList = Class.create({
     }
     var item =  new Template(this.options.item_format);
     var items = ""
-    var overlay_template = new Template("<li><div class='overlay_name'>#{name}</div><div><a href='#{url}'>#{name}</a></div></li>")
     var thisMapList = this
     jsonData.each(function(e){
           items += item.evaluate({  title: title.evaluate({title:e.name, description:e.description}), 
                                     description: e.description, 
                                     pk: e.pk,
-                                    overlays: thisMapList.populate_map_overlays(e, e.overlays, overlay_template),
                                     maker_url: Maker.maker_host})  
         })
     this.element.update( new Template(this.options.list_format).evaluate({items:items}) )
@@ -180,7 +178,6 @@ var MapList = Class.create({
   },
   observe_list: function() {
     $$('#' +this.element.id+ ' .load_map').invoke('observe','click', this.on_item_click.bind(this) )
-    $$('#' +this.element.id+ ' .show_overlays').invoke('observe','click', this.on_toggle_overlays.bind(this) )
   },
   on_item_click: function(ev) {
     ev.stop();
@@ -191,16 +188,6 @@ var MapList = Class.create({
     this.set_url_hash(id)
     FlashMap.load_map('maker_map', id)
     this.options.after_item_click(el,id)
-  },
-  on_toggle_overlays: function(ev) {
-    ev.stop();
-    var el = ev.element()
-    while (el.tagName != 'A') {el = $(el.parentNode)}
-    // get parent a
-    var id = id_from_class_pair(el, "show_overlays")
-    $('overlays_' + id).toggle()
-    $('show_overlays_' + id).toggle()
-    $('hide_overlays_' + id).toggle()
   },
   set_url_hash: function(id){
     var match = this.element.id.match(/map_list_([0-9]+)_page_([0-9]+)/)
