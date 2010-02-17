@@ -144,16 +144,6 @@ var MapList = Class.create({
       item_format: '<li id="maplist_item_#{pk}">\
                       <a href="javascript:void(0)" class="load_map load_map_#{pk}">#{title}</a>\
                       <div class="overlays_panel_button">\
-                      <a href="javascript:void(0)" class="show_overlays show_overlays_#{pk}">\
-                        <span id="show_overlays_#{pk}">show overlays</span>\
-                        <span id="hide_overlays_#{pk}" style="display:none;">hide overlays</span>\
-                      </a>\
-                      </div>\
-                      <div class="overlays_panel" id="overlays_panel_#{pk}">\
-                        <div id="overlays_#{pk}" class="overlays" style="display:none">\
-                          <ul>#{overlays}</ul>\
-                        </div>\
-                      </div>\
                     </li>',
       after_item_click: function(el,id) {}
     }, arguments[2] || { });
@@ -171,7 +161,7 @@ var MapList = Class.create({
     }
     var item =  new Template(this.options.item_format);
     var items = ""
-    var overlay_template = new Template("<li><div class='overlay'><a href='#{url}'>#{name}</a></li>")
+    var overlay_template = new Template("<li><div class='overlay_name'>#{name}</div><div><a href='#{url}'>#{name}</a></div></li>")
     var thisMapList = this
     jsonData.each(function(e){
           items += item.evaluate({  title: title.evaluate({title:e.name, description:e.description}), 
