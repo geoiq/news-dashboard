@@ -32,7 +32,7 @@
           %small
             =link_to "&laquo;&nbsp;Site Home", '/'
             = link_to "&laquo;&nbsp;Admin", admin_url
-            = link_to "&laquo Your Atlases", user_atlases_path(current_user.login) if current_user
+            = link_to "&laquo Your Atlases", user_atlases_path(current_user.login) unless current_user == :false
             = yield :nav
     #content
       .content
