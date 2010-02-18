@@ -179,18 +179,49 @@ var MapList = Class.create({
   observe_list: function() {
     $$('#' +this.element.id+ ' .load_map').invoke('observe','click', this.on_item_click.bind(this) )
   },
+	reobserve_gracefully: function(unique_function_id) {
+		var self = this;
+
+		var function_id;
+		if (unique_function_id == null)
+		{
+			function_id = (new Date()).getTime();
+		} else {
+			function_id = unique_function_id;
+		}
+		News.callbacks = {};
+		News.callbacks[function_id] = function() { setTimeout(function() {self.observe_list()}, 500); };
+
+		callback = "News.callbacks[" + function_id + "]";
+		console.log(callback);
+		if ($(FlashMap.dom_id).setCallback != null)
+		{
+			$(FlashMap.dom_id).setCallback("MapLoad", callback);
+		} else {
+			setTimeout(self.reobserve_gracefully(function_id), 100);
+		}
+	},
   on_item_click: function(ev) {
     ev.stop();
     var el = ev.element()
+    while (el.tagName != 'A') {el = $(el.parentNode)}
+		$$('#' +this.element.id+ ' .load_map').invoke('stopObserving');
+    this.select_item(el)
     var id = id_from_class_pair(el, "load_map")
-    //Ugly...hacky...i don't care..it works
-    if(el.className != "load_map load_map_" + id + " on"){
-      while (el.tagName != 'A') {el = $(el.parentNode)}   
-      this.select_item(el)
-      this.set_url_hash(id)
-      FlashMap.load_map('maker_map', id)
-      this.options.after_item_click(el,id)
-    }
+    this.set_url_hash(id)
+    FlashMap.load_map('maker_map', id)
+    this.options.after_item_click(el,id)
+		this.reobserve_gracefully();
+  },
+  on_toggle_overlays: function(ev) {
+    ev.stop();
+    var el = ev.element()
+    while (el.tagName != 'A') {el = $(el.parentNode)}
+    // get parent a
+    var id = id_from_class_pair(el, "show_overlays")
+    $('overlays_' + id).toggle()
+    $('show_overlays_' + id).toggle()
+    $('hide_overlays_' + id).toggle()
   },
   set_url_hash: function(id){
     var match = this.element.id.match(/map_list_([0-9]+)_page_([0-9]+)/)
