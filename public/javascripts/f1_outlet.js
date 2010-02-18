@@ -178,6 +178,7 @@ var MapList = Class.create({
   },
   observe_list: function() {
     $$('#' +this.element.id+ ' .load_map').invoke('observe','click', this.on_item_click.bind(this) )
+    $$('#' +this.element.id+ ' .show_overlays').invoke('observe','click', this.on_toggle_overlays.bind(this) )
   },
 	reobserve_gracefully: function(unique_function_id) {
 		var self = this;
@@ -193,7 +194,6 @@ var MapList = Class.create({
 		News.callbacks[function_id] = function() { setTimeout(function() {self.observe_list()}, 500); };
 
 		callback = "News.callbacks[" + function_id + "]";
-		console.log(callback);
 		if ($(FlashMap.dom_id).setCallback != null)
 		{
 			$(FlashMap.dom_id).setCallback("MapLoad", callback);
