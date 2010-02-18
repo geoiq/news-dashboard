@@ -1,6 +1,6 @@
 class Atlas < ActiveRecord::Base
 
-  belongs_to :user
+  belongs_to :user, :foreign_key => "user_login"
   has_many :map_lists, :order => :sort_order
   validates_associated :map_lists
   

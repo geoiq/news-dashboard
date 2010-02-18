@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+/fortiusone/live/apps/news/current/script/process/spawner -p 8300 -i 3

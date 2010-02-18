@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+<link href="http://haiticrisismap.org/css/haiti.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="http://haiticrisismap.org/css/gaz.css" rel="stylesheet" media="screen" type="text/css" />    
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://extjs.cachefly.net/builds/ext-cdn-2060.js"></script>
+<link rel="stylesheet" type="text/css" href="http://extjs.cachefly.net/ext-2.3.0/resources/css/ext-all.css" />
+<link rel="stylesheet" href="http://openlayers.org/dev/theme/default/style.css" />
+<script type="text/javascript" src="http://openlayers.org/api/2.8/OpenLayers.js"></script>
+<script type="text/javascript" src="http://haiticrisismap.org/js/GeoExt/script/GeoExt.js"></script>
+<script type="text/javascript" src="http://haiticrisismap.org/js/helpers.js"></script>
+<script type="text/javascript" src="http://haiticrisismap.org/js/ArgParser.js"></script>
+<script type="text/javascript" src="http://haiticrisismap.org/js/Controls.js"></script>
+<script type="text/javascript" src="http://haiticrisismap.org/js/Permalink.js"></script>
+<script type="text/javascript" src="http://haiticrisismap.org/js/usng2.js"></script>
+<script type="text/javascript" src="http://haiticrisismap.org/js/MP.js"></script>
+<script type="text/javascript" src="http://haiticrisismap.org/js/Click.js"></script>
+<script type="text/javascript" src="http://haiticrisismap.org/js/dd2dms.js"></script>
+<script type="text/javascript" src="http://haiticrisismap.org/js/Gazetteer.js"></script>
+
+<!link rel="stylesheet" type="text/css" href="http://haiticrisismap.org//media/css/nms_ol.css" />
+
+
+
+<script type="text/javascript" src="./browser.js"></script>
+
+<script type="text/javascript">
+function setMapCenter() {
+    if (!GEOCOMMONS.map.getCenter() || GEOCOMMONS.map.getCenter().lon == 0) {
+        GEOCOMMONS.map.setCenter(new OpenLayers.LonLat(-77.08, 38.85).transform(new OpenLayers.Projection("EPSG:4326"),
+        new OpenLayers.Projection("EPSG:900913")),9);
+    }
+}
+</script>
+</head>
+
+<body>
+<div id="title" class="title1" align="center" style="padding: 15px 0 15px 0">
+  <%= @atlas.title %>
+</div>
+<div id="contrib-div"></div>
+<div id="mappanel"></div>
+<div id="tree"></div>
+<div id="west"></div>
+<div id="west-panel"></div>
+<div id="description"></div>
+<div id="query-win" class="x-hidden">
+<div class="x-window-header">Query Results</div>
+<div id="query-tree">
+</div>
+</div>
+<div id="address_div" style="display: none">
+  <%= @atlas.description %>
+<%# Address: <form onsubmit="gaz.osmGaz($('address').value); return false;"><input type="text" id="address" /> <input type="submit" onclick="gaz.osmGaz($('address').value); return false;" value="Show"/> <br />(Powered by OSM, can also enter MGRS.)</form> %>
+</div>
+
+</body>
+</html>

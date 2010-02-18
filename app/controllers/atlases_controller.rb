@@ -2,14 +2,15 @@ class AtlasesController < ApplicationController
 
   ATLASES_PER_PAGE = 20
 
-  layout 'admin', :except => [:show]
-  before_filter :login_required, :except => [:show]
+  layout 'admin', :except => [:show, :browser]
+  before_filter :admin_required, :except => [:show, :browser]
 
-  before_filter :find_atlas, :only => [:show, :edit, :destroy, :update, :organize]
+  before_filter :find_atlas, :only => [:browser, :show, :edit, :destroy, :update, :organize]
   before_filter :ignore_empty_maplists
   
   rescue_from ActiveRecord::RecordInvalid, :with => :show_errors
 
+  
   def create
     @atlas = Atlas.new(params[:atlas])
     Atlas.transaction do
@@ -18,7 +19,7 @@ class AtlasesController < ApplicationController
     end
     respond_to do |format|
       flash[:notice] = 'Atlas was successfully created.'
-      format.html { redirect_to user_atlases_url(current_user.id) }
+      format.html { redirect_to user_atlases_url(current_user.login) }
       format.xml  { render :xml => @atlas, :status => :created, :location => @atlas }
     end
   end
@@ -38,8 +39,8 @@ class AtlasesController < ApplicationController
   end
 
   def index
-    if params[:user_id]
-      @atlases = User.find(params[:user_id]).atlases.paginate(
+    if params[:user_login]
+      @atlases = User.find(params[:user_login]).atlases.paginate(
         :page => params[:page], :per_page => ATLASES_PER_PAGE,
         :order => 'created_at desc')
     else
@@ -54,7 +55,7 @@ class AtlasesController < ApplicationController
   end
 
   def mine
-    redirect_to user_atlases_url(current_user.id)
+    redirect_to user_atlases_url(current_user.login)
   end
 
   def edit
@@ -69,11 +70,20 @@ class AtlasesController < ApplicationController
     end
   end
 
+  def browser
+    @page_title = @atlas.title
+    respond_to do |format|
+      format.html { render :layout => false}
+      format.js
+      # TODO: format.zip
+    end
+  end
   def show
     @page_title = @atlas.title
     respond_to do |format|
       format.html { render :layout => 'main'}
       format.xml  { render :xml => @atlas }
+      format.kml
     end
   end
 

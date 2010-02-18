@@ -5,7 +5,8 @@ class UsersController < ApplicationController
 
   # render new.rhtml
   def new
-    @user = User.new
+    #@user = User.new
+    redirect_to "#{CORE_API_URL}/users/new"
   end
  
   def create

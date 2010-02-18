@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100203190717) do
+ActiveRecord::Schema.define(:version => 20100211200956) do
 
   create_table "atlases", :force => true do |t|
     t.integer  "user_id"
@@ -19,7 +19,10 @@ ActiveRecord::Schema.define(:version => 20100203190717) do
     t.boolean  "listed"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "user_login"
   end
+
+  add_index "atlases", ["user_login"], :name => "index_atlases_on_user_login"
 
   create_table "blurbs", :force => true do |t|
     t.string   "key"
@@ -36,23 +39,15 @@ ActiveRecord::Schema.define(:version => 20100203190717) do
     t.string "intro_image_file_name"
   end
 
-  create_table "footers", :force => true do |t|
-    t.text     "link"
-    t.text     "linktext"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "map_lists", :force => true do |t|
     t.integer  "atlas_id"
     t.string   "title"
     t.text     "description"
     t.string   "maker_tag"
     t.string   "maker_user"
-    t.integer  "sort_order",      :default => 999
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sort_order",      :default => 999
     t.string   "maps_sort_order"
     t.boolean  "default",         :default => false
     t.integer  "default_map_id"
