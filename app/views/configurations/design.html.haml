@@ -19,23 +19,27 @@
   %fieldset
     %label Logo Image
     = f.file_field :logo_image
+    = f.hidden_field :clear_logo_image, :value => ''
     .hint For the best results upload an image with 310x49 pixels. Otherwise the image will be automatically resized and image quality will degrade.
     
   - if @configuration.logo_image_file_name
     %fieldset
       %label Preview
-      .preview= image_tag @configuration.logo_image.url(:exact)
+      #logo_image_preview.preview= image_tag @configuration.logo_image.url(:exact)
+      .hint= link_to "Remove and use default", '#', :onclick => 'jq("#configuration_clear_logo_image").val("true");jq("#logo_image_preview").fadeTo("slow",0.3);return false'
     
   %fieldset
     %label Home Page Intro Graphic
-    = f.file_field :intro_image
+    = f.file_field :intro_image, :value => ''
+    = f.hidden_field :clear_intro_image, :value => ''
     .hint For the best results upload an image with 828 pixels wide. Otherwise the image will be automatically resized and image quality will degrade.
     
     
   - if @configuration.intro_image_file_name
     %fieldset
       %label Preview
-      .preview= image_tag @configuration.intro_image.url(:medium)
+      #intro_image_preview.preview= image_tag @configuration.intro_image.url(:medium)
+      .hint= link_to "Remove and use default", '#', :onclick => 'jq("#configuration_clear_intro_image").val("true");jq("#intro_image_preview").fadeTo("slow",0.3);return false'
   
   
   = f.submit
