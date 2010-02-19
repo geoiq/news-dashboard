@@ -143,7 +143,7 @@ var MapList = Class.create({
       list_format: '<ul>#{items}</ul>',
       item_format: '<li id="maplist_item_#{pk}">\
                       <a href="javascript:void(0)" class="load_map load_map_#{pk}">#{title}</a>\
-                      <div class="overlays_panel_button">\
+                      <div class="overlays_panel_button"></div>\
                     </li>',
       after_item_click: function(el,id) {}
     }, arguments[2] || { });
