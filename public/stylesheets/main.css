@@ -150,6 +150,24 @@ h1 small {
 .caption .description {
   margin-right: 100px;
 }
+.caption #overlays {
+  margin-top: 10px;
+}
+
+.caption #overlay_name {
+  background-color: red;
+}
+
+.caption .overlay_link {
+  text-decoration: none;
+  color: #000;
+}
+
+.caption .overlay_link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
 .caption #reveal_share {
   position: absolute;
   right: 10px;
