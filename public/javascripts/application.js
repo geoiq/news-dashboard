@@ -119,8 +119,12 @@ var News = {
     }
     $('long_description_l').update(l)
     $('long_description_r').update(r)
+    var overlay_template = new Template("&nbsp;&nbsp;&nbsp;&nbsp;<img src='/images/b.finder.png'/>&nbsp;&nbsp;<a class='overlay_link' href='#{url}'>#{name}</a><br/>")
+    overlays = News.maps[id].overlays
+    var overlay_list = ""
+    overlays.each(function(o) { overlay_list += overlay_template.evaluate(o) } )
+    $('overlays_list').update( overlay_list )
   },
-  
   init_caption_observers: function() {
     $$('.toggle_caption').invoke('observe','click', function(ev){
       ev.stop()
@@ -140,6 +144,12 @@ var News = {
       $$('#caption .caption')[0].show()
       $$('#caption .caption')[0].morph('left:1px', {duration: 0.5})
       $('show_caption').hide()
+    })
+    $$('.toggle_layers').invoke('observe', 'click', function(ev){
+      ev.stop()
+      $('overlays').toggle()
+      $('show_layers').toggle()
+      $('hide_layers').toggle()
     })
     $('reveal_share').observe('click', function(ev) {
       ev.stop()

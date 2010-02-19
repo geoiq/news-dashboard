@@ -143,17 +143,7 @@ var MapList = Class.create({
       list_format: '<ul>#{items}</ul>',
       item_format: '<li id="maplist_item_#{pk}">\
                       <a href="javascript:void(0)" class="load_map load_map_#{pk}">#{title}</a>\
-                      <div class="overlays_panel_button">\
-                      <a href="javascript:void(0)" class="show_overlays show_overlays_#{pk}">\
-                        <span id="show_overlays_#{pk}">show overlays</span>\
-                        <span id="hide_overlays_#{pk}" style="display:none;">hide overlays</span>\
-                      </a>\
-                      </div>\
-                      <div class="overlays_panel" id="overlays_panel_#{pk}">\
-                        <div id="overlays_#{pk}" class="overlays" style="display:none">\
-                          <ul>#{overlays}</ul>\
-                        </div>\
-                      </div>\
+                      <div class="overlays_panel_button"></div>\
                     </li>',
       after_item_click: function(el,id) {}
     }, arguments[2] || { });
@@ -171,13 +161,11 @@ var MapList = Class.create({
     }
     var item =  new Template(this.options.item_format);
     var items = ""
-    var overlay_template = new Template("<li><div class='overlay'><a href='#{url}'>#{name}</a></li>")
     var thisMapList = this
     jsonData.each(function(e){
           items += item.evaluate({  title: title.evaluate({title:e.name, description:e.description}), 
                                     description: e.description, 
                                     pk: e.pk,
-                                    overlays: thisMapList.populate_map_overlays(e, e.overlays, overlay_template),
                                     maker_url: Maker.maker_host})  
         })
     this.element.update( new Template(this.options.list_format).evaluate({items:items}) )
@@ -206,7 +194,6 @@ var MapList = Class.create({
 		News.callbacks[function_id] = function() { setTimeout(function() {self.observe_list()}, 500); };
 
 		callback = "News.callbacks[" + function_id + "]";
-		console.log(callback);
 		if ($(FlashMap.dom_id).setCallback != null)
 		{
 			$(FlashMap.dom_id).setCallback("MapLoad", callback);
