@@ -99,6 +99,7 @@ Rails::Initializer.run do |config|
 
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector
+   Haml::Template.options[:ugly] = true
 end
 
 require "will_paginate" 

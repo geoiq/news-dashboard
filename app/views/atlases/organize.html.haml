@@ -1,11 +1,12 @@
 %h2 Sort your Map Lists
 %p Just drag and drop the map lists below in any order you wish. Click 'Save' when you're done.
+
 - form_for(@atlas) do |f|
   %ul#sortable_map_list.sortable
     - for @map_list in @atlas.map_lists
       %li{:id=>"sort_map_list_#{@map_list.id}"}
         = @map_list.title
-        = fields_for :map_list do |ff|
+        - fields_for :map_list do |ff|
           = ff.hidden_field :sort_order, :index => @map_list.id
           = ff.hidden_field :maps_sort_order, :index => @map_list.id
           = ff.hidden_field :default_map_id, :index => @map_list.id
@@ -14,6 +15,7 @@
   - for @map_list in @atlas.map_lists
     %label= @map_list.title
     %div.map_list{:id => "map_list_#{@map_list.id}", :class => "map_list_#{@map_list.id}"}
+
   = f.submit "Save"
 
 - content_for :end_js do
