@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   
   before_filter :load_config
+  before_filter :require_sitewide_login
 
   include AuthenticatedSystem
   require 'rdiscount'
@@ -53,6 +54,12 @@ class ApplicationController < ActionController::Base
       end
     end
     false
+  end
+  
+  def require_sitewide_login
+    if not (logged_in?) and Setting.require_login?
+      access_denied
+    end
   end
   
 end
