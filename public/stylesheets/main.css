@@ -150,7 +150,7 @@ h1 small {
 .caption .description {
   margin-right: 100px;
 }
-.caption .overlays {
+.caption #overlays {
   margin-top: 10px;
 }
 

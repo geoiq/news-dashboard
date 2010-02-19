@@ -14,18 +14,18 @@
           #long_description_r
           = link_to "less", '#', :id => 'less_caption', :class => 'toggle_caption'
       = link_to "share", '#', :id => 'reveal_share'
-      .overlays
-        %h3 Data used in this map: 
+      #overlays{:style => 'display: none;'}
+        %h3 Layers used in this map: 
         #overlays_list
       .view_in
         %label View In
         = link_to "Maker<i>!</i>", "#",      :id => 'view_in_maker', :target => '_maker'
-        &nbsp;|&nbsp;
+        or
         = link_to "Google Earth (KML)", "#", :id => 'view_in_kml',   :target => '_maker'
-        -if false
+        -if true
           &nbsp;|&nbsp;
-          = link_to "Show Layers", "#", :id => 'show_overlays', :class => 'toggle_overlays'
-          = link_to "Hide Layers", "#", :id => 'hide_overlays', :class => 'toggle_overlays', :style=>'display: none;'
+          = link_to "Show Layers", "#", :id => 'show_layers', :class => 'toggle_layers'
+          = link_to "Hide Layers", "#", :id => 'hide_layers', :class => 'toggle_layers', :style => "display: none;"
 
     = link_to "hide", '#', :id => 'hide_caption'
   = link_to "show", '#', :id => 'show_caption', :style => 'display:none'
