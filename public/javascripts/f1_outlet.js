@@ -205,13 +205,13 @@ var MapList = Class.create({
     ev.stop();
     var el = ev.element()
     while (el.tagName != 'A') {el = $(el.parentNode)}
-		$$('#' +this.element.id+ ' .load_map').invoke('stopObserving');
+		//$$('#' +this.element.id+ ' .load_map').invoke('stopObserving'); --temporarily commenting this out until the flash is updated to handle this stuff better
     this.select_item(el)
     var id = id_from_class_pair(el, "load_map")
     this.set_url_hash(id)
     FlashMap.load_map('maker_map', id)
     this.options.after_item_click(el,id)
-		this.reobserve_gracefully();
+		//this.reobserve_gracefully(); --temporarily commenting this out until the flash is updated to handle this stuff better
   },
   on_toggle_overlays: function(ev) {
     ev.stop();

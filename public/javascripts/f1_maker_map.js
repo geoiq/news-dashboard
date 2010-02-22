@@ -38,15 +38,13 @@ var FlashMap = {
     var options = Object.f1_extend({
       afterFinish: { }
     }, arguments[2] || { });
-    if (FlashMap.dom_id) {
-      this.load_just_map(map_id)
-    } else {
+
     FlashMap.dom_id = dom_id;
     var flashvars  = {map_id:map_id, core_host: Maker.core_host + '/', maker_host: Maker.maker_host + '/', dev:"false"}    
     var params     = {base: Maker.maker_host, "allowScriptAccess":"always", "allowNetworking": "all", "wmode":"transparent"};
     var attributes = {"allowScriptAccess":"always", "allowNetworking": "all", "wmode":"transparent"};
     f1_swfobject21.embedSWF(Maker.maker_host + "/Wrapper.swf", dom_id, "100%", "410", "9.0.0", Maker.maker_host + "/expressInstall.swf", flashvars, params, attributes)
-    }
+
     if(typeof options.afterFinish == "function") {options.afterFinish(dom_id, map_id)}
   },
   load_just_map: function(map_id) {
