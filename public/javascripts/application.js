@@ -120,7 +120,7 @@ var News = {
     $('long_description_l').update(l)
     $('long_description_r').update(r)
     var overlay_template = new Template("&nbsp;&nbsp;&nbsp;&nbsp;<img src='/images/b.finder.png'/>&nbsp;&nbsp;<a class='overlay_link' href='#{url}'>#{name}</a><br/>")
-    overlays = News.maps[id].overlays
+    var overlays = News.maps[id].overlays
     var overlay_list = ""
     overlays.each(function(o) { overlay_list += overlay_template.evaluate(o) } )
     $('overlays_list').update( overlay_list )
