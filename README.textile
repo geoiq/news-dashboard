@@ -16,3 +16,7 @@ h2. Upgrading to GeoIQ 1.8
 The current version of the GeoIQ dashboard is based on GeoIQ 1.4, which had three separate Ruby on Rails applications: Core, Finder, and Maker. In the newest version of GeoIQ 1.8, these have been merged into a single Rails application. Therefore, all code that refers to the separate applications needs to point to a single PLATFORM_URL endpoint.
 
 h2. Using the Dashboard
+
+h2. Restrictions
+
+This code is the proprietary property of FortiusOne, Inc. It should not be shared with third parties without prior approval.
