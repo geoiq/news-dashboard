@@ -1,0 +1,18 @@
+h1. GeoIQ News Dashboard
+
+This application provides a simple means for building "dashboards" of maps from a GeoIQ or GeoCommons server based on tags. 
+
+h2. Setup
+
+# Modify config/database.yml with the connection and login information to the database
+# Create a database with: rake db:create
+# Migrate it to the current schema with: rake db:migrate
+# Modify platform.yml with appropriate configuration to GeoIQ server
+# Start the server with: script/server
+** Alternatively use Phusion Passenger
+
+h2. Upgrading to GeoIQ 1.8
+
+The current version of the GeoIQ dashboard is based on GeoIQ 1.4, which had three separate Ruby on Rails applications: Core, Finder, and Maker. In the newest version of GeoIQ 1.8, these have been merged into a single Rails application. Therefore, all code that refers to the separate applications needs to point to a single PLATFORM_URL endpoint.
+
+h2. Using the Dashboard
