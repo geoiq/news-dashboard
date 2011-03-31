@@ -15,11 +15,8 @@ set :runner, nil
 set :deploy_to, "/fortiusone/live/apps/#{application}"
 set :deploy_via, :copy
 
-# set :copy_cache, true  # maintain local cache of deploying code. faster. but need to override method for our geocommons/#{application}
-set(:tag) {   
-  ENV['GIT_VERSION'] || Capistrano::CLI.ui.ask("\n>> Branch to deploy, e.g. 'releases/1.3' (or press <enter> for master): ") }
 
-set(:branch) { (tag == "master" || tag.length == 0) ? "master" : "#{tag}" }
+
 
 set :rake_cmd, (ENV['RAKE_CMD'] || nil)
 task :rake_exec do

@@ -1,12 +1,15 @@
 <div id="embed" style="display:none">
 <p>To use this map on your website simply copy the following and paste it into your web page:</p>
-<textarea onclick="Form.Element.select(element);" class="code" id="embed_code" rows="6" cols="50" readonly>&lt;style&gt;#maker_map_%mapid% {width: 100%; height: 400px;}&lt;/style&gt;
-  &lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;<%= PLATFORM_CONFIG["maker"] %>/javascripts/embed.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;
-  Maker.maker_host=&#x27;<%= PLATFORM_CONFIG["maker"] %>&#x27;; Maker.finder_host=&#x27;<%= PLATFORM_CONFIG["finder"] %>&#x27;; Maker.core_host=&#x27;<%= PLATFORM_CONFIG["url"] %>&#x27;;
-  Maker.load_map(&quot;maker_map_%mapid%&quot;, &quot;%mapid%&quot;);
-&lt;/script&gt;
-&lt;div class=&quot;geocommons_map&quot; id=&quot;maker_map_%mapid%&quot;&gt;&lt;/div&gt;&lt;br/&gt;
-&lt;a class=&quot;geocommons_map_link&quot; id=&quot;maker_map_%mapid%_link&quot; href=&quot;<%= top_atlas_path(:url => @atlas.url) %>&quot;&gt;View full atlas&lt;/a&gt;</textarea>
+<textarea onclick="Form.Element.select(element);" class="code" id="embed_code" rows="6" cols="50" readonly>
+  &lt;style&gt;#maker_map_%mapid% {width: 100%; height: 400px;}&lt;/style&gt;
+  &lt;div class=&quot;geocommons_map&quot; id=&quot;maker_map_%mapid%&quot;&gt;&lt;/div&gt;&lt;br/&gt;
+  &lt;a class=&quot;geocommons_map_link&quot; id=&quot;maker_map_%mapid%_link&quot; href=&quot;<%= PLATFORM_CONFIG["maker"] %>/maps/%mapid%&quot;&gt;View full map&lt;/a&gt;
+  &lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;<%= PLATFORM_CONFIG["maker"] %>/javascripts/f1.api.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;
+    maker_map_%mapid% = new F1.Maker.Map({map_id: &quot;%mapid%&quot;, dom_id: &quot;maker_map_%mapid%&quot;});
+  &lt;/script&gt;</textarea>
 <a href="#" id="dismiss_share">Done</a>
 </div>
+
+
+

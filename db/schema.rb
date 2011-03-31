@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100211200956) do
+ActiveRecord::Schema.define(:version => 20090811195804) do
 
   create_table "atlases", :force => true do |t|
     t.integer  "user_id"
@@ -19,10 +19,7 @@ ActiveRecord::Schema.define(:version => 20100211200956) do
     t.boolean  "listed"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "user_login"
   end
-
-  add_index "atlases", ["user_login"], :name => "index_atlases_on_user_login"
 
   create_table "blurbs", :force => true do |t|
     t.string   "key"
@@ -31,12 +28,6 @@ ActiveRecord::Schema.define(:version => 20100211200956) do
     t.datetime "publish_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "configurations", :force => true do |t|
-    t.string "header_color"
-    t.string "logo_image_file_name"
-    t.string "intro_image_file_name"
   end
 
   create_table "map_lists", :force => true do |t|

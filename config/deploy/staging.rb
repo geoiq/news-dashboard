@@ -68,7 +68,7 @@ EOF
   desc "Make symlink for database yaml" 
   task :symlink do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml" 
-    run "ln -nfs #{base_path}/apps/platform.yml #{release_path}/config/platform.yml" 
+    run "ln -nfs #{shared_path}/config/platform.yml #{release_path}/config/platform.yml" 
     # run "chown -R nobody:nobody #{release_path}/public"
   end  
 end

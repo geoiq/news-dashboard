@@ -40,6 +40,7 @@ if (Prototype.Browser.MobileSafari)
 /* Based on Alex Arnell's inheritance implementation. */
 var Class = {
   create: function() {
+
     var parent = null, properties = $A(arguments);
     if (Object.isFunction(properties[0]))
       parent = properties.shift();
@@ -61,12 +62,10 @@ var Class = {
 
     for (var i = 0; i < properties.length; i++)
       klass.addMethods(properties[i]);
-
     if (!klass.prototype.initialize)
       klass.prototype.initialize = Prototype.emptyFunction;
 
     klass.prototype.constructor = klass;
-
     return klass;
   }
 };
@@ -100,6 +99,7 @@ Class.Methods = {
 var Abstract = { };
 
 Object.extend = function(destination, source) {
+
   for (var property in source)
     destination[property] = source[property];
   return destination;
@@ -107,6 +107,7 @@ Object.extend = function(destination, source) {
 
 Object.extend(Object, {
   inspect: function(object) {
+
     try {
       if (Object.isUndefined(object)) return 'undefined';
       if (object === null) return 'null';
@@ -261,7 +262,6 @@ Date.prototype.toJSON = function() {
 var Try = {
   these: function() {
     var returnValue;
-
     for (var i = 0, length = arguments.length; i < length; i++) {
       var lambda = arguments[i];
       try {
@@ -756,6 +756,7 @@ var Enumerable = {
       if (!iterator(value, index))
         results.push(value);
     });
+
     return results;
   },
 

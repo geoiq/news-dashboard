@@ -1,4 +1,14 @@
 --- 
+- !ruby/object:Blurb 
+  attributes: 
+    updated_at: 2009-02-25 18:12:30
+    title: ""
+    body: <img src="/images/g.headline.png" id="home_headline"/>
+    id: "1"
+    publish_at: 2009-02-25 18:10:00
+    key: feature graphic
+    created_at: 2009-02-25 18:12:30
+  attributes_cache: {}
 
 - !ruby/object:Blurb 
   attributes: 

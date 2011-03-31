@@ -4,31 +4,11 @@
 # you don't control web/app server and can't set it the proper way
 # ENV['RAILS_ENV'] ||= 'production'
 
-require 'uri'
-require 'digest/md5'
-
 # Specifies gem version of Rails to use when vendor/rails is not present
 RAILS_GEM_VERSION = '2.1.1' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
-
-INSTANCE_ID = FileTest.exists?("IDENTITY") ? (`cat IDENTITY`).strip : ''
-
-# Note: we end up reading platform config twice - since we need to know the cookie deomain before it would
-# have been read in the initializer 
-PLATFORM_CONFIG = YAML.load_file("#{RAILS_ROOT}/config/platform.yml")[RAILS_ENV]
-
-SESSION_KEY_ID = '_f1gc_session_'+Digest::MD5.hexdigest("follow#{INSTANCE_ID}clue")
-
-def self.determine_cookie_domain
-  domain = URI.parse(PLATFORM_CONFIG["finder"]).host
-  if URI.parse(PLATFORM_CONFIG["maker"]).host != domain
-    domain.gsub!(/^\w+./, '.')
-  end
-end
-
-COOKIE_DOMAIN = determine_cookie_domain
 
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
@@ -44,11 +24,8 @@ Rails::Initializer.run do |config|
   # They can then be installed with "rake gems:install" on new installations.
   config.gem "rdiscount"
   config.gem "haml"
-  config.gem "sanitize"
-  config.gem "will_paginate"
-  #config.gem 'mislav-will_paginate',    :version => '>= 2.2.6', :lib => 'will_paginate',  :source => 'http://gems.github.com'
+  config.gem 'mislav-will_paginate',    :version => '>= 2.2.6', :lib => 'will_paginate',  :source => 'http://gems.github.com'
   config.gem "thoughtbot-shoulda",      :version => '>= 2.0.6', :lib => "shoulda",        :source => "http://gems.github.com"
-  config.gem "paperclip"
   
 
 
@@ -67,7 +44,6 @@ Rails::Initializer.run do |config|
   	File.directory?(lib = "#{dir}/lib") ? lib : dir
   end
 
-  config.load_paths += %W( #{RAILS_ROOT}/app/models/f1_common/ )
 
   # Force all environments to use the same logger level
   # (by default production uses :info, the others :debug)
@@ -83,9 +59,9 @@ Rails::Initializer.run do |config|
   # Make sure the secret is at least 30 characters and all random, 
   # no regular words or you'll be exposed to dictionary attacks.
   config.action_controller.session = {
-    :domain => COOKIE_DOMAIN,
-    :key => SESSION_KEY_ID,
-    :secret => "#{INSTANCE_ID}whymustyoutrytod3cod3s3cr3tsthatar3notmEanttob!decoded" }
+    :session_key => '_inauguration08_session',
+    :secret      => 'ea25655269bd67d4d7735c7749effeeb66c064cbfaae0711e8f0c9bade37e899d79927229403d13b1be884320e0230cecadf04f1dbedc50112b71b91c67653cd'
+  }
 
   # Use the database for sessions instead of the cookie-based default,
   # which shouldn't be used to store highly confidential information

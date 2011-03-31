@@ -1,9 +1,11 @@
+- content_for :nav do
+  = link_to "&laquo Your Atlases", user_atlases_path(@atlas.user_id)
 
 - form_for(atlas) do |f|
   = f.error_messages
   
   .side_hint.block_labels
-    = f.hidden_field :user_login
+    = f.hidden_field :user_id
     %fieldset
       = f.label :title
       - content_for :end_js do

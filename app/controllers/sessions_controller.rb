@@ -7,39 +7,26 @@ class SessionsController < ApplicationController
 
   # render new.rhtml
   def new
-    #redirect_to CORE_API_URL + "/login"
   end
 
   def create
-    self.current_user = User.authenticate(params[:login]||params[:session][:login], params[:password]||params[:session][:password])   
-    #session[:f1token] = self.current_user.f1token if logged_in?
-    respond_to do |format|
-      format.html {
-        if logged_in?
-          redirect_back_or_default('/')
-          flash[:notice] = "Logged in successfully"
-        end
-      }
-      format.js {
-        if logged_in?
-          render :json => {:location => user_url(:id => current_user, :format => :js), :id => current_user.id, :admin => current_user.admin?}, :status => :created
-          # head :created, :location => user_url(:id => current_user, :format => :js)
-        end
-      }
-    end
-  rescue ActiveResource::UnauthorizedAccess
-    respond_to do |format|
-      format.html {     
-        flash[:error] = "The username or password you entered is incorrect."
-        render :action => 'new'
-      }
-      format.js {
-        render(:text => {
-            :base => ["The username or password you entered is incorrect."],
-            :login => [""],
-            :password => [""]
-        }.to_json, :status => :accepted)
-      }
+    logout_keeping_session!
+    user = User.authenticate(params[:login], params[:password])
+    if user
+      # Protects against session fixation attacks, causes request forgery
+      # protection if user resubmits an earlier form using back
+      # button. Uncomment if you understand the tradeoffs.
+      # reset_session
+      self.current_user = user
+      new_cookie_flag = (params[:remember_me] == "1")
+      handle_remember_cookie! new_cookie_flag
+      redirect_back_or_default('/')
+      flash[:notice] = "Logged in successfully"
+    else
+      note_failed_signin
+      @login       = params[:login]
+      @remember_me = params[:remember_me]
+      render :action => 'new'
     end
   end
 

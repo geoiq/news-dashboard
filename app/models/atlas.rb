@@ -1,6 +1,6 @@
 class Atlas < ActiveRecord::Base
 
-  belongs_to :user, :foreign_key => "user_login"
+  belongs_to :user
   has_many :map_lists, :order => :sort_order
   validates_associated :map_lists
   
@@ -21,7 +21,7 @@ class Atlas < ActiveRecord::Base
   def default_map_list
     @default_map_list ||= (
       self.map_lists.detect{|m| m.default? }
-    )
+    ) || self.map_lists.first
   end
   
   def default_map_list_id
