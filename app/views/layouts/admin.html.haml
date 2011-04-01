@@ -11,16 +11,28 @@
       = #stylesheet_link_tag "application_ie6", :media => "all" 
   
     =javascript_include_tag 'prototype', 'effects', 'application', 'dragdrop', 'f1_maker_map', 'f1_outlet'
+    
+    =javascript_include_tag 'jquery-1.3.2.min'
+    
+    %script{:type=>"text/javascript"}
+      var jq = jQuery.noConflict();
+    
+    =javascript_include_tag 'admin'
+    
     %script{:type=>"text/javascript"}
       = "Maker.maker_host =  '#{PLATFORM_CONFIG["maker"]}'"
+      = "Maker.finder_host = '#{PLATFORM_CONFIG["finder"]}'"
+      = "Maker.core_host =   '#{PLATFORM_CONFIG["url"]}'"
 
   %body
     #header
       .header
         #logo
-          =link_to "Map of the News | Administration", '/admin'
+          =link_to "News Dashboard | Administration", '/admin'
           %small
             =link_to "&laquo;&nbsp;Site Home", '/'
+            = link_to "&laquo;&nbsp;Admin", admin_url
+            = link_to "&laquo;&nbsp;Atlases", user_atlases_path(current_user.login) unless current_user == :false
             = yield :nav
     #content
       .content

@@ -1,9 +1,15 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :footers
+
   map.resources :map_lists
 
-  map.resources :atlases, :member => { :organize => :get }
+  map.resources :atlases, :member => { :organize => :get, :browser => :get }
 
   map.resources :blurbs
+  
+  map.resources :footers
+  
+  map.resources :configurations
 
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.login '/login', :controller => 'sessions', :action => 'new'
@@ -13,6 +19,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users, :has_many => :atlases
 
   map.resource :session
+  
+  map.design '/admin/design', :controller => 'configurations', :action => 'design'
   
   map.admin '/admin', :controller => 'blurbs', :action => "index"
   map.about '/about', :controller => 'main', :action => "about"
@@ -54,6 +62,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => "main"
   
   map.top_atlas ':url', :controller => "atlases", :action => "show"
+  
 
   # See how all your routes lay out with "rake routes"
 

@@ -11,5 +11,4 @@
     = f.text_field :maker_user, :index => index, :class => 'nice'
 
   .actions
-    = link_to "Preview", "#"
-    = link_to "Organize", organize_atlas_path(@atlas)
+    = link_to "Organize", organize_atlas_path(@atlas) unless (@atlas.new_record?)

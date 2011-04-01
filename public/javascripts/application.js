@@ -1,15 +1,13 @@
 // All of the code related to the view of this Outlet application here.
 var News = {
-
   default_map_list: "",
   default_map_list_page: "",
   default_map: "",
   maps: {},
   panel_count: 0,
   panels_loaded: 0,
-
+  
   create_panels: function(element, jsonData) {
-
     News.panel_count = jsonData.length
     jsonData.each(function(data) {
       News.create_panel(element,data);
@@ -80,7 +78,9 @@ var News = {
     }
   },
   smart_per_page: function(results){
-    var avg = results.inject(0, function(acc, i) { return acc + i.title.length; }) / results.length
+    // This is broken - i.title does not exist; maybe mean "name"?
+    //var avg = results.inject(0, function(acc, i) { return acc + i.name.length; }) / results.length
+    avg = 100
     if(avg < 20) {return 8}
     if(avg < 40) {return 6}
     if(avg < 60) {return 4}
@@ -119,8 +119,12 @@ var News = {
     }
     $('long_description_l').update(l)
     $('long_description_r').update(r)
+    var overlay_template = new Template("&nbsp;&nbsp;&nbsp;&nbsp;<img src='/images/b.finder.png'/>&nbsp;&nbsp;<a class='overlay_link' href='#{url}'>#{name}</a><br/>")
+    var overlays = News.maps[id].overlays
+    var overlay_list = ""
+    overlays.each(function(o) { overlay_list += overlay_template.evaluate(o) } )
+    $('overlays_list').update( overlay_list )
   },
-  
   init_caption_observers: function() {
     $$('.toggle_caption').invoke('observe','click', function(ev){
       ev.stop()
@@ -140,6 +144,12 @@ var News = {
       $$('#caption .caption')[0].show()
       $$('#caption .caption')[0].morph('left:1px', {duration: 0.5})
       $('show_caption').hide()
+    })
+    $$('.toggle_layers').invoke('observe', 'click', function(ev){
+      ev.stop()
+      $('overlays').toggle()
+      $('show_layers').toggle()
+      $('hide_layers').toggle()
     })
     $('reveal_share').observe('click', function(ev) {
       ev.stop()
@@ -189,7 +199,7 @@ var News = {
   },
   
   prepare_data: function(jsonData, maps_sort_order){
-    var jsonMapData = jsonData.entries.reject(function(e){return e.type != "Map"})
+    var jsonMapData = jsonData.reject(function(e){return e.type != "Map"})
     if (maps_sort_order) {
       return News.custom_sort(jsonMapData, maps_sort_order)
     } else {

@@ -6,7 +6,7 @@
   #caption{:style=>'display:none'}
     .caption
       .description
-        %h#map_title
+        %h2#map_title
         %span#short_description
         = link_to "more", '#', :id => 'more_caption', :class => 'toggle_caption'
         #long_description{:style=>'display:none'}
@@ -14,17 +14,25 @@
           #long_description_r
           = link_to "less", '#', :id => 'less_caption', :class => 'toggle_caption'
       = link_to "share", '#', :id => 'reveal_share'
+      #overlays{:style => 'display: none;'}
+        %h3 Layers used in this map: 
+        #overlays_list
       .view_in
         %label View In
         = link_to "Maker<i>!</i>", "#",      :id => 'view_in_maker', :target => '_maker'
-        &nbsp;|&nbsp;
+        or
         = link_to "Google Earth (KML)", "#", :id => 'view_in_kml',   :target => '_maker'
+        -if true
+          &nbsp;|&nbsp;
+          = link_to "Show Layers", "#", :id => 'show_layers', :class => 'toggle_layers'
+          = link_to "Hide Layers", "#", :id => 'hide_layers', :class => 'toggle_layers', :style => "display: none;"
+
     = link_to "hide", '#', :id => 'hide_caption'
   = link_to "show", '#', :id => 'show_caption', :style => 'display:none'
   
   = find_and_preserve( render :partial => 'embed' )
 
-  - content_for :side  do
+  - content_for :side do
     %label.atlas_title= h(@atlas.title)
     #panel_welcome.panel
       .short
@@ -32,7 +40,7 @@
       %a#loading_maps{:href=>'#'} Loading...
       %a#continue_button{:href=>'#', :style=>'display:none'} Continue
     #atlas_panels{:style=>'display:none'}
-
+      
 - content_for :end_js do
   == News.default_map_list = "map_list_#{@atlas.default_map_list_id}"
   == News.default_map = "#{@atlas.default_map_id}"

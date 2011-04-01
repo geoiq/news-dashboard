@@ -1,9 +1,12 @@
+<%= render :partial => "layouts/admin_nav" %>
 <h1>Blurbs</h1>
+
+Edit blurbs to modify the text that appears on the front page.<br/><br/>
 
 <table>
   <tr>
     <th>Key</th>
-    <th>Body</th>
+    <th colspan="4">Body</th>
   </tr>
 
 <% for blurb in @blurbs %>
@@ -18,5 +21,3 @@
 </table>
 
 <br />
-
-<%= link_to 'New Blurb', new_blurb_path %> 

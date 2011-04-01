@@ -128,7 +128,6 @@ var PaginatedMapList = Class.create({
 //    title_format: [template string] allows you to specify your own title template.
 //                  ex: MapList.on_list_maps(jsonData, {title_format: "<h1>#{title}</h1>" })
 var MapLists = {
-
   lookup: {},
   register: function(item) {
     MapLists.lookup[item.element.id] = item
@@ -144,6 +143,7 @@ var MapList = Class.create({
       list_format: '<ul>#{items}</ul>',
       item_format: '<li id="maplist_item_#{pk}">\
                       <a href="javascript:void(0)" class="load_map load_map_#{pk}">#{title}</a>\
+                      <div class="overlays_panel_button"></div>\
                     </li>',
       after_item_click: function(el,id) {}
     }, arguments[2] || { });
@@ -151,19 +151,19 @@ var MapList = Class.create({
   populate: function(jsonData) {
     var title
     if (this.options.title_format == 'full') {
-      title = new Template('<strong>#{title}</strong><br/>#{description}') }
-    else if (this.options.title_format == 'short') {
-      title = new Template('#{title}') }
-    else if (this.options.title_format == 'reveal') {
+      title = new Template('<strong>#{title}</strong><br/>#{description}') 
+    } else if (this.options.title_format == 'short') {
+      title = new Template('#{title}') 
+    } else if (this.options.title_format == 'reveal') {
       title = new Template('<strong>#{title}</strong><br/><span class="desc">#{description}</span>')
-    }
-    else if ( /\#\{title\}/.test(this.options.title_format) ) {
+    } else if ( /\#\{title\}/.test(this.options.title_format) ) {
       title = new Template(this.options.title_format)
     }
     var item =  new Template(this.options.item_format);
     var items = ""
-    jsonData.each(function(e){ 
-          items += item.evaluate({  title: title.evaluate({title:e.title, description:e.description}), 
+    var thisMapList = this
+    jsonData.each(function(e){
+          items += item.evaluate({  title: title.evaluate({title:e.name, description:e.description}), 
                                     description: e.description, 
                                     pk: e.pk,
                                     maker_url: Maker.maker_host})  
@@ -171,22 +171,58 @@ var MapList = Class.create({
     this.element.update( new Template(this.options.list_format).evaluate({items:items}) )
     this.observe_list()
   },
-  
+  populate_map_overlays: function(map, overlays, template) {
+    var result = ""
+    overlays.each(function(o) { result += template.evaluate(o) })
+    return result
+  },
   observe_list: function() {
     $$('#' +this.element.id+ ' .load_map').invoke('observe','click', this.on_item_click.bind(this) )
+    $$('#' +this.element.id+ ' .show_overlays').invoke('observe','click', this.on_toggle_overlays.bind(this) )
   },
-  
+	reobserve_gracefully: function(unique_function_id) {
+		var self = this;
+
+		var function_id;
+		if (unique_function_id == null)
+		{
+			function_id = (new Date()).getTime();
+		} else {
+			function_id = unique_function_id;
+		}
+		News.callbacks = {};
+		News.callbacks[function_id] = function() { setTimeout(function() {self.observe_list()}, 500); };
+
+		callback = "News.callbacks[" + function_id + "]";
+		if ($(FlashMap.dom_id).setCallback != null)
+		{
+			$(FlashMap.dom_id).setCallback("MapLoad", callback);
+		} else {
+			setTimeout(self.reobserve_gracefully(function_id), 100);
+		}
+	},
   on_item_click: function(ev) {
     ev.stop();
     var el = ev.element()
     while (el.tagName != 'A') {el = $(el.parentNode)}
+		//$$('#' +this.element.id+ ' .load_map').invoke('stopObserving'); --temporarily commenting this out until the flash is updated to handle this stuff better
     this.select_item(el)
     var id = id_from_class_pair(el, "load_map")
     this.set_url_hash(id)
     FlashMap.load_map('maker_map', id)
     this.options.after_item_click(el,id)
+		//this.reobserve_gracefully(); --temporarily commenting this out until the flash is updated to handle this stuff better
   },
-  
+  on_toggle_overlays: function(ev) {
+    ev.stop();
+    var el = ev.element()
+    while (el.tagName != 'A') {el = $(el.parentNode)}
+    // get parent a
+    var id = id_from_class_pair(el, "show_overlays")
+    $('overlays_' + id).toggle()
+    $('show_overlays_' + id).toggle()
+    $('hide_overlays_' + id).toggle()
+  },
   set_url_hash: function(id){
     var match = this.element.id.match(/map_list_([0-9]+)_page_([0-9]+)/)
     UrlHash.set('/'+match[1]+'/' +match[2]+ '/'+id)  // == /list_id/page_id/map_id
@@ -223,10 +259,12 @@ var Accordion = {
   },
   expand: function(panel) {
     panel = $(panel)
-    Accordion.panels.without(panel).each(function(panel){
-      Accordion.transition(panel, 'minimize')
-    })
-    Accordion.transition(panel, 'maximize')
+    if (panel) {
+      Accordion.panels.without(panel).each(function(panel){
+        Accordion.transition(panel, 'minimize')
+      })
+      Accordion.transition(panel, 'maximize')
+    }
   },
   transition: function(panel,action) {
     var lng  = $$('#'+panel.id +' .long' ).first()

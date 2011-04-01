@@ -9,7 +9,7 @@
 
 // converts rgb() and #xxx to #xxxxxx format,  
 // returns self (or first argument) if not convertable  
-String.prototype.parseColor = function() {
+String.prototype.parseColor = function() {  
   var color = '#';
   if (this.slice(0,4) == 'rgb(') {  
     var cols = this.slice(4,this.length-1).split(',');  
@@ -231,7 +231,6 @@ Effect.Queues = {
 Effect.Queue = Effect.Queues.get('global');
 
 Effect.Base = Class.create({
-
   position: null,
   start: function(options) {
     function codeForEvent(options,eventName){
@@ -269,7 +268,6 @@ Effect.Base = Class.create({
         'global' : this.options.queue.scope).add(this);
   },
   loop: function(timePos) {
-
     if (timePos >= this.startOn) {
       if (timePos >= this.finishOn) {
         this.render(1.0);
