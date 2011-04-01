@@ -3,9 +3,10 @@
 
 var Maker = {
   version: "0.3a",
-  
+
+
   find_maps: function(maker_tag, maker_user, callback) {
-    Maker._check_hosts()
+     Maker._check_hosts()
     var q = "tag:" + maker_tag.split(/[, ]+/).join(" and tag:") //comma delimited tag spliting
     if(maker_user != undefined && maker_user != "") {q +=  " and user:" + maker_user}
     Maker.search(q, callback)
@@ -14,10 +15,11 @@ var Maker = {
   search: function(q,callback) {
     FlashMap.jsonp(Maker.maker_host + "/search.json", callback, "query="+encodeURIComponent(q))
   },
-  
-  load_map: function(dom_id, map_id, options) {  
+
+  load_map: function(dom_id, map_id, options) {
     Maker._check_hosts()
-    FlashMap.load_map(dom_id, map_id, arguments[2])  
+    FlashMap.load_map(dom_id, map_id, arguments[2])
+
   },
   resize_when_ready: function() { FlashMap.resize_when_ready() },
   resize_map_to_fit: function() { FlashMap.resize_map_to_fit() },
@@ -31,16 +33,17 @@ var Maker = {
   }
 }
 
-
 // Internal API. Use of these methods is strongly discouraged.
 var FlashMap = {
+
   load_map: function(dom_id, map_id) {
+
     var options = Object.f1_extend({
       afterFinish: { }
     }, arguments[2] || { });
-    
     FlashMap.dom_id = dom_id;
-    var flashvars  = {map_id:map_id, core_host: Maker.core_host + '/', maker_host: Maker.maker_host + '/', dev:"false"}    
+    var flashvars  = {map_id:map_id, core_host: Maker.maker_host + '/', maker_host: Maker.maker_host + '/',
+finder_host: Maker.maker_host + '/', dev:"false"}    
     var params     = {base: Maker.maker_host, "allowScriptAccess":"always", "allowNetworking": "all", "wmode":"transparent"};
     var attributes = {"allowScriptAccess":"always", "allowNetworking": "all", "wmode":"transparent"};
     f1_swfobject21.embedSWF(Maker.maker_host + "/Wrapper.swf", dom_id, "100%", "410", "9.0.0", Maker.maker_host + "/expressInstall.swf", flashvars, params, attributes)
@@ -48,6 +51,7 @@ var FlashMap = {
   },
   
   resize_when_ready: function() {
+
     var t = setTimeout("FlashMap.resize_map_to_fit();", 500); //flash init is a bit slow.
   },
   
@@ -79,11 +83,10 @@ var FlashMap = {
       url += callback + "&";
       if (query)
           url += query + "&";   
-      url += new Date().getTime().toString(); // prevent caching        
-
-      var script = document.createElement("script");        
+      url += new Date().getTime().toString(); // prevent caching
+      var script = document.createElement("script");
       script.setAttribute("src",url);
-      script.setAttribute("type","text/javascript");                
+      script.setAttribute("type","text/javascript");
       document.body.appendChild(script);
   }
 }
@@ -93,7 +96,7 @@ var FlashMap = {
 Object.f1_extend = function(destination, source) {
   for (var property in source)
     destination[property] = source[property];
-  return destination;
+    return destination;
 };
 
 /* SWFObject v2.1 <http://code.google.com/p/swfobject/>

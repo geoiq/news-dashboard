@@ -1,13 +1,15 @@
 // All of the code related to the view of this Outlet application here.
 var News = {
+
   default_map_list: "",
   default_map_list_page: "",
   default_map: "",
   maps: {},
   panel_count: 0,
   panels_loaded: 0,
-  
+
   create_panels: function(element, jsonData) {
+
     News.panel_count = jsonData.length
     jsonData.each(function(data) {
       News.create_panel(element,data);
@@ -187,7 +189,7 @@ var News = {
   },
   
   prepare_data: function(jsonData, maps_sort_order){
-    var jsonMapData = jsonData.reject(function(e){return e.type != "Map"})
+    var jsonMapData = jsonData.entries.reject(function(e){return e.type != "Map"})
     if (maps_sort_order) {
       return News.custom_sort(jsonMapData, maps_sort_order)
     } else {

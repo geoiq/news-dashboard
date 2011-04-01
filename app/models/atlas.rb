@@ -21,7 +21,7 @@ class Atlas < ActiveRecord::Base
   def default_map_list
     @default_map_list ||= (
       self.map_lists.detect{|m| m.default? }
-    )
+    ) || self.map_lists.first
   end
   
   def default_map_list_id

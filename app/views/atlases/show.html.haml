@@ -6,7 +6,7 @@
   #caption{:style=>'display:none'}
     .caption
       .description
-        %h2#map_title
+        %h#map_title
         %span#short_description
         = link_to "more", '#', :id => 'more_caption', :class => 'toggle_caption'
         #long_description{:style=>'display:none'}
@@ -24,7 +24,7 @@
   
   = find_and_preserve( render :partial => 'embed' )
 
-  - content_for :side do
+  - content_for :side  do
     %label.atlas_title= h(@atlas.title)
     #panel_welcome.panel
       .short
@@ -32,7 +32,7 @@
       %a#loading_maps{:href=>'#'} Loading...
       %a#continue_button{:href=>'#', :style=>'display:none'} Continue
     #atlas_panels{:style=>'display:none'}
-      
+
 - content_for :end_js do
   == News.default_map_list = "map_list_#{@atlas.default_map_list_id}"
   == News.default_map = "#{@atlas.default_map_id}"

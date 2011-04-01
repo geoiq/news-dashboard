@@ -128,6 +128,7 @@ var PaginatedMapList = Class.create({
 //    title_format: [template string] allows you to specify your own title template.
 //                  ex: MapList.on_list_maps(jsonData, {title_format: "<h1>#{title}</h1>" })
 var MapLists = {
+
   lookup: {},
   register: function(item) {
     MapLists.lookup[item.element.id] = item

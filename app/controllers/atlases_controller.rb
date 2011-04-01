@@ -112,6 +112,7 @@ class AtlasesController < ApplicationController
     else params[:url]
       @atlas = Atlas.find_by_url(params[:url])
     end
+    puts @atlas.to_json
     raise ActiveRecord::RecordNotFound, "Atlas not found for params #{params.inspect}" if @atlas.nil?
   end
 

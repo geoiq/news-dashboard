@@ -1,15 +1,18 @@
 development:
-    url: http://localhost:4000
-    finder: http://localhost:4001
-    maker: http://localhost:4002
-    scratch: file:/var/rails/core/trunk/tmp/scratch
+  url: http://geocommons.com
+  platform_env: cloud
+  scratch: file:/fortiusone/live/data/scratch
+  maker: http://geocommons.com
+  geocoder: http://geocoder2.geoiq.com
 test:
-    url: http://localhost:4000
-    finder: http://localhost:4001
-    maker: http://localhost:4002
-    scratch: file:/var/rails/core/trunk/tmp/scratch
+  url: http://core.news.geocommons.com
+  platform_env: cloud
+  scratch: file:/fortiusone/live/data/scratch
+  maker: http://maker.news.geocommons.com
+  geocoder: http://geocoder2.geoiq.com
 production:
-    url: http://core.news.geocommons.com
-    finder: http://finder.news.geocommons.com
-    maker: http://maker.news.geocommons.com
-    scratch: file:/var/rails/core/trunk/tmp/scratch
+  url: http://core.news.geocommons.com
+  platform_env: cloud
+  scratch: file:/fortiusone/live/data/scratch
+  maker: http://maker.news.geocommons.com
+  geocoder: http://geocoder2.geoiq.com
